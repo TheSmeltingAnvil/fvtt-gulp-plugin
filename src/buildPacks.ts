@@ -1,4 +1,4 @@
-import { compilePack, extractPack } from "@foundryvtt/utils"
+import { compilePack } from "@foundryvtt/utils"
 import * as fse from "fs-extra"
 import path from "node:path"
 
@@ -28,26 +28,6 @@ export async function buildPacks(done: () => void): Promise<void> {
   done()
 }
 
-export async function extractPacks(done: () => void): Promise<void> {
-  const exists = await fse.exists("dist/packs")
-  if (!exists) return done() // early exit if no directory found.
-
-  const dirs = await getDirectories("dist/packs")
-  if (dirs.length === 0) return // nothing to do!
-
-  for (const dir of dirs) {
-    const src = path.resolve("dist/packs", dir).split(path.sep).join(path.posix.sep)
-    const dst = src.replace("dist/packs", "packs")
-    try {
-      await extractPack(src, dst, { yaml: true, yamlOptions, log: true })
-    } catch (e) {
-      console.error(e)
-    }
-  }
-
-  done()
-}
-
 /** Get sub-directories. */
 async function getDirectories(dir: string): Promise<string[]> {
   const files = await fse.readdir(dir)
@@ -56,11 +36,4 @@ async function getDirectories(dir: string): Promise<string[]> {
     const stat = await fse.stat(filepath)
     return stat.isDirectory()
   })
-}
-
-const yamlOptions = {
-  indent: 2,
-  lineWidth: 120,
-  noCompatMode: true,
-  quotingType: "'",
 }

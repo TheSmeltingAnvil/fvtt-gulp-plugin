@@ -31,6 +31,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   buildPacks: () => buildPacks,
+  extractPack: () => extractPack2,
   launch: () => launch,
   link: () => link
 });
@@ -41,8 +42,8 @@ var import_utils = require("@foundryvtt/utils");
 var fse = __toESM(require("fs-extra"));
 var import_node_path = __toESM(require("path"));
 async function buildPacks(done) {
-  const exists3 = await fse.exists("packs");
-  if (!exists3) return done();
+  const exists4 = await fse.exists("packs");
+  if (!exists4) return done();
   const dirs = await getDirectories("packs");
   if (dirs.length === 0) return;
   for (const dir of dirs) {
@@ -65,6 +66,29 @@ async function getDirectories(dir) {
   });
 }
 
+// src/extractPack.ts
+var utils = __toESM(require("@foundryvtt/utils"));
+var fse2 = __toESM(require("fs-extra"));
+var import_node_path2 = __toESM(require("path"));
+async function extractPack2(directory, documentType, { yamlOptions } = { yamlOptions: {} }) {
+  const exists4 = await fse2.exists(`dist/packs/${directory}`);
+  if (!exists4) return;
+  const src = import_node_path2.default.resolve(`dist/packs/${directory}`).split(import_node_path2.default.sep).join(import_node_path2.default.posix.sep);
+  const dst = src.replace("dist/packs/", "packs/");
+  try {
+    yamlOptions = { ...defaultYamlOptions, ...yamlOptions };
+    await utils.extractPack(src, dst, { documentType, yaml: true, yamlOptions, log: true });
+  } catch (e) {
+    console.error(e);
+  }
+}
+var defaultYamlOptions = {
+  indent: 2,
+  lineWidth: 120,
+  noCompatMode: true,
+  quotingType: '"'
+};
+
 // src/launch.ts
 var import_utils2 = require("@foundryvtt/utils");
 var import_process = __toESM(require("process"));
@@ -85,7 +109,7 @@ async function launch(done) {
 // src/link.ts
 var import_utils3 = require("@foundryvtt/utils");
 var import_console = __toESM(require("console"));
-var fse2 = __toESM(require("fs-extra"));
+var fse3 = __toESM(require("fs-extra"));
 var import_path = __toESM(require("path"));
 var import_process2 = __toESM(require("process"));
 var import_yargs2 = __toESM(require("yargs"));
@@ -94,7 +118,9 @@ async function link(done) {
   const foundryPackage = await (0, import_utils3.getFoundryPackageInfo)();
   const foundryConfig = await (0, import_utils3.getFoundryConfigInfo)();
   if (!foundryPackage || !foundryConfig) return done();
-  const linkDirectories = foundryConfig.resolvedDataPath.map((dataPath) => import_path.default.resolve(dataPath, "Data", foundryPackage.path));
+  const linkDirectories = foundryConfig.resolvedDataPath.map(
+    (dataPath) => import_path.default.resolve(dataPath, "Data", foundryPackage.path)
+  );
   const argv = (0, import_yargs2.default)((0, import_helpers2.hideBin)(import_process2.default.argv)).options({
     clean: { type: "boolean", default: false }
   }).argv;
@@ -102,12 +128,12 @@ async function link(done) {
   for (const linkDirectory of linkDirectories) {
     if (clean) {
       import_console.default.log(`Removing build in ${linkDirectory}.`);
-      await fse2.remove(linkDirectory);
-    } else if (!await fse2.exists(linkDirectory)) {
+      await fse3.remove(linkDirectory);
+    } else if (!await fse3.exists(linkDirectory)) {
       import_console.default.log(`Linking dist to ${linkDirectory}.`);
-      await fse2.ensureDir("dist");
-      await fse2.ensureDir(import_path.default.resolve(linkDirectory, ".."));
-      await fse2.symlink(import_path.default.resolve("dist"), linkDirectory);
+      await fse3.ensureDir("dist");
+      await fse3.ensureDir(import_path.default.resolve(linkDirectory, ".."));
+      await fse3.symlink(import_path.default.resolve("dist"), linkDirectory);
     } else {
       import_console.default.log(`Skipped linking to ${linkDirectory}, as it already exists.`);
     }
@@ -116,6 +142,7 @@ async function link(done) {
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   buildPacks,
+  extractPack,
   launch,
   link
 });
