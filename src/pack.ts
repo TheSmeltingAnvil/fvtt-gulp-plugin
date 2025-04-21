@@ -8,7 +8,7 @@ import path from "node:path"
  * @param distPath
  * @param {*} done Callback to notify task completes.
  */
-export async function buildPacks(done: () => void): Promise<void> {
+export async function pack(done: () => void): Promise<void> {
   const exists = await fse.exists("packs")
   if (!exists) return done() // early exit if no directory found.
 

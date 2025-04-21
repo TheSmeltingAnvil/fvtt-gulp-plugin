@@ -1,4 +1,4 @@
-export { buildPacks } from "./buildPacks"
-export { extractPack } from "./extractPack"
+export { pack } from "./pack"
+export { unpack } from "./unpack"
 export { launch } from "./launch"
 export { link } from "./link"

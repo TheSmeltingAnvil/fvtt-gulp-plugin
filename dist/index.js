@@ -30,18 +30,18 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var index_exports = {};
 __export(index_exports, {
-  buildPacks: () => buildPacks,
-  extractPack: () => extractPack2,
   launch: () => launch,
-  link: () => link
+  link: () => link,
+  pack: () => pack,
+  unpack: () => unpack
 });
 module.exports = __toCommonJS(index_exports);
 
-// src/buildPacks.ts
+// src/pack.ts
 var import_utils = require("@foundryvtt/utils");
 var fse = __toESM(require("fs-extra"));
 var import_node_path = __toESM(require("path"));
-async function buildPacks(done) {
+async function pack(done) {
   const exists4 = await fse.exists("packs");
   if (!exists4) return done();
   const dirs = await getDirectories("packs");
@@ -61,26 +61,38 @@ async function getDirectories(dir) {
   const files = await fse.readdir(dir);
   return files.filter(async (file) => {
     const filepath = import_node_path.default.join(dir, file);
-    const stat2 = await fse.stat(filepath);
-    return stat2.isDirectory();
+    const stat3 = await fse.stat(filepath);
+    return stat3.isDirectory();
   });
 }
 
-// src/extractPack.ts
+// src/unpack.ts
 var utils = __toESM(require("@foundryvtt/utils"));
 var fse2 = __toESM(require("fs-extra"));
 var import_node_path2 = __toESM(require("path"));
-async function extractPack2(directory, documentType, { yamlOptions } = { yamlOptions: {} }) {
-  const exists4 = await fse2.exists(`dist/packs/${directory}`);
-  if (!exists4) return;
-  const src = import_node_path2.default.resolve(`dist/packs/${directory}`).split(import_node_path2.default.sep).join(import_node_path2.default.posix.sep);
-  const dst = src.replace("dist/packs/", "packs/");
-  try {
-    yamlOptions = { ...defaultYamlOptions, ...yamlOptions };
-    await utils.extractPack(src, dst, { documentType, yaml: true, yamlOptions, log: true });
-  } catch (e) {
-    console.error(e);
+async function unpack(done) {
+  const exists4 = await fse2.exists(`dist/packs`);
+  if (!exists4) return done();
+  const dirs = await getDirectories2("dist/packs");
+  if (dirs.length === 0) return;
+  for (const dir of dirs) {
+    const src = import_node_path2.default.resolve("dist/packs/", dir).split(import_node_path2.default.sep).join(import_node_path2.default.posix.sep);
+    const dst = src.replace("dist/packs/", "packs/");
+    try {
+      await utils.extractPack(src, dst, { yaml: true, yamlOptions: defaultYamlOptions, log: true });
+    } catch (e) {
+      console.error(e);
+    }
   }
+  done();
+}
+async function getDirectories2(dir) {
+  const files = await fse2.readdir(dir);
+  return files.filter(async (file) => {
+    const filepath = import_node_path2.default.join(dir, file);
+    const stat3 = await fse2.stat(filepath);
+    return stat3.isDirectory();
+  });
 }
 var defaultYamlOptions = {
   indent: 2,
@@ -141,8 +153,8 @@ async function link(done) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  buildPacks,
-  extractPack,
   launch,
-  link
+  link,
+  pack,
+  unpack
 });
