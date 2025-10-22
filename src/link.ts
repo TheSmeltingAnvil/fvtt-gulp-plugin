@@ -1,4 +1,4 @@
-import { getFoundryConfigInfo, getFoundryPackageInfo } from "@foundryvtt/utils"
+import { findManifest, getFoundryConfigInfo } from "@foundryvtt/utils"
 import console from "console"
 import * as fse from "fs-extra"
 import path from "path"
@@ -15,12 +15,14 @@ import { hideBin } from "yargs/helpers"
  * @returns: Promise<void>
  */
 export async function link(done: () => void) {
-  const foundryPackage = await getFoundryPackageInfo()
+  const foundryManifestInfo = await findManifest()
+  if (!foundryManifestInfo) return done()
+  const foundryManifest = await foundryManifestInfo.load()
   const foundryConfig = await getFoundryConfigInfo()
-  if (!foundryPackage || !foundryConfig) return done()
+  if (!foundryManifest || !foundryConfig) return done()
 
   const linkDirectories = foundryConfig.resolvedDataPath.map((dataPath: string) =>
-    path.resolve(dataPath, "Data", foundryPackage.path),
+    path.resolve(dataPath, "Data", foundryManifestInfo.path),
   )
 
   const argv = yargs(hideBin(process.argv)).options({

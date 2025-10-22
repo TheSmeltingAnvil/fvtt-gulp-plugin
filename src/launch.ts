@@ -19,8 +19,3 @@ export async function launch(done: () => void) {
   launchFoundry(".", argv)
   done()
 }
-
-////yargs.option("adminKey", {
-////  describe: "The admin key to secure Foundry VTT's Setup screen with",
-////  type: "string"
-////});

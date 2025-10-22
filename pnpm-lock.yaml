@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@foundryvtt/utils':
-        specifier: github:TheSmeltingAnvil/fvtt-utils#main
-        version: https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/13384f4e6360827bf58dbce877d6921ba01c1d10(gulp@5.0.0)
       fs-extra:
         specifier: ^11.3.0
         version: 11.3.0
@@ -27,6 +24,9 @@ importers:
       '@eslint/js':
         specifier: ^9.24.0
         version: 9.24.0
+      '@foundryvtt/utils':
+        specifier: github:TheSmeltingAnvil/fvtt-utils#dev
+        version: https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/3f8487cf85f515bbdc950bc729f027cf06b391a3(gulp@5.0.0)
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -270,8 +270,8 @@ packages:
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@foundryvtt/utils@https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/13384f4e6360827bf58dbce877d6921ba01c1d10':
-    resolution: {tarball: https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/13384f4e6360827bf58dbce877d6921ba01c1d10}
+  '@foundryvtt/utils@https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/3f8487cf85f515bbdc950bc729f027cf06b391a3':
+    resolution: {tarball: https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/3f8487cf85f515bbdc950bc729f027cf06b391a3}
     version: 0.1.0
     peerDependencies:
       gulp: '>=5.0.0'
@@ -1945,7 +1945,7 @@ snapshots:
       '@eslint/core': 0.13.0
       levn: 0.4.1
 
-  '@foundryvtt/utils@https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/13384f4e6360827bf58dbce877d6921ba01c1d10(gulp@5.0.0)':
+  '@foundryvtt/utils@https://codeload.github.com/TheSmeltingAnvil/fvtt-utils/tar.gz/3f8487cf85f515bbdc950bc729f027cf06b391a3(gulp@5.0.0)':
     dependencies:
       classic-level: 2.0.0
       dotenv: 16.5.0
