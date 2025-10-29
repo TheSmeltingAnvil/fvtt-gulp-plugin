@@ -17,7 +17,7 @@ import { hideBin } from "yargs/helpers"
 export async function link(done: () => void) {
   const foundryManifestInfo = await findManifest()
   if (!foundryManifestInfo) return done()
-  const foundryManifest = await foundryManifestInfo.load()
+  const foundryManifest = await foundryManifestInfo.manifest()
   const foundryConfig = await getFoundryConfigInfo()
   if (!foundryManifest || !foundryConfig) return done()
 

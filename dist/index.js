@@ -30,9 +30,9 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js
+// ../../node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js
 var require_picocolors = __commonJS({
-  "node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js"(exports2, module2) {
+  "../../node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js"(exports2, module2) {
     "use strict";
     var p = process || {};
     var argv = p.argv || [];
@@ -103,9 +103,9 @@ var require_picocolors = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js
+// ../../node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js
 var require_level_supports = __commonJS({
-  "node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js"(exports2) {
+  "../../node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js"(exports2) {
     "use strict";
     exports2.supports = function supports(...manifests) {
       const manifest = manifests.reduce((acc, m) => Object.assign(acc, m), {});
@@ -131,9 +131,9 @@ var require_level_supports = __commonJS({
   }
 });
 
-// node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js
+// ../../node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js
 var require_module_error = __commonJS({
-  "node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js"(exports2, module2) {
+  "../../node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js"(exports2, module2) {
     "use strict";
     module2.exports = class ModuleError extends Error {
       /**
@@ -156,9 +156,9 @@ var require_module_error = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js
+// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js
 var require_text_endec = __commonJS({
-  "node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js"(exports2, module2) {
+  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js"(exports2, module2) {
     "use strict";
     var lazy = null;
     module2.exports = function() {
@@ -173,9 +173,9 @@ var require_text_endec = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js
+// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js
 var require_encoding = __commonJS({
-  "node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js"(exports2) {
+  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js"(exports2) {
     "use strict";
     var ModuleError = require_module_error();
     var formats = /* @__PURE__ */ new Set(["buffer", "view", "utf8"]);
@@ -241,9 +241,9 @@ var require_encoding = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js
+// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js
 var require_formats = __commonJS({
-  "node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js"(exports2) {
+  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js"(exports2) {
     "use strict";
     var { Buffer: Buffer2 } = require("buffer") || {};
     var { Encoding } = require_encoding();
@@ -330,9 +330,9 @@ var require_formats = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js
+// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js
 var require_encodings = __commonJS({
-  "node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js"(exports2) {
+  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js"(exports2) {
     "use strict";
     var { Buffer: Buffer2 } = require("buffer") || { Buffer: { isBuffer: () => false } };
     var { textEncoder, textDecoder } = require_text_endec()();
@@ -427,9 +427,9 @@ var require_encodings = __commonJS({
   }
 });
 
-// node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js
+// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js
 var require_level_transcoder = __commonJS({
-  "node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js"(exports2) {
+  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js"(exports2) {
     "use strict";
     var ModuleError = require_module_error();
     var encodings = require_encodings();
@@ -546,9 +546,9 @@ var require_level_transcoder = __commonJS({
   }
 });
 
-// node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js
+// ../../node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js
 var require_maybe_combine_errors = __commonJS({
-  "node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js"(exports2, module2) {
+  "../../node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js"(exports2, module2) {
     "use strict";
     var kErrors = Symbol("kErrors");
     module2.exports = function(errors) {
@@ -596,9 +596,9 @@ var require_maybe_combine_errors = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/common.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/common.js
 var require_common = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/common.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/common.js"(exports2) {
     "use strict";
     var ModuleError = require_module_error();
     var deprecations = /* @__PURE__ */ new Set();
@@ -627,9 +627,9 @@ var require_common = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/errors.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/errors.js
 var require_errors = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/errors.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/errors.js"(exports2) {
     "use strict";
     var ModuleError = require_module_error();
     var AbortError = class extends ModuleError {
@@ -650,28 +650,27 @@ var require_errors = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-iterator.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-iterator.js
 var require_abstract_iterator = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-iterator.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-iterator.js"(exports2) {
     "use strict";
     var ModuleError = require_module_error();
     var combineErrors = require_maybe_combine_errors();
     var { getOptions, emptyOptions, noop } = require_common();
     var { AbortError } = require_errors();
-    var kWorking = Symbol("working");
     var kDecodeOne = Symbol("decodeOne");
     var kDecodeMany = Symbol("decodeMany");
-    var kSignal = Symbol("signal");
-    var kPendingClose = Symbol("pendingClose");
-    var kClosingPromise = Symbol("closingPromise");
     var kKeyEncoding = Symbol("keyEncoding");
     var kValueEncoding = Symbol("valueEncoding");
-    var kKeys = Symbol("keys");
-    var kValues = Symbol("values");
-    var kLimit = Symbol("limit");
-    var kCount = Symbol("count");
-    var kEnded = Symbol("ended");
     var CommonIterator = class {
+      #working = false;
+      #pendingClose = null;
+      #closingPromise = null;
+      #count = 0;
+      #signal;
+      #limit;
+      #ended;
+      #snapshot;
       constructor(db, options) {
         if (typeof db !== "object" || db === null) {
           const hint = db === null ? "null" : typeof db;
@@ -680,34 +679,31 @@ var require_abstract_iterator = __commonJS({
         if (typeof options !== "object" || options === null) {
           throw new TypeError("The second argument must be an options object");
         }
-        this[kWorking] = false;
-        this[kPendingClose] = null;
-        this[kClosingPromise] = null;
         this[kKeyEncoding] = options[kKeyEncoding];
         this[kValueEncoding] = options[kValueEncoding];
-        this[kLimit] = Number.isInteger(options.limit) && options.limit >= 0 ? options.limit : Infinity;
-        this[kCount] = 0;
-        this[kSignal] = options.signal != null ? options.signal : null;
-        this[kEnded] = false;
+        this.#limit = Number.isInteger(options.limit) && options.limit >= 0 ? options.limit : Infinity;
+        this.#signal = options.signal != null ? options.signal : null;
+        this.#snapshot = options.snapshot != null ? options.snapshot : null;
+        this.#ended = false;
         this.db = db;
         this.db.attachResource(this);
       }
       get count() {
-        return this[kCount];
+        return this.#count;
       }
       get limit() {
-        return this[kLimit];
+        return this.#limit;
       }
       async next() {
-        startWork(this);
+        this.#startWork();
         try {
-          if (this[kEnded] || this[kCount] >= this[kLimit]) {
-            this[kEnded] = true;
+          if (this.#ended || this.#count >= this.#limit) {
+            this.#ended = true;
             return void 0;
           }
           let item = await this._next();
           if (item === void 0) {
-            this[kEnded] = true;
+            this.#ended = true;
             return void 0;
           }
           try {
@@ -715,10 +711,10 @@ var require_abstract_iterator = __commonJS({
           } catch (err) {
             throw new IteratorDecodeError(err);
           }
-          this[kCount]++;
+          this.#count++;
           return item;
         } finally {
-          endWork(this);
+          this.#endWork();
         }
       }
       async _next() {
@@ -729,16 +725,16 @@ var require_abstract_iterator = __commonJS({
         }
         options = getOptions(options, emptyOptions);
         if (size < 1) size = 1;
-        if (this[kLimit] < Infinity) size = Math.min(size, this[kLimit] - this[kCount]);
-        startWork(this);
+        if (this.#limit < Infinity) size = Math.min(size, this.#limit - this.#count);
+        this.#startWork();
         try {
-          if (this[kEnded] || size <= 0) {
-            this[kEnded] = true;
+          if (this.#ended || size <= 0) {
+            this.#ended = true;
             return [];
           }
           const items = await this._nextv(size, options);
           if (items.length === 0) {
-            this[kEnded] = true;
+            this.#ended = true;
             return items;
           }
           try {
@@ -746,10 +742,10 @@ var require_abstract_iterator = __commonJS({
           } catch (err) {
             throw new IteratorDecodeError(err);
           }
-          this[kCount] += items.length;
+          this.#count += items.length;
           return items;
         } finally {
-          endWork(this);
+          this.#endWork();
         }
       }
       async _nextv(size, options) {
@@ -759,7 +755,7 @@ var require_abstract_iterator = __commonJS({
           if (item !== void 0) {
             acc.push(item);
           } else {
-            this[kEnded] = true;
+            this.#ended = true;
             break;
           }
         }
@@ -767,9 +763,9 @@ var require_abstract_iterator = __commonJS({
       }
       async all(options) {
         options = getOptions(options, emptyOptions);
-        startWork(this);
+        this.#startWork();
         try {
-          if (this[kEnded] || this[kCount] >= this[kLimit]) {
+          if (this.#ended || this.#count >= this.#limit) {
             return [];
           }
           const items = await this._all(options);
@@ -778,24 +774,24 @@ var require_abstract_iterator = __commonJS({
           } catch (err) {
             throw new IteratorDecodeError(err);
           }
-          this[kCount] += items.length;
+          this.#count += items.length;
           return items;
         } catch (err) {
-          endWork(this);
-          await destroy(this, err);
+          this.#endWork();
+          await this.#destroy(err);
         } finally {
-          this[kEnded] = true;
-          if (this[kWorking]) {
-            endWork(this);
+          this.#ended = true;
+          if (this.#working) {
+            this.#endWork();
             await this.close();
           }
         }
       }
       async _all(options) {
-        let count = this[kCount];
+        let count = this.#count;
         const acc = [];
         while (true) {
-          const size = this[kLimit] < Infinity ? Math.min(1e3, this[kLimit] - count) : 1e3;
+          const size = this.#limit < Infinity ? Math.min(1e3, this.#limit - count) : 1e3;
           if (size <= 0) {
             return acc;
           }
@@ -809,8 +805,8 @@ var require_abstract_iterator = __commonJS({
       }
       seek(target, options) {
         options = getOptions(options, emptyOptions);
-        if (this[kClosingPromise] !== null) {
-        } else if (this[kWorking]) {
+        if (this.#closingPromise !== null) {
+        } else if (this.#working) {
           throw new ModuleError("Iterator is busy: cannot call seek() until next() has completed", {
             code: "LEVEL_ITERATOR_BUSY"
           });
@@ -822,28 +818,28 @@ var require_abstract_iterator = __commonJS({
           }
           const mapped = this.db.prefixKey(keyEncoding.encode(target), keyFormat, false);
           this._seek(mapped, options);
-          this[kEnded] = false;
+          this.#ended = false;
         }
       }
       _seek(target, options) {
-        throw new ModuleError("Iterator does not support seek()", {
+        throw new ModuleError("Iterator does not implement seek()", {
           code: "LEVEL_NOT_SUPPORTED"
         });
       }
       async close() {
-        if (this[kClosingPromise] !== null) {
-          return this[kClosingPromise].catch(noop);
+        if (this.#closingPromise !== null) {
+          return this.#closingPromise.catch(noop);
         }
-        this[kClosingPromise] = new Promise((resolve, reject) => {
-          this[kPendingClose] = () => {
-            this[kPendingClose] = null;
-            privateClose(this).then(resolve, reject);
+        this.#closingPromise = new Promise((resolve, reject) => {
+          this.#pendingClose = () => {
+            this.#pendingClose = null;
+            this.#privateClose().then(resolve, reject);
           };
         });
-        if (!this[kWorking]) {
-          this[kPendingClose]();
+        if (!this.#working) {
+          this.#pendingClose();
         }
-        return this[kClosingPromise];
+        return this.#closingPromise;
       }
       async _close() {
       }
@@ -854,26 +850,65 @@ var require_abstract_iterator = __commonJS({
             yield item;
           }
         } catch (err) {
-          await destroy(this, err);
+          await this.#destroy(err);
         } finally {
           await this.close();
         }
       }
+      #startWork() {
+        if (this.#closingPromise !== null) {
+          throw new ModuleError("Iterator is not open: cannot read after close()", {
+            code: "LEVEL_ITERATOR_NOT_OPEN"
+          });
+        } else if (this.#working) {
+          throw new ModuleError("Iterator is busy: cannot read until previous read has completed", {
+            code: "LEVEL_ITERATOR_BUSY"
+          });
+        } else if (this.#signal?.aborted) {
+          throw new AbortError();
+        }
+        this.#snapshot?.ref();
+        this.#working = true;
+      }
+      #endWork() {
+        this.#working = false;
+        this.#pendingClose?.();
+        this.#snapshot?.unref();
+      }
+      async #privateClose() {
+        await this._close();
+        this.db.detachResource(this);
+      }
+      async #destroy(err) {
+        try {
+          await this.close();
+        } catch (closeErr) {
+          throw combineErrors([err, closeErr]);
+        }
+        throw err;
+      }
     };
+    if (typeof Symbol.asyncDispose === "symbol") {
+      CommonIterator.prototype[Symbol.asyncDispose] = async function() {
+        return this.close();
+      };
+    }
     var AbstractIterator = class extends CommonIterator {
+      #keys;
+      #values;
       constructor(db, options) {
         super(db, options);
-        this[kKeys] = options.keys !== false;
-        this[kValues] = options.values !== false;
+        this.#keys = options.keys !== false;
+        this.#values = options.values !== false;
       }
       [kDecodeOne](entry) {
         const key = entry[0];
         const value = entry[1];
         if (key !== void 0) {
-          entry[0] = this[kKeys] ? this[kKeyEncoding].decode(key) : void 0;
+          entry[0] = this.#keys ? this[kKeyEncoding].decode(key) : void 0;
         }
         if (value !== void 0) {
-          entry[1] = this[kValues] ? this[kValueEncoding].decode(value) : void 0;
+          entry[1] = this.#values ? this[kValueEncoding].decode(value) : void 0;
         }
         return entry;
       }
@@ -883,8 +918,8 @@ var require_abstract_iterator = __commonJS({
         for (const entry of entries) {
           const key = entry[0];
           const value = entry[1];
-          if (key !== void 0) entry[0] = this[kKeys] ? keyEncoding.decode(key) : void 0;
-          if (value !== void 0) entry[1] = this[kValues] ? valueEncoding.decode(value) : void 0;
+          if (key !== void 0) entry[0] = this.#keys ? keyEncoding.decode(key) : void 0;
+          if (value !== void 0) entry[1] = this.#values ? valueEncoding.decode(value) : void 0;
         }
       }
     };
@@ -920,38 +955,6 @@ var require_abstract_iterator = __commonJS({
         });
       }
     };
-    var startWork = function(iterator) {
-      if (iterator[kClosingPromise] !== null) {
-        throw new ModuleError("Iterator is not open: cannot read after close()", {
-          code: "LEVEL_ITERATOR_NOT_OPEN"
-        });
-      } else if (iterator[kWorking]) {
-        throw new ModuleError("Iterator is busy: cannot read until previous read has completed", {
-          code: "LEVEL_ITERATOR_BUSY"
-        });
-      } else if (iterator[kSignal] !== null && iterator[kSignal].aborted) {
-        throw new AbortError();
-      }
-      iterator[kWorking] = true;
-    };
-    var endWork = function(iterator) {
-      iterator[kWorking] = false;
-      if (iterator[kPendingClose] !== null) {
-        iterator[kPendingClose]();
-      }
-    };
-    var privateClose = async function(iterator) {
-      await iterator._close();
-      iterator.db.detachResource(iterator);
-    };
-    var destroy = async function(iterator, err) {
-      try {
-        await iterator.close();
-      } catch (closeErr) {
-        throw combineErrors([err, closeErr]);
-      }
-      throw err;
-    };
     AbstractIterator.keyEncoding = kKeyEncoding;
     AbstractIterator.valueEncoding = kValueEncoding;
     exports2.AbstractIterator = AbstractIterator;
@@ -960,9 +963,9 @@ var require_abstract_iterator = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/default-kv-iterator.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-kv-iterator.js
 var require_default_kv_iterator = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/default-kv-iterator.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-kv-iterator.js"(exports2) {
     "use strict";
     var { AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
     var kIterator = Symbol("iterator");
@@ -1023,9 +1026,9 @@ var require_default_kv_iterator = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/deferred-iterator.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-iterator.js
 var require_deferred_iterator = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/deferred-iterator.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-iterator.js"(exports2) {
     "use strict";
     var { AbstractIterator, AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
     var ModuleError = require_module_error();
@@ -1120,9 +1123,9 @@ var require_deferred_iterator = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/prefixes.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prefixes.js
 var require_prefixes = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/prefixes.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prefixes.js"(exports2) {
     "use strict";
     exports2.prefixDescendantKey = function(key, keyFormat, descendant, ancestor) {
       while (descendant !== null && descendant !== ancestor) {
@@ -1141,30 +1144,28 @@ var require_prefixes = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/prewrite-batch.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prewrite-batch.js
 var require_prewrite_batch = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/prewrite-batch.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prewrite-batch.js"(exports2) {
     "use strict";
     var { prefixDescendantKey, isDescendant } = require_prefixes();
-    var kDb = Symbol("db");
-    var kPrivateOperations = Symbol("privateOperations");
-    var kPublicOperations = Symbol("publicOperations");
     var PrewriteBatch = class {
+      #db;
+      #privateOperations;
+      #publicOperations;
       constructor(db, privateOperations, publicOperations) {
-        this[kDb] = db;
-        this[kPrivateOperations] = privateOperations;
-        this[kPublicOperations] = publicOperations;
+        this.#db = db;
+        this.#privateOperations = privateOperations;
+        this.#publicOperations = publicOperations;
       }
       add(op) {
         const isPut = op.type === "put";
         const delegated = op.sublevel != null;
-        const db = delegated ? op.sublevel : this[kDb];
-        const keyError = db._checkKey(op.key);
-        if (keyError != null) throw keyError;
+        const db = delegated ? op.sublevel : this.#db;
+        db._assertValidKey(op.key);
         op.keyEncoding = db.keyEncoding(op.keyEncoding);
         if (isPut) {
-          const valueError = db._checkValue(op.value);
-          if (valueError != null) throw valueError;
+          db._assertValidValue(op.value);
           op.valueEncoding = db.valueEncoding(op.valueEncoding);
         } else if (op.type !== "del") {
           throw new TypeError("A batch operation must have a type property that is 'put' or 'del'");
@@ -1172,22 +1173,22 @@ var require_prewrite_batch = __commonJS({
         const keyEncoding = op.keyEncoding;
         const preencodedKey = keyEncoding.encode(op.key);
         const keyFormat = keyEncoding.format;
-        const siblings = delegated && !isDescendant(op.sublevel, this[kDb]) && op.sublevel !== this[kDb];
-        const encodedKey = delegated && !siblings ? prefixDescendantKey(preencodedKey, keyFormat, db, this[kDb]) : preencodedKey;
+        const siblings = delegated && !isDescendant(op.sublevel, this.#db) && op.sublevel !== this.#db;
+        const encodedKey = delegated && !siblings ? prefixDescendantKey(preencodedKey, keyFormat, db, this.#db) : preencodedKey;
         if (delegated && !siblings) {
           op.sublevel = null;
         }
         let publicOperation = null;
-        if (this[kPublicOperations] !== null && !siblings) {
-          publicOperation = Object.assign({}, op);
+        if (this.#publicOperations !== null && !siblings) {
+          publicOperation = { ...op };
           publicOperation.encodedKey = encodedKey;
           if (delegated) {
             publicOperation.key = encodedKey;
-            publicOperation.keyEncoding = this[kDb].keyEncoding(keyFormat);
+            publicOperation.keyEncoding = this.#db.keyEncoding(keyFormat);
           }
-          this[kPublicOperations].push(publicOperation);
+          this.#publicOperations.push(publicOperation);
         }
-        op.key = siblings ? encodedKey : this[kDb].prefixKey(encodedKey, keyFormat, true);
+        op.key = siblings ? encodedKey : this.#db.prefixKey(encodedKey, keyFormat, true);
         op.keyEncoding = keyFormat;
         if (isPut) {
           const valueEncoding = op.valueEncoding;
@@ -1199,11 +1200,11 @@ var require_prewrite_batch = __commonJS({
             publicOperation.encodedValue = encodedValue;
             if (delegated) {
               publicOperation.value = encodedValue;
-              publicOperation.valueEncoding = this[kDb].valueEncoding(valueFormat);
+              publicOperation.valueEncoding = this.#db.valueEncoding(valueFormat);
             }
           }
         }
-        this[kPrivateOperations].push(op);
+        this.#privateOperations.push(op);
         return this;
       }
     };
@@ -1211,26 +1212,26 @@ var require_prewrite_batch = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-chained-batch.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-chained-batch.js
 var require_abstract_chained_batch = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-chained-batch.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-chained-batch.js"(exports2) {
     "use strict";
     var combineErrors = require_maybe_combine_errors();
     var ModuleError = require_module_error();
     var { getOptions, emptyOptions, noop } = require_common();
     var { prefixDescendantKey, isDescendant } = require_prefixes();
     var { PrewriteBatch } = require_prewrite_batch();
-    var kStatus = Symbol("status");
     var kPublicOperations = Symbol("publicOperations");
-    var kLegacyOperations = Symbol("legacyOperations");
     var kPrivateOperations = Symbol("privateOperations");
-    var kClosePromise = Symbol("closePromise");
-    var kLength = Symbol("length");
-    var kPrewriteRun = Symbol("prewriteRun");
-    var kPrewriteBatch = Symbol("prewriteBatch");
-    var kPrewriteData = Symbol("prewriteData");
-    var kAddMode = Symbol("addMode");
     var AbstractChainedBatch = class {
+      #status = "open";
+      #length = 0;
+      #closePromise = null;
+      #publicOperations;
+      #prewriteRun;
+      #prewriteBatch;
+      #prewriteData;
+      #addMode;
       constructor(db, options) {
         if (typeof db !== "object" || db === null) {
           const hint = db === null ? "null" : typeof db;
@@ -1238,52 +1239,46 @@ var require_abstract_chained_batch = __commonJS({
         }
         const enableWriteEvent = db.listenerCount("write") > 0;
         const enablePrewriteHook = !db.hooks.prewrite.noop;
-        this[kPublicOperations] = enableWriteEvent ? [] : null;
-        this[kLegacyOperations] = enableWriteEvent || enablePrewriteHook ? null : [];
-        this[kLength] = 0;
-        this[kStatus] = "open";
-        this[kClosePromise] = null;
-        this[kAddMode] = getOptions(options, emptyOptions).add === true;
+        this.#publicOperations = enableWriteEvent ? [] : null;
+        this.#addMode = getOptions(options, emptyOptions).add === true;
         if (enablePrewriteHook) {
           const data = new PrewriteData([], enableWriteEvent ? [] : null);
-          this[kPrewriteData] = data;
-          this[kPrewriteBatch] = new PrewriteBatch(db, data[kPrivateOperations], data[kPublicOperations]);
-          this[kPrewriteRun] = db.hooks.prewrite.run;
+          this.#prewriteData = data;
+          this.#prewriteBatch = new PrewriteBatch(db, data[kPrivateOperations], data[kPublicOperations]);
+          this.#prewriteRun = db.hooks.prewrite.run;
         } else {
-          this[kPrewriteData] = null;
-          this[kPrewriteBatch] = null;
-          this[kPrewriteRun] = null;
+          this.#prewriteData = null;
+          this.#prewriteBatch = null;
+          this.#prewriteRun = null;
         }
         this.db = db;
         this.db.attachResource(this);
       }
       get length() {
-        if (this[kPrewriteData] !== null) {
-          return this[kLength] + this[kPrewriteData].length;
+        if (this.#prewriteData !== null) {
+          return this.#length + this.#prewriteData.length;
         } else {
-          return this[kLength];
+          return this.#length;
         }
       }
       put(key, value, options) {
-        assertStatus(this);
+        this.#assertStatus();
         options = getOptions(options, emptyOptions);
         const delegated = options.sublevel != null;
         const db = delegated ? options.sublevel : this.db;
-        const original = options;
-        const keyError = db._checkKey(key);
-        const valueError = db._checkValue(value);
-        if (keyError != null) throw keyError;
-        if (valueError != null) throw valueError;
-        const op = Object.assign({}, options, {
+        db._assertValidKey(key);
+        db._assertValidValue(value);
+        const op = {
+          ...options,
           type: "put",
           key,
           value,
           keyEncoding: db.keyEncoding(options.keyEncoding),
           valueEncoding: db.valueEncoding(options.valueEncoding)
-        });
-        if (this[kPrewriteRun] !== null) {
+        };
+        if (this.#prewriteRun !== null) {
           try {
-            this[kPrewriteRun](op, this[kPrewriteBatch]);
+            this.#prewriteRun(op, this.#prewriteBatch);
             op.keyEncoding = db.keyEncoding(op.keyEncoding);
             op.valueEncoding = db.valueEncoding(op.valueEncoding);
           } catch (err) {
@@ -1304,8 +1299,8 @@ var require_abstract_chained_batch = __commonJS({
         if (delegated && !siblings) {
           op.sublevel = null;
         }
-        if (this[kPublicOperations] !== null && !siblings) {
-          const publicOperation = Object.assign({}, op);
+        if (this.#publicOperations !== null && !siblings) {
+          const publicOperation = { ...op };
           publicOperation.encodedKey = encodedKey;
           publicOperation.encodedValue = encodedValue;
           if (delegated) {
@@ -1314,44 +1309,37 @@ var require_abstract_chained_batch = __commonJS({
             publicOperation.keyEncoding = this.db.keyEncoding(keyFormat);
             publicOperation.valueEncoding = this.db.valueEncoding(valueFormat);
           }
-          this[kPublicOperations].push(publicOperation);
-        } else if (this[kLegacyOperations] !== null && !siblings) {
-          const legacyOperation = Object.assign({}, original);
-          legacyOperation.type = "put";
-          legacyOperation.key = key;
-          legacyOperation.value = value;
-          this[kLegacyOperations].push(legacyOperation);
+          this.#publicOperations.push(publicOperation);
         }
         op.key = siblings ? encodedKey : this.db.prefixKey(encodedKey, keyFormat, true);
         op.value = encodedValue;
         op.keyEncoding = keyFormat;
         op.valueEncoding = valueFormat;
-        if (this[kAddMode]) {
+        if (this.#addMode) {
           this._add(op);
         } else {
           this._put(op.key, encodedValue, op);
         }
-        this[kLength]++;
+        this.#length++;
         return this;
       }
       _put(key, value, options) {
       }
       del(key, options) {
-        assertStatus(this);
+        this.#assertStatus();
         options = getOptions(options, emptyOptions);
         const delegated = options.sublevel != null;
         const db = delegated ? options.sublevel : this.db;
-        const original = options;
-        const keyError = db._checkKey(key);
-        if (keyError != null) throw keyError;
-        const op = Object.assign({}, options, {
+        db._assertValidKey(key);
+        const op = {
+          ...options,
           type: "del",
           key,
           keyEncoding: db.keyEncoding(options.keyEncoding)
-        });
-        if (this[kPrewriteRun] !== null) {
+        };
+        if (this.#prewriteRun !== null) {
           try {
-            this[kPrewriteRun](op, this[kPrewriteBatch]);
+            this.#prewriteRun(op, this.#prewriteBatch);
             op.keyEncoding = db.keyEncoding(op.keyEncoding);
           } catch (err) {
             throw new ModuleError("The prewrite hook failed on batch.del()", {
@@ -1365,28 +1353,23 @@ var require_abstract_chained_batch = __commonJS({
         const keyFormat = keyEncoding.format;
         const encodedKey = delegated ? prefixDescendantKey(preencodedKey, keyFormat, db, this.db) : preencodedKey;
         if (delegated) op.sublevel = null;
-        if (this[kPublicOperations] !== null) {
-          const publicOperation = Object.assign({}, op);
+        if (this.#publicOperations !== null) {
+          const publicOperation = { ...op };
           publicOperation.encodedKey = encodedKey;
           if (delegated) {
             publicOperation.key = encodedKey;
             publicOperation.keyEncoding = this.db.keyEncoding(keyFormat);
           }
-          this[kPublicOperations].push(publicOperation);
-        } else if (this[kLegacyOperations] !== null) {
-          const legacyOperation = Object.assign({}, original);
-          legacyOperation.type = "del";
-          legacyOperation.key = key;
-          this[kLegacyOperations].push(legacyOperation);
+          this.#publicOperations.push(publicOperation);
         }
         op.key = this.db.prefixKey(encodedKey, keyFormat, true);
         op.keyEncoding = keyFormat;
-        if (this[kAddMode]) {
+        if (this.#addMode) {
           this._add(op);
         } else {
           this._del(op.key, op);
         }
-        this[kLength]++;
+        this.#length++;
         return this;
       }
       _del(key, options) {
@@ -1394,32 +1377,31 @@ var require_abstract_chained_batch = __commonJS({
       _add(op) {
       }
       clear() {
-        assertStatus(this);
+        this.#assertStatus();
         this._clear();
-        if (this[kPublicOperations] !== null) this[kPublicOperations] = [];
-        if (this[kLegacyOperations] !== null) this[kLegacyOperations] = [];
-        if (this[kPrewriteData] !== null) this[kPrewriteData].clear();
-        this[kLength] = 0;
+        if (this.#publicOperations !== null) this.#publicOperations = [];
+        if (this.#prewriteData !== null) this.#prewriteData.clear();
+        this.#length = 0;
         return this;
       }
       _clear() {
       }
       async write(options) {
-        assertStatus(this);
+        this.#assertStatus();
         options = getOptions(options);
-        if (this[kLength] === 0) {
+        if (this.#length === 0) {
           return this.close();
         } else {
-          this[kStatus] = "writing";
-          const close = prepareClose(this);
+          this.#status = "writing";
+          const close = this.#prepareClose();
           try {
-            if (this[kPrewriteData] !== null) {
-              const publicOperations = this[kPrewriteData][kPublicOperations];
-              const privateOperations = this[kPrewriteData][kPrivateOperations];
-              const length = this[kPrewriteData].length;
+            if (this.#prewriteData !== null) {
+              const publicOperations = this.#prewriteData[kPublicOperations];
+              const privateOperations = this.#prewriteData[kPrivateOperations];
+              const length = this.#prewriteData.length;
               for (let i = 0; i < length; i++) {
                 const op = privateOperations[i];
-                if (this[kAddMode]) {
+                if (this.#addMode) {
                   this._add(op);
                 } else if (op.type === "put") {
                   this._put(op.key, op.value, op);
@@ -1428,55 +1410,70 @@ var require_abstract_chained_batch = __commonJS({
                 }
               }
               if (publicOperations !== null && length !== 0) {
-                this[kPublicOperations] = this[kPublicOperations].concat(publicOperations);
+                this.#publicOperations = this.#publicOperations.concat(publicOperations);
               }
             }
             await this._write(options);
           } catch (err) {
             close();
             try {
-              await this[kClosePromise];
+              await this.#closePromise;
             } catch (closeErr) {
               err = combineErrors([err, closeErr]);
             }
             throw err;
           }
           close();
-          if (this[kPublicOperations] !== null) {
-            this.db.emit("write", this[kPublicOperations]);
-          } else if (this[kLegacyOperations] !== null) {
-            this.db.emit("batch", this[kLegacyOperations]);
+          if (this.#publicOperations !== null) {
+            this.db.emit("write", this.#publicOperations);
           }
-          return this[kClosePromise];
+          return this.#closePromise;
         }
       }
       async _write(options) {
       }
       async close() {
-        if (this[kClosePromise] !== null) {
-          return this[kClosePromise].catch(noop);
+        if (this.#closePromise !== null) {
+          return this.#closePromise.catch(noop);
         } else {
-          prepareClose(this)();
-          return this[kClosePromise];
+          this.#prepareClose()();
+          return this.#closePromise;
         }
       }
       async _close() {
       }
+      #assertStatus() {
+        if (this.#status !== "open") {
+          throw new ModuleError("Batch is not open: cannot change operations after write() or close()", {
+            code: "LEVEL_BATCH_NOT_OPEN"
+          });
+        }
+        if (this.db.status !== "open") {
+          throw new ModuleError("Database is not open", {
+            code: "LEVEL_DATABASE_NOT_OPEN"
+          });
+        }
+      }
+      #prepareClose() {
+        let close;
+        this.#closePromise = new Promise((resolve, reject) => {
+          close = () => {
+            this.#privateClose().then(resolve, reject);
+          };
+        });
+        return close;
+      }
+      async #privateClose() {
+        this.#status = "closing";
+        await this._close();
+        this.db.detachResource(this);
+      }
     };
-    var prepareClose = function(batch) {
-      let close;
-      batch[kClosePromise] = new Promise((resolve, reject) => {
-        close = () => {
-          privateClose(batch).then(resolve, reject);
-        };
-      });
-      return close;
-    };
-    var privateClose = async function(batch) {
-      batch[kStatus] = "closing";
-      await batch._close();
-      batch.db.detachResource(batch);
-    };
+    if (typeof Symbol.asyncDispose === "symbol") {
+      AbstractChainedBatch.prototype[Symbol.asyncDispose] = async function() {
+        return this.close();
+      };
+    }
     var PrewriteData = class {
       constructor(privateOperations, publicOperations) {
         this[kPrivateOperations] = privateOperations;
@@ -1494,54 +1491,39 @@ var require_abstract_chained_batch = __commonJS({
         }
       }
     };
-    var assertStatus = function(batch) {
-      if (batch[kStatus] !== "open") {
-        throw new ModuleError("Batch is not open: cannot change operations after write() or close()", {
-          code: "LEVEL_BATCH_NOT_OPEN"
-        });
-      }
-      if (batch.db.status !== "open") {
-        throw new ModuleError("Database is not open", {
-          code: "LEVEL_DATABASE_NOT_OPEN"
-        });
-      }
-    };
     exports2.AbstractChainedBatch = AbstractChainedBatch;
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/default-chained-batch.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-chained-batch.js
 var require_default_chained_batch = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/default-chained-batch.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-chained-batch.js"(exports2) {
     "use strict";
     var { AbstractChainedBatch } = require_abstract_chained_batch();
-    var kEncoded = Symbol("encoded");
     var DefaultChainedBatch = class extends AbstractChainedBatch {
+      #encoded = [];
       constructor(db) {
         super(db, { add: true });
-        this[kEncoded] = [];
       }
       _add(op) {
-        this[kEncoded].push(op);
+        this.#encoded.push(op);
       }
       _clear() {
-        this[kEncoded] = [];
+        this.#encoded = [];
       }
       async _write(options) {
-        return this.db._batch(this[kEncoded], options);
+        return this.db._batch(this.#encoded, options);
       }
     };
     exports2.DefaultChainedBatch = DefaultChainedBatch;
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/hooks.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/hooks.js
 var require_hooks = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/hooks.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/hooks.js"(exports2) {
     "use strict";
     var { noop } = require_common();
-    var kFunctions = Symbol("functions");
-    var kAsync = Symbol("async");
     var DatabaseHooks = class {
       constructor() {
         this.postopen = new Hook({ async: true });
@@ -1550,23 +1532,46 @@ var require_hooks = __commonJS({
       }
     };
     var Hook = class {
+      #functions = /* @__PURE__ */ new Set();
+      #isAsync;
       constructor(options) {
-        this[kAsync] = options.async;
-        this[kFunctions] = /* @__PURE__ */ new Set();
+        this.#isAsync = options.async;
         this.noop = true;
-        this.run = runner(this);
+        this.run = this.#runner();
       }
       add(fn) {
         assertFunction(fn);
-        this[kFunctions].add(fn);
+        this.#functions.add(fn);
         this.noop = false;
-        this.run = runner(this);
+        this.run = this.#runner();
       }
       delete(fn) {
         assertFunction(fn);
-        this[kFunctions].delete(fn);
-        this.noop = this[kFunctions].size === 0;
-        this.run = runner(this);
+        this.#functions.delete(fn);
+        this.noop = this.#functions.size === 0;
+        this.run = this.#runner();
+      }
+      #runner() {
+        if (this.noop) {
+          return noop;
+        } else if (this.#functions.size === 1) {
+          const [fn] = this.#functions;
+          return fn;
+        } else if (this.#isAsync) {
+          const run = async function(functions, ...args) {
+            for (const fn of functions) {
+              await fn(...args);
+            }
+          };
+          return run.bind(null, Array.from(this.#functions));
+        } else {
+          const run = function(functions, ...args) {
+            for (const fn of functions) {
+              fn(...args);
+            }
+          };
+          return run.bind(null, Array.from(this.#functions));
+        }
       }
     };
     var assertFunction = function(fn) {
@@ -1575,77 +1580,44 @@ var require_hooks = __commonJS({
         throw new TypeError(`The first argument must be a function, received ${hint}`);
       }
     };
-    var runner = function(hook) {
-      if (hook.noop) {
-        return noop;
-      } else if (hook[kFunctions].size === 1) {
-        const [fn] = hook[kFunctions];
-        return fn;
-      } else if (hook[kAsync]) {
-        const run = async function(functions, ...args) {
-          for (const fn of functions) {
-            await fn(...args);
-          }
-        };
-        return run.bind(null, Array.from(hook[kFunctions]));
-      } else {
-        const run = function(functions, ...args) {
-          for (const fn of functions) {
-            fn(...args);
-          }
-        };
-        return run.bind(null, Array.from(hook[kFunctions]));
-      }
-    };
     exports2.DatabaseHooks = DatabaseHooks;
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/event-monitor.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/event-monitor.js
 var require_event_monitor = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/event-monitor.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/event-monitor.js"(exports2) {
     "use strict";
     var { deprecate } = require_common();
     exports2.EventMonitor = class EventMonitor {
-      constructor(emitter, events) {
-        for (const event of events) {
-          this[event.name] = false;
-          if (event.deprecated) {
-            event.message = `The '${event.name}' event is deprecated in favor of '${event.alt}' and will be removed in a future version of abstract-level`;
+      constructor(emitter) {
+        this.write = false;
+        const beforeAdded = (name) => {
+          if (name === "write") {
+            this.write = true;
           }
-        }
-        const map = new Map(events.map((e) => [e.name, e]));
-        const monitor = this;
+          if (name === "put" || name === "del" || name === "batch") {
+            deprecate(`The '${name}' event has been removed in favor of 'write'`);
+          }
+        };
+        const afterRemoved = (name) => {
+          if (name === "write") {
+            this.write = emitter.listenerCount("write") > 0;
+          }
+        };
         emitter.on("newListener", beforeAdded);
         emitter.on("removeListener", afterRemoved);
-        function beforeAdded(name) {
-          const event = map.get(name);
-          if (event !== void 0) {
-            monitor[name] = true;
-            if (event.deprecated) {
-              deprecate(event.message);
-            }
-          }
-        }
-        function afterRemoved(name) {
-          if (map.has(name)) {
-            monitor[name] = this.listenerCount(name) > 0;
-          }
-        }
       }
     };
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/deferred-queue.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-queue.js
 var require_deferred_queue = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/deferred-queue.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-queue.js"(exports2) {
     "use strict";
     var { getOptions, emptyOptions } = require_common();
     var { AbortError } = require_errors();
-    var kOperations = Symbol("operations");
-    var kSignals = Symbol("signals");
-    var kHandleAbort = Symbol("handleAbort");
     var DeferredOperation = class {
       constructor(fn, signal) {
         this.fn = fn;
@@ -1653,45 +1625,46 @@ var require_deferred_queue = __commonJS({
       }
     };
     var DeferredQueue = class {
+      #operations;
+      #signals;
       constructor() {
-        this[kOperations] = [];
-        this[kSignals] = /* @__PURE__ */ new Set();
-        this[kHandleAbort] = this[kHandleAbort].bind(this);
+        this.#operations = [];
+        this.#signals = /* @__PURE__ */ new Set();
       }
       add(fn, options) {
         options = getOptions(options, emptyOptions);
         const signal = options.signal;
         if (signal == null) {
-          this[kOperations].push(new DeferredOperation(fn, null));
+          this.#operations.push(new DeferredOperation(fn, null));
           return;
         }
         if (signal.aborted) {
           fn(new AbortError());
           return;
         }
-        if (!this[kSignals].has(signal)) {
-          this[kSignals].add(signal);
-          signal.addEventListener("abort", this[kHandleAbort], { once: true });
+        if (!this.#signals.has(signal)) {
+          this.#signals.add(signal);
+          signal.addEventListener("abort", this.#handleAbort, { once: true });
         }
-        this[kOperations].push(new DeferredOperation(fn, signal));
+        this.#operations.push(new DeferredOperation(fn, signal));
       }
       drain() {
-        const operations = this[kOperations];
-        const signals = this[kSignals];
-        this[kOperations] = [];
-        this[kSignals] = /* @__PURE__ */ new Set();
+        const operations = this.#operations;
+        const signals = this.#signals;
+        this.#operations = [];
+        this.#signals = /* @__PURE__ */ new Set();
         for (const signal of signals) {
-          signal.removeEventListener("abort", this[kHandleAbort]);
+          signal.removeEventListener("abort", this.#handleAbort);
         }
         for (const operation of operations) {
           operation.fn.call(null);
         }
       }
-      [kHandleAbort](ev) {
+      #handleAbort = (ev) => {
         const signal = ev.target;
         const err = new AbortError();
         const aborted = [];
-        this[kOperations] = this[kOperations].filter(function(operation) {
+        this.#operations = this.#operations.filter(function(operation) {
           if (operation.signal !== null && operation.signal === signal) {
             aborted.push(operation);
             return false;
@@ -1699,19 +1672,19 @@ var require_deferred_queue = __commonJS({
             return true;
           }
         });
-        this[kSignals].delete(signal);
+        this.#signals.delete(signal);
         for (const operation of aborted) {
           operation.fn.call(null, err);
         }
-      }
+      };
     };
     exports2.DeferredQueue = DeferredQueue;
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/range-options.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/range-options.js
 var require_range_options = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/range-options.js"(exports2, module2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/range-options.js"(exports2, module2) {
     "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty;
     var rangeOptions = /* @__PURE__ */ new Set(["lt", "lte", "gt", "gte"]);
@@ -1733,30 +1706,30 @@ var require_range_options = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/abstract-sublevel-iterator.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel-iterator.js
 var require_abstract_sublevel_iterator = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/abstract-sublevel-iterator.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel-iterator.js"(exports2) {
     "use strict";
     var { AbstractIterator, AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
-    var kUnfix = Symbol("unfix");
-    var kIterator = Symbol("iterator");
     var AbstractSublevelIterator = class extends AbstractIterator {
+      #iterator;
+      #unfix;
       constructor(db, options, iterator, unfix) {
         super(db, options);
-        this[kIterator] = iterator;
-        this[kUnfix] = unfix;
+        this.#iterator = iterator;
+        this.#unfix = unfix;
       }
       async _next() {
-        const entry = await this[kIterator].next();
+        const entry = await this.#iterator.next();
         if (entry !== void 0) {
           const key = entry[0];
-          if (key !== void 0) entry[0] = this[kUnfix](key);
+          if (key !== void 0) entry[0] = this.#unfix(key);
         }
         return entry;
       }
       async _nextv(size, options) {
-        const entries = await this[kIterator].nextv(size, options);
-        const unfix = this[kUnfix];
+        const entries = await this.#iterator.nextv(size, options);
+        const unfix = this.#unfix;
         for (const entry of entries) {
           const key = entry[0];
           if (key !== void 0) entry[0] = unfix(key);
@@ -1764,28 +1737,36 @@ var require_abstract_sublevel_iterator = __commonJS({
         return entries;
       }
       async _all(options) {
-        const entries = await this[kIterator].all(options);
-        const unfix = this[kUnfix];
+        const entries = await this.#iterator.all(options);
+        const unfix = this.#unfix;
         for (const entry of entries) {
           const key = entry[0];
           if (key !== void 0) entry[0] = unfix(key);
         }
         return entries;
+      }
+      _seek(target, options) {
+        this.#iterator.seek(target, options);
+      }
+      async _close() {
+        return this.#iterator.close();
       }
     };
     var AbstractSublevelKeyIterator = class extends AbstractKeyIterator {
+      #iterator;
+      #unfix;
       constructor(db, options, iterator, unfix) {
         super(db, options);
-        this[kIterator] = iterator;
-        this[kUnfix] = unfix;
+        this.#iterator = iterator;
+        this.#unfix = unfix;
       }
       async _next() {
-        const key = await this[kIterator].next();
-        return key === void 0 ? key : this[kUnfix](key);
+        const key = await this.#iterator.next();
+        return key === void 0 ? key : this.#unfix(key);
       }
       async _nextv(size, options) {
-        const keys = await this[kIterator].nextv(size, options);
-        const unfix = this[kUnfix];
+        const keys = await this.#iterator.nextv(size, options);
+        const unfix = this.#unfix;
         for (let i = 0; i < keys.length; i++) {
           const key = keys[i];
           if (key !== void 0) keys[i] = unfix(key);
@@ -1793,47 +1774,52 @@ var require_abstract_sublevel_iterator = __commonJS({
         return keys;
       }
       async _all(options) {
-        const keys = await this[kIterator].all(options);
-        const unfix = this[kUnfix];
+        const keys = await this.#iterator.all(options);
+        const unfix = this.#unfix;
         for (let i = 0; i < keys.length; i++) {
           const key = keys[i];
           if (key !== void 0) keys[i] = unfix(key);
         }
         return keys;
+      }
+      _seek(target, options) {
+        this.#iterator.seek(target, options);
+      }
+      async _close() {
+        return this.#iterator.close();
       }
     };
     var AbstractSublevelValueIterator = class extends AbstractValueIterator {
+      #iterator;
       constructor(db, options, iterator) {
         super(db, options);
-        this[kIterator] = iterator;
+        this.#iterator = iterator;
       }
       async _next() {
-        return this[kIterator].next();
+        return this.#iterator.next();
       }
       async _nextv(size, options) {
-        return this[kIterator].nextv(size, options);
+        return this.#iterator.nextv(size, options);
       }
       async _all(options) {
-        return this[kIterator].all(options);
+        return this.#iterator.all(options);
+      }
+      _seek(target, options) {
+        this.#iterator.seek(target, options);
+      }
+      async _close() {
+        return this.#iterator.close();
       }
     };
-    for (const Iterator of [AbstractSublevelIterator, AbstractSublevelKeyIterator, AbstractSublevelValueIterator]) {
-      Iterator.prototype._seek = function(target, options) {
-        this[kIterator].seek(target, options);
-      };
-      Iterator.prototype._close = async function() {
-        return this[kIterator].close();
-      };
-    }
     exports2.AbstractSublevelIterator = AbstractSublevelIterator;
     exports2.AbstractSublevelKeyIterator = AbstractSublevelKeyIterator;
     exports2.AbstractSublevelValueIterator = AbstractSublevelValueIterator;
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/abstract-sublevel.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel.js
 var require_abstract_sublevel = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/lib/abstract-sublevel.js"(exports2, module2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel.js"(exports2, module2) {
     "use strict";
     var ModuleError = require_module_error();
     var { Buffer: Buffer2 } = require("buffer") || {};
@@ -1842,19 +1828,18 @@ var require_abstract_sublevel = __commonJS({
       AbstractSublevelKeyIterator,
       AbstractSublevelValueIterator
     } = require_abstract_sublevel_iterator();
-    var kGlobalPrefix = Symbol("prefix");
-    var kLocalPrefix = Symbol("localPrefix");
-    var kLocalPath = Symbol("localPath");
-    var kGlobalPath = Symbol("globalPath");
-    var kGlobalUpperBound = Symbol("upperBound");
-    var kPrefixRange = Symbol("prefixRange");
     var kRoot = Symbol("root");
-    var kParent = Symbol("parent");
-    var kUnfix = Symbol("unfix");
     var textEncoder = new TextEncoder();
     var defaults = { separator: "!" };
     module2.exports = function({ AbstractLevel }) {
       class AbstractSublevel extends AbstractLevel {
+        #globalPrefix;
+        #localPrefix;
+        #localPath;
+        #globalPath;
+        #globalUpperBound;
+        #parent;
+        #unfix;
         static defaults(options) {
           if (options == null) {
             return defaults;
@@ -1864,7 +1849,6 @@ var require_abstract_sublevel = __commonJS({
             return options;
           }
         }
-        // TODO: add autoClose option, which if true, does parent.attachResource(this)
         constructor(db, name, options) {
           const { separator, manifest, ...forward } = AbstractSublevel.defaults(options);
           const names = [].concat(name).map((name2) => trim(name2, separator));
@@ -1880,16 +1864,16 @@ var require_abstract_sublevel = __commonJS({
           const globalPrefix = (db.prefix || "") + localPrefix;
           const globalUpperBound = globalPrefix.slice(0, -1) + String.fromCharCode(reserved);
           this[kRoot] = root;
-          this[kParent] = db;
-          this[kLocalPath] = names;
-          this[kGlobalPath] = db.prefix ? db.path().concat(names) : names;
-          this[kGlobalPrefix] = new MultiFormat(globalPrefix);
-          this[kGlobalUpperBound] = new MultiFormat(globalUpperBound);
-          this[kLocalPrefix] = new MultiFormat(localPrefix);
-          this[kUnfix] = new Unfixer();
+          this.#parent = db;
+          this.#localPath = names;
+          this.#globalPath = db.prefix ? db.path().concat(names) : names;
+          this.#globalPrefix = new MultiFormat(globalPrefix);
+          this.#globalUpperBound = new MultiFormat(globalUpperBound);
+          this.#localPrefix = new MultiFormat(localPrefix);
+          this.#unfix = new Unfixer();
         }
         prefixKey(key, keyFormat, local) {
-          const prefix = local ? this[kLocalPrefix] : this[kGlobalPrefix];
+          const prefix = local ? this.#localPrefix : this.#globalPrefix;
           if (keyFormat === "utf8") {
             return prefix.utf8 + key;
           } else if (key.byteLength === 0) {
@@ -1906,74 +1890,90 @@ var require_abstract_sublevel = __commonJS({
           }
         }
         // Not exposed for now.
-        [kPrefixRange](range, keyFormat) {
+        #prefixRange(range, keyFormat) {
           if (range.gte !== void 0) {
             range.gte = this.prefixKey(range.gte, keyFormat, false);
           } else if (range.gt !== void 0) {
             range.gt = this.prefixKey(range.gt, keyFormat, false);
           } else {
-            range.gte = this[kGlobalPrefix][keyFormat];
+            range.gte = this.#globalPrefix[keyFormat];
           }
           if (range.lte !== void 0) {
             range.lte = this.prefixKey(range.lte, keyFormat, false);
           } else if (range.lt !== void 0) {
             range.lt = this.prefixKey(range.lt, keyFormat, false);
           } else {
-            range.lte = this[kGlobalUpperBound][keyFormat];
+            range.lte = this.#globalUpperBound[keyFormat];
           }
         }
         get prefix() {
-          return this[kGlobalPrefix].utf8;
+          return this.#globalPrefix.utf8;
         }
         get db() {
           return this[kRoot];
         }
         get parent() {
-          return this[kParent];
+          return this.#parent;
         }
         path(local = false) {
-          return local ? this[kLocalPath] : this[kGlobalPath];
+          return local ? this.#localPath : this.#globalPath;
         }
         async _open(options) {
-          return this[kParent].open({ passive: true });
+          await this.#parent.open({ passive: true });
+          this.#parent.attachResource(this);
+        }
+        async _close() {
+          this.#parent.detachResource(this);
         }
         async _put(key, value, options) {
-          return this[kParent].put(key, value, options);
+          return this.#parent.put(key, value, options);
         }
         async _get(key, options) {
-          return this[kParent].get(key, options);
+          return this.#parent.get(key, options);
+        }
+        _getSync(key, options) {
+          return this.#parent.getSync(key, options);
         }
         async _getMany(keys, options) {
-          return this[kParent].getMany(keys, options);
+          return this.#parent.getMany(keys, options);
+        }
+        async _has(key, options) {
+          return this.#parent.has(key, options);
+        }
+        async _hasMany(keys, options) {
+          return this.#parent.hasMany(keys, options);
         }
         async _del(key, options) {
-          return this[kParent].del(key, options);
+          return this.#parent.del(key, options);
         }
         async _batch(operations, options) {
-          return this[kParent].batch(operations, options);
+          return this.#parent.batch(operations, options);
         }
         // TODO: call parent instead of root
         async _clear(options) {
-          this[kPrefixRange](options, options.keyEncoding);
+          this.#prefixRange(options, options.keyEncoding);
           return this[kRoot].clear(options);
         }
         // TODO: call parent instead of root
         _iterator(options) {
-          this[kPrefixRange](options, options.keyEncoding);
+          this.#prefixRange(options, options.keyEncoding);
           const iterator = this[kRoot].iterator(options);
-          const unfix = this[kUnfix].get(this[kGlobalPrefix].utf8.length, options.keyEncoding);
+          const unfix = this.#unfix.get(this.#globalPrefix.utf8.length, options.keyEncoding);
           return new AbstractSublevelIterator(this, options, iterator, unfix);
         }
         _keys(options) {
-          this[kPrefixRange](options, options.keyEncoding);
+          this.#prefixRange(options, options.keyEncoding);
           const iterator = this[kRoot].keys(options);
-          const unfix = this[kUnfix].get(this[kGlobalPrefix].utf8.length, options.keyEncoding);
+          const unfix = this.#unfix.get(this.#globalPrefix.utf8.length, options.keyEncoding);
           return new AbstractSublevelKeyIterator(this, options, iterator, unfix);
         }
         _values(options) {
-          this[kPrefixRange](options, options.keyEncoding);
+          this.#prefixRange(options, options.keyEncoding);
           const iterator = this[kRoot].values(options);
           return new AbstractSublevelValueIterator(this, options, iterator);
+        }
+        _snapshot(options) {
+          return this[kRoot].snapshot(options);
         }
       }
       return { AbstractSublevel };
@@ -2041,9 +2041,9 @@ var require_abstract_sublevel = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-level.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-level.js
 var require_abstract_level = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/abstract-level.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-level.js"(exports2) {
     "use strict";
     var { supports } = require_level_supports();
     var { Transcoder } = require_level_transcoder();
@@ -2061,21 +2061,19 @@ var require_abstract_level = __commonJS({
     var { prefixDescendantKey, isDescendant } = require_prefixes();
     var { DeferredQueue } = require_deferred_queue();
     var rangeOptions = require_range_options();
-    var kResources = Symbol("resources");
-    var kCloseResources = Symbol("closeResources");
-    var kQueue = Symbol("queue");
-    var kDeferOpen = Symbol("deferOpen");
-    var kOptions = Symbol("options");
-    var kStatus = Symbol("status");
-    var kStatusChange = Symbol("statusChange");
-    var kStatusLocked = Symbol("statusLocked");
-    var kDefaultOptions = Symbol("defaultOptions");
-    var kTranscoder = Symbol("transcoder");
-    var kKeyEncoding = Symbol("keyEncoding");
-    var kValueEncoding = Symbol("valueEncoding");
-    var kEventMonitor = Symbol("eventMonitor");
-    var kArrayBatch = Symbol("arrayBatch");
     var AbstractLevel = class extends EventEmitter {
+      #status = "opening";
+      #deferOpen = true;
+      #statusChange = null;
+      #statusLocked = false;
+      #resources;
+      #queue;
+      #options;
+      #defaultOptions;
+      #transcoder;
+      #keyEncoding;
+      #valueEncoding;
+      #eventMonitor;
       constructor(manifest, options) {
         super();
         if (typeof manifest !== "object" || manifest === null) {
@@ -2083,266 +2081,326 @@ var require_abstract_level = __commonJS({
         }
         options = getOptions(options);
         const { keyEncoding, valueEncoding, passive, ...forward } = options;
-        this[kResources] = /* @__PURE__ */ new Set();
-        this[kQueue] = new DeferredQueue();
-        this[kDeferOpen] = true;
-        this[kOptions] = forward;
-        this[kStatus] = "opening";
-        this[kStatusChange] = null;
-        this[kStatusLocked] = false;
+        this.#resources = /* @__PURE__ */ new Set();
+        this.#queue = new DeferredQueue();
+        this.#options = forward;
+        const implicitSnapshots = manifest.snapshots !== false && manifest.implicitSnapshots !== false;
         this.hooks = new DatabaseHooks();
         this.supports = supports(manifest, {
           deferredOpen: true,
-          // TODO (next major): add seek
-          snapshots: manifest.snapshots !== false,
+          seek: true,
+          implicitSnapshots,
           permanence: manifest.permanence !== false,
           encodings: manifest.encodings || {},
-          events: Object.assign({}, manifest.events, {
+          events: {
+            ...manifest.events,
             opening: true,
             open: true,
             closing: true,
             closed: true,
             write: true,
-            put: true,
-            del: true,
-            batch: true,
             clear: true
-          })
+          }
         });
-        this[kEventMonitor] = new EventMonitor(this, [
-          { name: "write" },
-          { name: "put", deprecated: true, alt: "write" },
-          { name: "del", deprecated: true, alt: "write" },
-          { name: "batch", deprecated: true, alt: "write" }
-        ]);
-        this[kTranscoder] = new Transcoder(formats(this));
-        this[kKeyEncoding] = this[kTranscoder].encoding(keyEncoding || "utf8");
-        this[kValueEncoding] = this[kTranscoder].encoding(valueEncoding || "utf8");
-        for (const encoding of this[kTranscoder].encodings()) {
+        this.#eventMonitor = new EventMonitor(this);
+        this.#transcoder = new Transcoder(formats(this));
+        this.#keyEncoding = this.#transcoder.encoding(keyEncoding || "utf8");
+        this.#valueEncoding = this.#transcoder.encoding(valueEncoding || "utf8");
+        for (const encoding of this.#transcoder.encodings()) {
           if (!this.supports.encodings[encoding.commonName]) {
             this.supports.encodings[encoding.commonName] = true;
           }
         }
-        this[kDefaultOptions] = {
+        this.#defaultOptions = {
           empty: emptyOptions,
           entry: Object.freeze({
-            keyEncoding: this[kKeyEncoding].commonName,
-            valueEncoding: this[kValueEncoding].commonName
+            keyEncoding: this.#keyEncoding.commonName,
+            valueEncoding: this.#valueEncoding.commonName
           }),
           entryFormat: Object.freeze({
-            keyEncoding: this[kKeyEncoding].format,
-            valueEncoding: this[kValueEncoding].format
+            keyEncoding: this.#keyEncoding.format,
+            valueEncoding: this.#valueEncoding.format
           }),
           key: Object.freeze({
-            keyEncoding: this[kKeyEncoding].commonName
+            keyEncoding: this.#keyEncoding.commonName
           }),
           keyFormat: Object.freeze({
-            keyEncoding: this[kKeyEncoding].format
+            keyEncoding: this.#keyEncoding.format
+          }),
+          owner: Object.freeze({
+            owner: this
           })
         };
         queueMicrotask(() => {
-          if (this[kDeferOpen]) {
+          if (this.#deferOpen) {
             this.open({ passive: false }).catch(noop);
           }
         });
       }
       get status() {
-        return this[kStatus];
+        return this.#status;
       }
       get parent() {
         return null;
       }
       keyEncoding(encoding) {
-        return this[kTranscoder].encoding(encoding != null ? encoding : this[kKeyEncoding]);
+        return this.#transcoder.encoding(encoding ?? this.#keyEncoding);
       }
       valueEncoding(encoding) {
-        return this[kTranscoder].encoding(encoding != null ? encoding : this[kValueEncoding]);
+        return this.#transcoder.encoding(encoding ?? this.#valueEncoding);
       }
       async open(options) {
-        options = { ...this[kOptions], ...getOptions(options) };
+        options = { ...this.#options, ...getOptions(options) };
         options.createIfMissing = options.createIfMissing !== false;
         options.errorIfExists = !!options.errorIfExists;
         const postopen = this.hooks.postopen.noop ? null : this.hooks.postopen.run;
         const passive = options.passive;
-        if (passive && this[kDeferOpen]) {
+        if (passive && this.#deferOpen) {
           await void 0;
         }
-        assertUnlocked(this);
-        while (this[kStatusChange] !== null) await this[kStatusChange].catch(noop);
-        assertUnlocked(this);
+        this.#assertUnlocked();
+        while (this.#statusChange !== null) await this.#statusChange.catch(noop);
+        this.#assertUnlocked();
         if (passive) {
-          if (this[kStatus] !== "open") throw new NotOpenError();
-        } else if (this[kStatus] === "closed" || this[kDeferOpen]) {
-          this[kDeferOpen] = false;
-          this[kStatusChange] = resolvedPromise;
-          this[kStatusChange] = (async () => {
-            this[kStatus] = "opening";
+          if (this.#status !== "open") throw new NotOpenError();
+        } else if (this.#status === "closed" || this.#deferOpen) {
+          this.#deferOpen = false;
+          this.#statusChange = resolvedPromise;
+          this.#statusChange = (async () => {
+            this.#status = "opening";
             try {
               this.emit("opening");
               await this._open(options);
             } catch (err) {
-              this[kStatus] = "closed";
-              this[kQueue].drain();
+              this.#status = "closed";
+              this.#queue.drain();
               try {
-                await this[kCloseResources]();
+                await this.#closeResources();
               } catch (resourceErr) {
                 err = combineErrors([err, resourceErr]);
               }
               throw new NotOpenError(err);
             }
-            this[kStatus] = "open";
+            this.#status = "open";
             if (postopen !== null) {
               let hookErr;
               try {
-                this[kStatusLocked] = true;
+                this.#statusLocked = true;
                 await postopen(options);
               } catch (err) {
                 hookErr = convertRejection(err);
               } finally {
-                this[kStatusLocked] = false;
+                this.#statusLocked = false;
               }
               if (hookErr) {
-                this[kStatus] = "closing";
-                this[kQueue].drain();
+                this.#status = "closing";
+                this.#queue.drain();
                 try {
-                  await this[kCloseResources]();
+                  await this.#closeResources();
                   await this._close();
                 } catch (closeErr) {
-                  this[kStatusLocked] = true;
+                  this.#statusLocked = true;
                   hookErr = combineErrors([hookErr, closeErr]);
                 }
-                this[kStatus] = "closed";
+                this.#status = "closed";
                 throw new ModuleError("The postopen hook failed on open()", {
                   code: "LEVEL_HOOK_ERROR",
                   cause: hookErr
                 });
               }
             }
-            this[kQueue].drain();
+            this.#queue.drain();
             this.emit("open");
           })();
           try {
-            await this[kStatusChange];
+            await this.#statusChange;
           } finally {
-            this[kStatusChange] = null;
+            this.#statusChange = null;
           }
-        } else if (this[kStatus] !== "open") {
+        } else if (this.#status !== "open") {
           throw new NotOpenError();
         }
       }
       async _open(options) {
       }
       async close() {
-        assertUnlocked(this);
-        while (this[kStatusChange] !== null) await this[kStatusChange].catch(noop);
-        assertUnlocked(this);
-        if (this[kStatus] === "open" || this[kDeferOpen]) {
-          const fromInitial = this[kDeferOpen];
-          this[kDeferOpen] = false;
-          this[kStatusChange] = resolvedPromise;
-          this[kStatusChange] = (async () => {
-            this[kStatus] = "closing";
-            this[kQueue].drain();
+        this.#assertUnlocked();
+        while (this.#statusChange !== null) await this.#statusChange.catch(noop);
+        this.#assertUnlocked();
+        if (this.#status === "open" || this.#deferOpen) {
+          const fromInitial = this.#deferOpen;
+          this.#deferOpen = false;
+          this.#statusChange = resolvedPromise;
+          this.#statusChange = (async () => {
+            this.#status = "closing";
+            this.#queue.drain();
             try {
               this.emit("closing");
-              await this[kCloseResources]();
+              await this.#closeResources();
               if (!fromInitial) await this._close();
             } catch (err) {
-              this[kStatus] = "open";
-              this[kQueue].drain();
+              this.#status = "open";
+              this.#queue.drain();
               throw new NotClosedError(err);
             }
-            this[kStatus] = "closed";
-            this[kQueue].drain();
+            this.#status = "closed";
+            this.#queue.drain();
             this.emit("closed");
           })();
           try {
-            await this[kStatusChange];
+            await this.#statusChange;
           } finally {
-            this[kStatusChange] = null;
+            this.#statusChange = null;
           }
-        } else if (this[kStatus] !== "closed") {
+        } else if (this.#status !== "closed") {
           throw new NotClosedError();
         }
       }
-      async [kCloseResources]() {
-        if (this[kResources].size === 0) {
+      async #closeResources() {
+        if (this.#resources.size === 0) {
           return;
         }
-        const resources = Array.from(this[kResources]);
+        const resources = Array.from(this.#resources);
         const promises = resources.map(closeResource);
-        return Promise.allSettled(promises).then(async (results) => {
-          const errors = [];
-          for (let i = 0; i < results.length; i++) {
-            if (results[i].status === "fulfilled") {
-              this[kResources].delete(resources[i]);
-            } else {
-              errors.push(convertRejection(results[i].reason));
-            }
+        const results = await Promise.allSettled(promises);
+        const errors = [];
+        for (let i = 0; i < results.length; i++) {
+          if (results[i].status === "fulfilled") {
+            this.#resources.delete(resources[i]);
+          } else {
+            errors.push(convertRejection(results[i].reason));
           }
-          if (errors.length > 0) {
-            throw combineErrors(errors);
-          }
-        });
+        }
+        if (errors.length > 0) {
+          throw combineErrors(errors);
+        }
       }
       async _close() {
       }
       async get(key, options) {
-        options = getOptions(options, this[kDefaultOptions].entry);
-        if (this[kStatus] === "opening") {
+        options = getOptions(options, this.#defaultOptions.entry);
+        if (this.#status === "opening") {
           return this.deferAsync(() => this.get(key, options));
         }
-        assertOpen(this);
-        const err = this._checkKey(key);
-        if (err) throw err;
+        this.#assertOpen();
+        this._assertValidKey(key);
+        const snapshot = options.snapshot;
         const keyEncoding = this.keyEncoding(options.keyEncoding);
         const valueEncoding = this.valueEncoding(options.valueEncoding);
         const keyFormat = keyEncoding.format;
         const valueFormat = valueEncoding.format;
-        if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = Object.assign({}, options, { keyEncoding: keyFormat, valueEncoding: valueFormat });
+        if (options === this.#defaultOptions.entry) {
+          options = this.#defaultOptions.entryFormat;
+        } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
+          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
         }
         const encodedKey = keyEncoding.encode(key);
-        const value = await this._get(this.prefixKey(encodedKey, keyFormat, true), options);
+        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
+        snapshot?.ref();
+        let value;
+        try {
+          value = await this._get(mappedKey, options);
+        } finally {
+          snapshot?.unref();
+        }
         try {
           return value === void 0 ? value : valueEncoding.decode(value);
-        } catch (err2) {
+        } catch (err) {
           throw new ModuleError("Could not decode value", {
             code: "LEVEL_DECODE_ERROR",
-            cause: err2
+            cause: err
           });
         }
       }
       async _get(key, options) {
         return void 0;
       }
+      getSync(key, options) {
+        if (this.status !== "open") {
+          throw new ModuleError("Database is not open", {
+            code: "LEVEL_DATABASE_NOT_OPEN"
+          });
+        }
+        this._assertValidKey(key);
+        if (options == null) {
+          const encodedKey2 = this.#keyEncoding.encode(key);
+          const mappedKey2 = this.prefixKey(encodedKey2, this.#keyEncoding.format, true);
+          const value2 = this._getSync(mappedKey2, this.#defaultOptions.entryFormat);
+          try {
+            return value2 !== void 0 ? this.#valueEncoding.decode(value2) : void 0;
+          } catch (err) {
+            throw new ModuleError("Could not decode value", {
+              code: "LEVEL_DECODE_ERROR",
+              cause: err
+            });
+          }
+        }
+        const snapshot = options.snapshot;
+        const keyEncoding = this.keyEncoding(options.keyEncoding);
+        const valueEncoding = this.valueEncoding(options.valueEncoding);
+        const keyFormat = keyEncoding.format;
+        const valueFormat = valueEncoding.format;
+        if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
+          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
+        }
+        const encodedKey = keyEncoding.encode(key);
+        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
+        let value;
+        snapshot?.ref();
+        try {
+          value = this._getSync(mappedKey, options);
+        } finally {
+          snapshot?.unref();
+        }
+        try {
+          return value !== void 0 ? valueEncoding.decode(value) : void 0;
+        } catch (err) {
+          throw new ModuleError("Could not decode value", {
+            code: "LEVEL_DECODE_ERROR",
+            cause: err
+          });
+        }
+      }
+      _getSync(key, options) {
+        throw new ModuleError("Database does not support getSync()", {
+          code: "LEVEL_NOT_SUPPORTED"
+        });
+      }
       async getMany(keys, options) {
-        options = getOptions(options, this[kDefaultOptions].entry);
-        if (this[kStatus] === "opening") {
+        options = getOptions(options, this.#defaultOptions.entry);
+        if (this.#status === "opening") {
           return this.deferAsync(() => this.getMany(keys, options));
         }
-        assertOpen(this);
+        this.#assertOpen();
         if (!Array.isArray(keys)) {
           throw new TypeError("The first argument 'keys' must be an array");
         }
         if (keys.length === 0) {
           return [];
         }
+        const snapshot = options.snapshot;
         const keyEncoding = this.keyEncoding(options.keyEncoding);
         const valueEncoding = this.valueEncoding(options.valueEncoding);
         const keyFormat = keyEncoding.format;
         const valueFormat = valueEncoding.format;
-        if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = Object.assign({}, options, { keyEncoding: keyFormat, valueEncoding: valueFormat });
+        if (options === this.#defaultOptions.entry) {
+          options = this.#defaultOptions.entryFormat;
+        } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
+          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
         }
         const mappedKeys = new Array(keys.length);
         for (let i = 0; i < keys.length; i++) {
           const key = keys[i];
-          const err = this._checkKey(key);
-          if (err) throw err;
+          this._assertValidKey(key);
           mappedKeys[i] = this.prefixKey(keyEncoding.encode(key), keyFormat, true);
         }
-        const values = await this._getMany(mappedKeys, options);
+        snapshot?.ref();
+        let values;
+        try {
+          values = await this._getMany(mappedKeys, options);
+        } finally {
+          snapshot?.unref();
+        }
         try {
           for (let i = 0; i < values.length; i++) {
             if (values[i] !== void 0) {
@@ -2360,34 +2418,102 @@ var require_abstract_level = __commonJS({
       async _getMany(keys, options) {
         return new Array(keys.length).fill(void 0);
       }
+      async has(key, options) {
+        options = getOptions(options, this.#defaultOptions.key);
+        if (this.#status === "opening") {
+          return this.deferAsync(() => this.has(key, options));
+        }
+        this.#assertOpen();
+        this._assertValidKey(key);
+        const snapshot = options.snapshot;
+        const keyEncoding = this.keyEncoding(options.keyEncoding);
+        const keyFormat = keyEncoding.format;
+        if (options === this.#defaultOptions.key) {
+          options = this.#defaultOptions.keyFormat;
+        } else if (options.keyEncoding !== keyFormat) {
+          options = { ...options, keyEncoding: keyFormat };
+        }
+        const encodedKey = keyEncoding.encode(key);
+        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
+        snapshot?.ref();
+        try {
+          return this._has(mappedKey, options);
+        } finally {
+          snapshot?.unref();
+        }
+      }
+      async _has(key, options) {
+        throw new ModuleError("Database does not support has()", {
+          code: "LEVEL_NOT_SUPPORTED"
+        });
+      }
+      async hasMany(keys, options) {
+        options = getOptions(options, this.#defaultOptions.key);
+        if (this.#status === "opening") {
+          return this.deferAsync(() => this.hasMany(keys, options));
+        }
+        this.#assertOpen();
+        if (!Array.isArray(keys)) {
+          throw new TypeError("The first argument 'keys' must be an array");
+        }
+        if (keys.length === 0) {
+          return [];
+        }
+        const snapshot = options.snapshot;
+        const keyEncoding = this.keyEncoding(options.keyEncoding);
+        const keyFormat = keyEncoding.format;
+        if (options === this.#defaultOptions.key) {
+          options = this.#defaultOptions.keyFormat;
+        } else if (options.keyEncoding !== keyFormat) {
+          options = { ...options, keyEncoding: keyFormat };
+        }
+        const mappedKeys = new Array(keys.length);
+        for (let i = 0; i < keys.length; i++) {
+          const key = keys[i];
+          this._assertValidKey(key);
+          mappedKeys[i] = this.prefixKey(keyEncoding.encode(key), keyFormat, true);
+        }
+        snapshot?.ref();
+        try {
+          return this._hasMany(mappedKeys, options);
+        } finally {
+          snapshot?.unref();
+        }
+      }
+      async _hasMany(keys, options) {
+        throw new ModuleError("Database does not support hasMany()", {
+          code: "LEVEL_NOT_SUPPORTED"
+        });
+      }
       async put(key, value, options) {
         if (!this.hooks.prewrite.noop) {
           return this.batch([{ type: "put", key, value }], options);
         }
-        options = getOptions(options, this[kDefaultOptions].entry);
-        if (this[kStatus] === "opening") {
+        options = getOptions(options, this.#defaultOptions.entry);
+        if (this.#status === "opening") {
           return this.deferAsync(() => this.put(key, value, options));
         }
-        assertOpen(this);
-        const err = this._checkKey(key) || this._checkValue(value);
-        if (err) throw err;
+        this.#assertOpen();
+        this._assertValidKey(key);
+        this._assertValidValue(value);
         const keyEncoding = this.keyEncoding(options.keyEncoding);
         const valueEncoding = this.valueEncoding(options.valueEncoding);
         const keyFormat = keyEncoding.format;
         const valueFormat = valueEncoding.format;
-        const enableWriteEvent = this[kEventMonitor].write;
+        const enableWriteEvent = this.#eventMonitor.write;
         const original = options;
-        if (options === this[kDefaultOptions].entry) {
-          options = this[kDefaultOptions].entryFormat;
+        if (options === this.#defaultOptions.entry) {
+          options = this.#defaultOptions.entryFormat;
         } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = Object.assign({}, options, { keyEncoding: keyFormat, valueEncoding: valueFormat });
+          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
         }
         const encodedKey = keyEncoding.encode(key);
         const prefixedKey = this.prefixKey(encodedKey, keyFormat, true);
         const encodedValue = valueEncoding.encode(value);
         await this._put(prefixedKey, encodedValue, options);
         if (enableWriteEvent) {
-          const op = Object.assign({}, original, {
+          const op = {
+            ...original,
             type: "put",
             key,
             value,
@@ -2395,10 +2521,8 @@ var require_abstract_level = __commonJS({
             valueEncoding,
             encodedKey,
             encodedValue
-          });
+          };
           this.emit("write", [op]);
-        } else {
-          this.emit("put", key, value);
         }
       }
       async _put(key, value, options) {
@@ -2407,35 +2531,33 @@ var require_abstract_level = __commonJS({
         if (!this.hooks.prewrite.noop) {
           return this.batch([{ type: "del", key }], options);
         }
-        options = getOptions(options, this[kDefaultOptions].key);
-        if (this[kStatus] === "opening") {
+        options = getOptions(options, this.#defaultOptions.key);
+        if (this.#status === "opening") {
           return this.deferAsync(() => this.del(key, options));
         }
-        assertOpen(this);
-        const err = this._checkKey(key);
-        if (err) throw err;
+        this.#assertOpen();
+        this._assertValidKey(key);
         const keyEncoding = this.keyEncoding(options.keyEncoding);
         const keyFormat = keyEncoding.format;
-        const enableWriteEvent = this[kEventMonitor].write;
+        const enableWriteEvent = this.#eventMonitor.write;
         const original = options;
-        if (options === this[kDefaultOptions].key) {
-          options = this[kDefaultOptions].keyFormat;
+        if (options === this.#defaultOptions.key) {
+          options = this.#defaultOptions.keyFormat;
         } else if (options.keyEncoding !== keyFormat) {
-          options = Object.assign({}, options, { keyEncoding: keyFormat });
+          options = { ...options, keyEncoding: keyFormat };
         }
         const encodedKey = keyEncoding.encode(key);
         const prefixedKey = this.prefixKey(encodedKey, keyFormat, true);
         await this._del(prefixedKey, options);
         if (enableWriteEvent) {
-          const op = Object.assign({}, original, {
+          const op = {
+            ...original,
             type: "del",
             key,
             keyEncoding,
             encodedKey
-          });
+          };
           this.emit("write", [op]);
-        } else {
-          this.emit("del", key);
         }
       }
       async _del(key, options) {
@@ -2445,18 +2567,18 @@ var require_abstract_level = __commonJS({
       // of classic-level, that should not be copied to individual operations.
       batch(operations, options) {
         if (!arguments.length) {
-          assertOpen(this);
+          this.#assertOpen();
           return this._chainedBatch();
         }
-        options = getOptions(options, this[kDefaultOptions].empty);
-        return this[kArrayBatch](operations, options);
+        options = getOptions(options, this.#defaultOptions.empty);
+        return this.#arrayBatch(operations, options);
       }
       // Wrapped for async error handling
-      async [kArrayBatch](operations, options) {
-        if (this[kStatus] === "opening") {
-          return this.deferAsync(() => this[kArrayBatch](operations, options));
+      async #arrayBatch(operations, options) {
+        if (this.#status === "opening") {
+          return this.deferAsync(() => this.#arrayBatch(operations, options));
         }
-        assertOpen(this);
+        this.#assertOpen();
         if (!Array.isArray(operations)) {
           throw new TypeError("The first argument 'operations' must be an array");
         }
@@ -2465,21 +2587,19 @@ var require_abstract_level = __commonJS({
         }
         const length = operations.length;
         const enablePrewriteHook = !this.hooks.prewrite.noop;
-        const enableWriteEvent = this[kEventMonitor].write;
+        const enableWriteEvent = this.#eventMonitor.write;
         const publicOperations = enableWriteEvent ? new Array(length) : null;
         const privateOperations = new Array(length);
         const prewriteBatch = enablePrewriteHook ? new PrewriteBatch(this, privateOperations, publicOperations) : null;
         for (let i = 0; i < length; i++) {
-          const op = Object.assign({}, options, operations[i]);
+          const op = { ...options, ...operations[i] };
           const isPut = op.type === "put";
           const delegated = op.sublevel != null;
           const db = delegated ? op.sublevel : this;
-          const keyError = db._checkKey(op.key);
-          if (keyError != null) throw keyError;
+          db._assertValidKey(op.key);
           op.keyEncoding = db.keyEncoding(op.keyEncoding);
           if (isPut) {
-            const valueError = db._checkValue(op.value);
-            if (valueError != null) throw valueError;
+            db._assertValidValue(op.value);
             op.valueEncoding = db.valueEncoding(op.valueEncoding);
           } else if (op.type !== "del") {
             throw new TypeError("A batch operation must have a type property that is 'put' or 'del'");
@@ -2506,7 +2626,7 @@ var require_abstract_level = __commonJS({
           }
           let publicOperation = null;
           if (enableWriteEvent && !siblings) {
-            publicOperation = Object.assign({}, op);
+            publicOperation = { ...op };
             publicOperation.encodedKey = encodedKey;
             if (delegated) {
               publicOperation.key = encodedKey;
@@ -2535,8 +2655,6 @@ var require_abstract_level = __commonJS({
         await this._batch(privateOperations, options);
         if (enableWriteEvent) {
           this.emit("write", publicOperations);
-        } else if (!enablePrewriteHook) {
-          this.emit("batch", operations);
         }
       }
       async _batch(operations, options) {
@@ -2563,25 +2681,31 @@ var require_abstract_level = __commonJS({
         return key;
       }
       async clear(options) {
-        options = getOptions(options, this[kDefaultOptions].empty);
-        if (this[kStatus] === "opening") {
+        options = getOptions(options, this.#defaultOptions.empty);
+        if (this.#status === "opening") {
           return this.deferAsync(() => this.clear(options));
         }
-        assertOpen(this);
+        this.#assertOpen();
         const original = options;
         const keyEncoding = this.keyEncoding(options.keyEncoding);
+        const snapshot = options.snapshot;
         options = rangeOptions(options, keyEncoding);
         options.keyEncoding = keyEncoding.format;
         if (options.limit !== 0) {
-          await this._clear(options);
+          snapshot?.ref();
+          try {
+            await this._clear(options);
+          } finally {
+            snapshot?.unref();
+          }
           this.emit("clear", original);
         }
       }
       async _clear(options) {
       }
       iterator(options) {
-        const keyEncoding = this.keyEncoding(options && options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options && options.valueEncoding);
+        const keyEncoding = this.keyEncoding(options?.keyEncoding);
+        const valueEncoding = this.valueEncoding(options?.valueEncoding);
         options = rangeOptions(options, keyEncoding);
         options.keys = options.keys !== false;
         options.values = options.values !== false;
@@ -2589,54 +2713,68 @@ var require_abstract_level = __commonJS({
         options[AbstractIterator.valueEncoding] = valueEncoding;
         options.keyEncoding = keyEncoding.format;
         options.valueEncoding = valueEncoding.format;
-        if (this[kStatus] === "opening") {
+        if (this.#status === "opening") {
           return new DeferredIterator(this, options);
         }
-        assertOpen(this);
+        this.#assertOpen();
         return this._iterator(options);
       }
       _iterator(options) {
         return new AbstractIterator(this, options);
       }
       keys(options) {
-        const keyEncoding = this.keyEncoding(options && options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options && options.valueEncoding);
+        const keyEncoding = this.keyEncoding(options?.keyEncoding);
+        const valueEncoding = this.valueEncoding(options?.valueEncoding);
         options = rangeOptions(options, keyEncoding);
         options[AbstractIterator.keyEncoding] = keyEncoding;
         options[AbstractIterator.valueEncoding] = valueEncoding;
         options.keyEncoding = keyEncoding.format;
         options.valueEncoding = valueEncoding.format;
-        if (this[kStatus] === "opening") {
+        if (this.#status === "opening") {
           return new DeferredKeyIterator(this, options);
         }
-        assertOpen(this);
+        this.#assertOpen();
         return this._keys(options);
       }
       _keys(options) {
         return new DefaultKeyIterator(this, options);
       }
       values(options) {
-        const keyEncoding = this.keyEncoding(options && options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options && options.valueEncoding);
+        const keyEncoding = this.keyEncoding(options?.keyEncoding);
+        const valueEncoding = this.valueEncoding(options?.valueEncoding);
         options = rangeOptions(options, keyEncoding);
         options[AbstractIterator.keyEncoding] = keyEncoding;
         options[AbstractIterator.valueEncoding] = valueEncoding;
         options.keyEncoding = keyEncoding.format;
         options.valueEncoding = valueEncoding.format;
-        if (this[kStatus] === "opening") {
+        if (this.#status === "opening") {
           return new DeferredValueIterator(this, options);
         }
-        assertOpen(this);
+        this.#assertOpen();
         return this._values(options);
       }
       _values(options) {
         return new DefaultValueIterator(this, options);
       }
+      snapshot(options) {
+        this.#assertOpen();
+        if (typeof options !== "object" || options === null) {
+          options = this.#defaultOptions.owner;
+        } else if (options.owner == null) {
+          options = { ...options, owner: this };
+        }
+        return this._snapshot(options);
+      }
+      _snapshot(options) {
+        throw new ModuleError("Database does not support explicit snapshots", {
+          code: "LEVEL_NOT_SUPPORTED"
+        });
+      }
       defer(fn, options) {
         if (typeof fn !== "function") {
           throw new TypeError("The first argument must be a function");
         }
-        this[kQueue].add(function(abortError) {
+        this.#queue.add(function(abortError) {
           if (!abortError) fn();
         }, options);
       }
@@ -2645,37 +2783,49 @@ var require_abstract_level = __commonJS({
           throw new TypeError("The first argument must be a function");
         }
         return new Promise((resolve, reject) => {
-          this[kQueue].add(function(abortError) {
+          this.#queue.add(function(abortError) {
             if (abortError) reject(abortError);
             else fn().then(resolve, reject);
           }, options);
         });
       }
-      // TODO: docs and types
       attachResource(resource) {
         if (typeof resource !== "object" || resource === null || typeof resource.close !== "function") {
           throw new TypeError("The first argument must be a resource object");
         }
-        this[kResources].add(resource);
+        this.#resources.add(resource);
       }
-      // TODO: docs and types
       detachResource(resource) {
-        this[kResources].delete(resource);
+        this.#resources.delete(resource);
       }
       _chainedBatch() {
         return new DefaultChainedBatch(this);
       }
-      _checkKey(key) {
+      _assertValidKey(key) {
         if (key === null || key === void 0) {
-          return new ModuleError("Key cannot be null or undefined", {
+          throw new ModuleError("Key cannot be null or undefined", {
             code: "LEVEL_INVALID_KEY"
           });
         }
       }
-      _checkValue(value) {
+      _assertValidValue(value) {
         if (value === null || value === void 0) {
-          return new ModuleError("Value cannot be null or undefined", {
+          throw new ModuleError("Value cannot be null or undefined", {
             code: "LEVEL_INVALID_VALUE"
+          });
+        }
+      }
+      #assertOpen() {
+        if (this.#status !== "open") {
+          throw new ModuleError("Database is not open", {
+            code: "LEVEL_DATABASE_NOT_OPEN"
+          });
+        }
+      }
+      #assertUnlocked() {
+        if (this.#statusLocked) {
+          throw new ModuleError("Database status is locked", {
+            code: "LEVEL_STATUS_LOCKED"
           });
         }
       }
@@ -2683,20 +2833,11 @@ var require_abstract_level = __commonJS({
     var { AbstractSublevel } = require_abstract_sublevel()({ AbstractLevel });
     exports2.AbstractLevel = AbstractLevel;
     exports2.AbstractSublevel = AbstractSublevel;
-    var assertOpen = function(db) {
-      if (db[kStatus] !== "open") {
-        throw new ModuleError("Database is not open", {
-          code: "LEVEL_DATABASE_NOT_OPEN"
-        });
-      }
-    };
-    var assertUnlocked = function(db) {
-      if (db[kStatusLocked]) {
-        throw new ModuleError("Database status is locked", {
-          code: "LEVEL_STATUS_LOCKED"
-        });
-      }
-    };
+    if (typeof Symbol.asyncDispose === "symbol") {
+      AbstractLevel.prototype[Symbol.asyncDispose] = async function() {
+        return this.close();
+      };
+    }
     var formats = function(db) {
       return Object.keys(db.supports.encodings).filter((k) => !!db.supports.encodings[k]);
     };
@@ -2733,9 +2874,75 @@ var require_abstract_level = __commonJS({
   }
 });
 
-// node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/index.js
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-snapshot.js
+var require_abstract_snapshot = __commonJS({
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-snapshot.js"(exports2) {
+    "use strict";
+    var ModuleError = require_module_error();
+    var { noop } = require_common();
+    var AbstractSnapshot = class {
+      #open = true;
+      #referenceCount = 0;
+      #pendingClose = null;
+      #closePromise = null;
+      #owner;
+      constructor(options) {
+        const owner = options.owner;
+        if (typeof owner !== "object" || owner === null) {
+          const hint = owner === null ? "null" : typeof owner;
+          throw new TypeError(`Owner must be an abstract-level database, received ${hint}`);
+        }
+        this.#owner = owner;
+        this.#owner.attachResource(this);
+      }
+      ref() {
+        if (!this.#open) {
+          throw new ModuleError("Snapshot is not open: cannot use snapshot after close()", {
+            code: "LEVEL_SNAPSHOT_NOT_OPEN"
+          });
+        }
+        this.#referenceCount++;
+      }
+      unref() {
+        if (--this.#referenceCount === 0) {
+          this.#pendingClose?.();
+        }
+      }
+      async close() {
+        if (this.#closePromise !== null) {
+          return this.#closePromise.catch(noop);
+        }
+        this.#open = false;
+        this.#closePromise = new Promise((resolve, reject) => {
+          this.#pendingClose = () => {
+            this.#pendingClose = null;
+            privateClose(this, this.#owner).then(resolve, reject);
+          };
+        });
+        if (this.#referenceCount === 0) {
+          this.#pendingClose();
+        }
+        return this.#closePromise;
+      }
+      async _close() {
+      }
+    };
+    if (typeof Symbol.asyncDispose === "symbol") {
+      AbstractSnapshot.prototype[Symbol.asyncDispose] = async function() {
+        return this.close();
+      };
+    }
+    var privateClose = async function(snapshot, owner) {
+      await snapshot._close();
+      owner.detachResource(snapshot);
+    };
+    exports2.AbstractSnapshot = AbstractSnapshot;
+  }
+});
+
+// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/index.js
 var require_abstract_level2 = __commonJS({
-  "node_modules/.pnpm/abstract-level@2.0.2/node_modules/abstract-level/index.js"(exports2) {
+  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/index.js"(exports2) {
     "use strict";
     exports2.AbstractLevel = require_abstract_level().AbstractLevel;
     exports2.AbstractSublevel = require_abstract_level().AbstractSublevel;
@@ -2743,12 +2950,13 @@ var require_abstract_level2 = __commonJS({
     exports2.AbstractKeyIterator = require_abstract_iterator().AbstractKeyIterator;
     exports2.AbstractValueIterator = require_abstract_iterator().AbstractValueIterator;
     exports2.AbstractChainedBatch = require_abstract_chained_batch().AbstractChainedBatch;
+    exports2.AbstractSnapshot = require_abstract_snapshot().AbstractSnapshot;
   }
 });
 
-// node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js
+// ../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js
 var require_node_gyp_build = __commonJS({
-  "node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js"(exports2, module2) {
+  "../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js"(exports2, module2) {
     "use strict";
     var fs = require("fs");
     var path4 = require("path");
@@ -2916,9 +3124,9 @@ var require_node_gyp_build = __commonJS({
   }
 });
 
-// node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js
+// ../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js
 var require_node_gyp_build2 = __commonJS({
-  "node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js"(exports2, module2) {
+  "../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js"(exports2, module2) {
     "use strict";
     var runtimeRequire = typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
     if (typeof runtimeRequire.addon === "function") {
@@ -2929,17 +3137,17 @@ var require_node_gyp_build2 = __commonJS({
   }
 });
 
-// node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/binding.js
+// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/binding.js
 var require_binding = __commonJS({
-  "node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/binding.js"(exports2, module2) {
+  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/binding.js"(exports2, module2) {
     "use strict";
     module2.exports = require_node_gyp_build2()(__dirname);
   }
 });
 
-// node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/chained-batch.js
+// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/chained-batch.js
 var require_chained_batch = __commonJS({
-  "node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/chained-batch.js"(exports2) {
+  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/chained-batch.js"(exports2) {
     "use strict";
     var { AbstractChainedBatch } = require_abstract_level2();
     var binding = require_binding();
@@ -2968,9 +3176,9 @@ var require_chained_batch = __commonJS({
   }
 });
 
-// node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/iterator.js
+// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/iterator.js
 var require_iterator = __commonJS({
-  "node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/iterator.js"(exports2) {
+  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/iterator.js"(exports2) {
     "use strict";
     var { AbstractIterator } = require_abstract_level2();
     var binding = require_binding();
@@ -2984,10 +3192,10 @@ var require_iterator = __commonJS({
     var empty = [];
     var STATE_ENDED = 1;
     var Iterator = class extends AbstractIterator {
-      constructor(db, context, options) {
+      constructor(db, context, options, snapshotCtx) {
         super(db, options);
         this[kState] = new Uint8Array(1);
-        this[kContext] = binding.iterator_init(context, this[kState], options);
+        this[kContext] = binding.iterator_init(context, this[kState], options, snapshotCtx);
         this[kFirst] = true;
         this[kCache] = empty;
         this[kPosition] = 0;
@@ -3044,7 +3252,7 @@ var require_iterator = __commonJS({
           this[kSignal].removeEventListener("abort", this[kAbort]);
           this[kSignal] = null;
         }
-        return binding.iterator_close(this[kContext]);
+        binding.iterator_close(this[kContext]);
       }
       [kAbort]() {
         this[kSignal] = null;
@@ -3059,11 +3267,11 @@ var require_iterator = __commonJS({
   }
 });
 
-// node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/index.js
+// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/index.js
 var require_classic_level = __commonJS({
-  "node_modules/.pnpm/classic-level@2.0.0/node_modules/classic-level/index.js"(exports2) {
+  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/index.js"(exports2) {
     "use strict";
-    var { AbstractLevel } = require_abstract_level2();
+    var { AbstractLevel, AbstractSnapshot } = require_abstract_level2();
     var ModuleError = require_module_error();
     var fsp = require("fs/promises");
     var binding = require_binding();
@@ -3072,6 +3280,7 @@ var require_classic_level = __commonJS({
     var kContext = Symbol("context");
     var kLocation = Symbol("location");
     var ClassicLevel = class extends AbstractLevel {
+      #sharedBuffer = null;
       constructor(location, options) {
         if (typeof location !== "string" || location === "") {
           throw new TypeError("The first argument 'location' must be a non-empty string");
@@ -3082,9 +3291,11 @@ var require_classic_level = __commonJS({
             utf8: true,
             view: true
           },
-          seek: true,
+          has: true,
           createIfMissing: true,
           errorIfExists: true,
+          explicitSnapshots: true,
+          getSync: true,
           additionalMethods: {
             approximateSize: true,
             compactRange: true
@@ -3112,21 +3323,98 @@ var require_classic_level = __commonJS({
         return binding.db_put(this[kContext], key, value, options);
       }
       async _get(key, options) {
+        let flags = 0;
+        if (options.fillCache !== false) flags |= FLAG_FILL_CACHE;
+        if (options.valueEncoding !== "utf8") flags |= FLAG_VALUE_AS_BUFFER;
+        if (options.keyEncoding !== "utf8") {
+          flags |= FLAG_KEY_AS_BUFFER;
+          if (key.buffer.resizable) {
+            key = new Uint8Array(key);
+          }
+        }
         return binding.db_get(
           this[kContext],
+          flags,
           key,
-          encodingEnum(options.valueEncoding),
-          options.fillCache
+          options.snapshot?.[kContext]
         );
       }
+      _getSync(key, options) {
+        let flags = 0;
+        if (options.fillCache !== false) flags |= FLAG_FILL_CACHE;
+        if (options.valueEncoding !== "utf8") flags |= FLAG_VALUE_AS_BUFFER;
+        if (options.keyEncoding !== "utf8") {
+          return binding.db_get_sync(
+            this[kContext],
+            flags,
+            key,
+            options.snapshot?.[kContext]
+          );
+        } else {
+          let keySize;
+          if (this.#sharedBuffer === null) {
+            keySize = this.#createSharedBuffer(key);
+          } else {
+            keySize = this.#sharedBuffer.write(key);
+            if (keySize === this.#sharedBuffer.byteLength) {
+              keySize = this.#createSharedBuffer(key);
+            }
+          }
+          return binding.db_get_sync(
+            this[kContext],
+            flags | FLAG_SHARED_KEY,
+            keySize,
+            options.snapshot?.[kContext]
+          );
+        }
+      }
+      #createSharedBuffer(str) {
+        this.#sharedBuffer = Buffer.allocUnsafe(Buffer.byteLength(str) + 64);
+        binding.db_set_shared_buffer(this[kContext], this.#sharedBuffer);
+        return this.#sharedBuffer.write(str);
+      }
       async _getMany(keys, options) {
-        return binding.db_get_many(this[kContext], keys, options);
+        return binding.db_get_many(
+          this[kContext],
+          keys,
+          options,
+          options.snapshot?.[kContext]
+        );
+      }
+      async _has(key, options) {
+        return binding.db_has(
+          this[kContext],
+          key,
+          options.fillCache,
+          options.snapshot?.[kContext]
+        );
+      }
+      async _hasMany(keys, options) {
+        const wordCount = keys.length + 32 >>> 5;
+        const buffer = new ArrayBuffer(wordCount * 4);
+        const bitset = new Uint32Array(buffer);
+        await binding.db_has_many(
+          this[kContext],
+          keys,
+          options.fillCache,
+          options.snapshot?.[kContext],
+          buffer
+        );
+        const values = new Array(keys.length);
+        for (let i = 0; i < values.length; i++) {
+          values[i] = (bitset[i >>> 5] & 1 << (i & 31)) !== 0;
+        }
+        return values;
       }
       async _del(key, options) {
         return binding.db_del(this[kContext], key, options);
       }
       async _clear(options) {
-        return binding.db_clear(this[kContext], options);
+        return binding.db_clear(
+          this[kContext],
+          options,
+          options.snapshot?.[kContext]
+        );
       }
       _chainedBatch() {
         return new ChainedBatch(this, this[kContext]);
@@ -3184,7 +3472,15 @@ var require_classic_level = __commonJS({
         return binding.db_get_property(this[kContext], property);
       }
       _iterator(options) {
-        return new Iterator(this, this[kContext], options);
+        return new Iterator(
+          this,
+          this[kContext],
+          options,
+          options.snapshot?.[kContext]
+        );
+      }
+      _snapshot(options) {
+        return new Snapshot(this[kContext], options);
       }
       static async destroy(location) {
         if (typeof location !== "string" || location === "") {
@@ -3199,21 +3495,29 @@ var require_classic_level = __commonJS({
         return binding.repair_db(location);
       }
     };
-    exports2.ClassicLevel = ClassicLevel;
-    var encodingEnum = function(encoding) {
-      if (encoding === "buffer") return 0;
-      if (encoding === "utf8") return 1;
-      if (encoding === "view") return 2;
+    var Snapshot = class extends AbstractSnapshot {
+      constructor(context, options) {
+        super(options);
+        this[kContext] = binding.snapshot_init(context);
+      }
+      async _close() {
+        binding.snapshot_close(this[kContext]);
+      }
     };
+    exports2.ClassicLevel = ClassicLevel;
+    var FLAG_FILL_CACHE = 1;
+    var FLAG_KEY_AS_BUFFER = 2;
+    var FLAG_VALUE_AS_BUFFER = 4;
+    var FLAG_SHARED_KEY = 8;
   }
 });
 
-// node_modules/.pnpm/dotenv@16.5.0/node_modules/dotenv/package.json
+// ../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/package.json
 var require_package = __commonJS({
-  "node_modules/.pnpm/dotenv@16.5.0/node_modules/dotenv/package.json"(exports2, module2) {
+  "../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/package.json"(exports2, module2) {
     module2.exports = {
       name: "dotenv",
-      version: "16.5.0",
+      version: "16.6.1",
       description: "Loads environment variables from .env file",
       main: "lib/main.js",
       types: "lib/main.d.ts",
@@ -3236,7 +3540,7 @@ var require_package = __commonJS({
         lint: "standard",
         pretest: "npm run lint && npm run dts-check",
         test: "tap run --allow-empty-coverage --disable-coverage --timeout=60000",
-        "test:coverage": "tap run --show-full-coverage --timeout=60000 --coverage-report=lcov",
+        "test:coverage": "tap run --show-full-coverage --timeout=60000 --coverage-report=text --coverage-report=lcov",
         prerelease: "npm test",
         release: "standard-version"
       },
@@ -3276,9 +3580,9 @@ var require_package = __commonJS({
   }
 });
 
-// node_modules/.pnpm/dotenv@16.5.0/node_modules/dotenv/lib/main.js
+// ../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/lib/main.js
 var require_main = __commonJS({
-  "node_modules/.pnpm/dotenv@16.5.0/node_modules/dotenv/lib/main.js"(exports2, module2) {
+  "../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/lib/main.js"(exports2, module2) {
     "use strict";
     var fs = require("fs");
     var path4 = require("path");
@@ -3307,8 +3611,10 @@ var require_main = __commonJS({
       return obj;
     }
     function _parseVault(options) {
+      options = options || {};
       const vaultPath = _vaultPath(options);
-      const result = DotenvModule.configDotenv({ path: vaultPath });
+      options.path = vaultPath;
+      const result = DotenvModule.configDotenv(options);
       if (!result.parsed) {
         const err = new Error(`MISSING_DATA: Cannot parse ${vaultPath} for an unknown reason`);
         err.code = "MISSING_DATA";
@@ -3336,6 +3642,9 @@ var require_main = __commonJS({
     }
     function _debug(message) {
       console.log(`[dotenv@${version}][DEBUG] ${message}`);
+    }
+    function _log(message) {
+      console.log(`[dotenv@${version}] ${message}`);
     }
     function _dotenvKey(options) {
       if (options && options.DOTENV_KEY && options.DOTENV_KEY.length > 0) {
@@ -3404,8 +3713,9 @@ var require_main = __commonJS({
     }
     function _configVault(options) {
       const debug = Boolean(options && options.debug);
-      if (debug) {
-        _debug("Loading env from encrypted .env.vault");
+      const quiet = options && "quiet" in options ? options.quiet : true;
+      if (debug || !quiet) {
+        _log("Loading env from encrypted .env.vault");
       }
       const parsed = DotenvModule._parseVault(options);
       let processEnv = process.env;
@@ -3419,6 +3729,7 @@ var require_main = __commonJS({
       const dotenvPath = path4.resolve(process.cwd(), ".env");
       let encoding = "utf8";
       const debug = Boolean(options && options.debug);
+      const quiet = options && "quiet" in options ? options.quiet : true;
       if (options && options.encoding) {
         encoding = options.encoding;
       } else {
@@ -3455,6 +3766,22 @@ var require_main = __commonJS({
         processEnv = options.processEnv;
       }
       DotenvModule.populate(processEnv, parsedAll, options);
+      if (debug || !quiet) {
+        const keysCount = Object.keys(parsedAll).length;
+        const shortPaths = [];
+        for (const filePath of optionPaths) {
+          try {
+            const relative = path4.relative(process.cwd(), filePath);
+            shortPaths.push(relative);
+          } catch (e) {
+            if (debug) {
+              _debug(`Failed to load ${filePath} ${e.message}`);
+            }
+            lastError = e;
+          }
+        }
+        _log(`injecting env (${keysCount}) from ${shortPaths.join(",")}`);
+      }
       if (lastError) {
         return { parsed: parsedAll, error: lastError };
       } else {
@@ -3544,9 +3871,9 @@ var require_main = __commonJS({
   }
 });
 
-// node_modules/.pnpm/@foundryvtt+utils@https+++c_abf8bd438502ad24e969415d859ab748/node_modules/@foundryvtt/utils/dist/index.js
+// ../fvtt-utils/dist/index.js
 var require_dist = __commonJS({
-  "node_modules/.pnpm/@foundryvtt+utils@https+++c_abf8bd438502ad24e969415d859ab748/node_modules/@foundryvtt/utils/dist/index.js"(exports2, module2) {
+  "../fvtt-utils/dist/index.js"(exports2, module2) {
     "use strict";
     var __create2 = Object.create;
     var __defProp2 = Object.defineProperty;
@@ -5781,7 +6108,7 @@ var require_dist = __commonJS({
       return quotingType === QUOTING_TYPE_DOUBLE ? STYLE_DOUBLE : STYLE_SINGLE;
     }
     function writeScalar(state, string, level, iskey, inblock) {
-      state.dump = function() {
+      state.dump = (function() {
         if (string.length === 0) {
           return state.quotingType === QUOTING_TYPE_DOUBLE ? '""' : "''";
         }
@@ -5819,7 +6146,7 @@ var require_dist = __commonJS({
           default:
             throw new exception("impossible error: invalid scalar style");
         }
-      }();
+      })();
     }
     function blockHeader(string, indentPerLevel) {
       var indentIndicator = needIndentIndicator(string) ? String(indentPerLevel) : "";
@@ -5833,12 +6160,12 @@ var require_dist = __commonJS({
     }
     function foldString(string, width) {
       var lineRe = /(\n+)([^\n]*)/g;
-      var result = function() {
+      var result = (function() {
         var nextLF = string.indexOf("\n");
         nextLF = nextLF !== -1 ? nextLF : string.length;
         lineRe.lastIndex = nextLF;
         return foldLine(string.slice(0, nextLF), width);
-      }();
+      })();
       var prevMoreIndented = string[0] === "\n" || string[0] === " ";
       var moreIndented;
       var match;
@@ -6627,10 +6954,12 @@ var require_dist = __commonJS({
       if (found.length === 0) return void 0;
       const manifestPath = found[0];
       const { base } = import_path4.default.parse(manifestPath);
+      let cachedManifest = void 0;
+      const manifest = async () => cachedManifest ??= await loadManifest(manifestPath);
       const manifestInfo = {
         path: manifestPath,
         type: base,
-        load: () => loadManifest(manifestPath),
+        manifest,
         baseUrl: () => getFoundryBaseUrl(manifestInfo)
       };
       return manifestInfo;
@@ -6647,7 +6976,7 @@ var require_dist = __commonJS({
     async function getFoundryBaseUrl(manifestInfo) {
       const prefix = mapping.get(manifestInfo.type);
       if (!prefix) return void 0;
-      const { id } = await manifestInfo.load() ?? { id: void 0 };
+      const { id } = await manifestInfo.manifest() ?? { id: void 0 };
       if (!id) return void 0;
       return import_path4.default.posix.join(prefix, id);
     }
@@ -6756,7 +7085,7 @@ var import_helpers2 = require("yargs/helpers");
 async function link(done) {
   const foundryManifestInfo = await (0, import_utils3.findManifest)();
   if (!foundryManifestInfo) return done();
-  const foundryManifest = await foundryManifestInfo.load();
+  const foundryManifest = await foundryManifestInfo.manifest();
   const foundryConfig = await (0, import_utils3.getFoundryConfigInfo)();
   if (!foundryManifest || !foundryConfig) return done();
   const linkDirectories = foundryConfig.resolvedDataPath.map(
@@ -6789,10 +7118,6 @@ async function link(done) {
 });
 /*! Bundled license information:
 
-@foundryvtt/utils/dist/index.js:
-  (*! Bundled license information:
-  
-  js-yaml/dist/js-yaml.mjs:
-    (*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT *)
-  *)
+js-yaml/dist/js-yaml.mjs:
+  (*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT *)
 */

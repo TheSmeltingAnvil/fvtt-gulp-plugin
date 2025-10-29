@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.24.0",
-    "@foundryvtt/utils": "github:TheSmeltingAnvil/fvtt-utils#dev",
+    "@foundryvtt/utils": "workspace:^",
     "@types/fs-extra": "^11.0.4",
     "@types/gulp": "^4.0.17",
     "@types/js-yaml": "^4.0.9",
