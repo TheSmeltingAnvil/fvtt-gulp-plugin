@@ -21,8 +21,11 @@ export async function link(done: () => void) {
   const foundryConfig = await getFoundryConfigInfo()
   if (!foundryManifest || !foundryConfig) return done()
 
-  const linkDirectories = foundryConfig.resolvedDataPath.map((dataPath: string) =>
-    path.resolve(dataPath, "Data", foundryManifestInfo.path),
+  const linkDirectories = await Promise.all(
+    foundryConfig.resolvedDataPath.map(async (dataPath: string) => {
+      const baseUrl = await foundryManifestInfo.baseUrl()
+      return path.join(dataPath, "Data", baseUrl!)
+    }),
   )
 
   const argv = yargs(hideBin(process.argv)).options({

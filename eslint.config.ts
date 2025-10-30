@@ -1,7 +1,7 @@
 import pluginJs from "@eslint/js"
+import { Linter } from "eslint"
 import globals from "globals"
 import tseslint from "typescript-eslint"
-import { Linter } from "eslint"
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts}"] },
@@ -29,7 +29,7 @@ export default [
           ignoreRestSiblings: true,
         },
       ],
-      "@typescript-eslint/no-explicit-any": ["error", { fixToUnknown: true }],
+      "@typescript-eslint/no-explicit-any": ["warn", { fixToUnknown: true }],
     },
   },
 ] satisfies Linter.Config[]

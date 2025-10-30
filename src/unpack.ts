@@ -1,7 +1,7 @@
-import * as utils from "@foundryvtt/utils"
 import * as fse from "fs-extra"
 import * as YAML from "js-yaml"
-import path from "node:path"
+import * as path from "path"
+import { extractPack } from "./_database"
 
 export async function unpack(done: () => void): Promise<void> {
   const exists = await fse.exists(`dist/packs`)
@@ -14,7 +14,7 @@ export async function unpack(done: () => void): Promise<void> {
     const src = path.resolve("dist/packs/", dir).split(path.sep).join(path.posix.sep)
     const dst = src.replace("dist/packs/", "packs/")
     try {
-      await utils.extractPack(src, dst, { yaml: true, yamlOptions: defaultYamlOptions, log: true })
+      await extractPack(src, dst, { yaml: true, yamlOptions: defaultYamlOptions, log: true })
     } catch (e) {
       console.error(e)
     }

@@ -1,6 +1,6 @@
-import { compilePack } from "@foundryvtt/utils"
 import * as fse from "fs-extra"
 import path from "node:path"
+import { compilePack } from "./_database"
 
 /**
  * Build packs: convert to JSON, compile packs database and copy to output directory.

@@ -30,3488 +30,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js
-var require_picocolors = __commonJS({
-  "../../node_modules/.pnpm/picocolors@1.1.1/node_modules/picocolors/picocolors.js"(exports2, module2) {
-    "use strict";
-    var p = process || {};
-    var argv = p.argv || [];
-    var env = p.env || {};
-    var isColorSupported = !(!!env.NO_COLOR || argv.includes("--no-color")) && (!!env.FORCE_COLOR || argv.includes("--color") || p.platform === "win32" || (p.stdout || {}).isTTY && env.TERM !== "dumb" || !!env.CI);
-    var formatter = (open, close, replace = open) => (input) => {
-      let string = "" + input, index = string.indexOf(close, open.length);
-      return ~index ? open + replaceClose(string, close, replace, index) + close : open + string + close;
-    };
-    var replaceClose = (string, close, replace, index) => {
-      let result = "", cursor = 0;
-      do {
-        result += string.substring(cursor, index) + replace;
-        cursor = index + close.length;
-        index = string.indexOf(close, cursor);
-      } while (~index);
-      return result + string.substring(cursor);
-    };
-    var createColors = (enabled = isColorSupported) => {
-      let f = enabled ? formatter : () => String;
-      return {
-        isColorSupported: enabled,
-        reset: f("\x1B[0m", "\x1B[0m"),
-        bold: f("\x1B[1m", "\x1B[22m", "\x1B[22m\x1B[1m"),
-        dim: f("\x1B[2m", "\x1B[22m", "\x1B[22m\x1B[2m"),
-        italic: f("\x1B[3m", "\x1B[23m"),
-        underline: f("\x1B[4m", "\x1B[24m"),
-        inverse: f("\x1B[7m", "\x1B[27m"),
-        hidden: f("\x1B[8m", "\x1B[28m"),
-        strikethrough: f("\x1B[9m", "\x1B[29m"),
-        black: f("\x1B[30m", "\x1B[39m"),
-        red: f("\x1B[31m", "\x1B[39m"),
-        green: f("\x1B[32m", "\x1B[39m"),
-        yellow: f("\x1B[33m", "\x1B[39m"),
-        blue: f("\x1B[34m", "\x1B[39m"),
-        magenta: f("\x1B[35m", "\x1B[39m"),
-        cyan: f("\x1B[36m", "\x1B[39m"),
-        white: f("\x1B[37m", "\x1B[39m"),
-        gray: f("\x1B[90m", "\x1B[39m"),
-        bgBlack: f("\x1B[40m", "\x1B[49m"),
-        bgRed: f("\x1B[41m", "\x1B[49m"),
-        bgGreen: f("\x1B[42m", "\x1B[49m"),
-        bgYellow: f("\x1B[43m", "\x1B[49m"),
-        bgBlue: f("\x1B[44m", "\x1B[49m"),
-        bgMagenta: f("\x1B[45m", "\x1B[49m"),
-        bgCyan: f("\x1B[46m", "\x1B[49m"),
-        bgWhite: f("\x1B[47m", "\x1B[49m"),
-        blackBright: f("\x1B[90m", "\x1B[39m"),
-        redBright: f("\x1B[91m", "\x1B[39m"),
-        greenBright: f("\x1B[92m", "\x1B[39m"),
-        yellowBright: f("\x1B[93m", "\x1B[39m"),
-        blueBright: f("\x1B[94m", "\x1B[39m"),
-        magentaBright: f("\x1B[95m", "\x1B[39m"),
-        cyanBright: f("\x1B[96m", "\x1B[39m"),
-        whiteBright: f("\x1B[97m", "\x1B[39m"),
-        bgBlackBright: f("\x1B[100m", "\x1B[49m"),
-        bgRedBright: f("\x1B[101m", "\x1B[49m"),
-        bgGreenBright: f("\x1B[102m", "\x1B[49m"),
-        bgYellowBright: f("\x1B[103m", "\x1B[49m"),
-        bgBlueBright: f("\x1B[104m", "\x1B[49m"),
-        bgMagentaBright: f("\x1B[105m", "\x1B[49m"),
-        bgCyanBright: f("\x1B[106m", "\x1B[49m"),
-        bgWhiteBright: f("\x1B[107m", "\x1B[49m")
-      };
-    };
-    module2.exports = createColors();
-    module2.exports.createColors = createColors;
-  }
-});
-
-// ../../node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js
-var require_level_supports = __commonJS({
-  "../../node_modules/.pnpm/level-supports@6.2.0/node_modules/level-supports/index.js"(exports2) {
-    "use strict";
-    exports2.supports = function supports(...manifests) {
-      const manifest = manifests.reduce((acc, m) => Object.assign(acc, m), {});
-      const implicitSnapshots = manifest.implicitSnapshots || manifest.snapshots || false;
-      const explicitSnapshots = manifest.explicitSnapshots || false;
-      return Object.assign(manifest, {
-        implicitSnapshots,
-        explicitSnapshots,
-        snapshots: implicitSnapshots,
-        has: manifest.has || false,
-        permanence: manifest.permanence || false,
-        seek: manifest.seek || false,
-        createIfMissing: manifest.createIfMissing || false,
-        errorIfExists: manifest.errorIfExists || false,
-        deferredOpen: manifest.deferredOpen || false,
-        streams: manifest.streams || false,
-        encodings: Object.assign({}, manifest.encodings),
-        events: Object.assign({}, manifest.events),
-        additionalMethods: Object.assign({}, manifest.additionalMethods),
-        signals: Object.assign({}, manifest.signals)
-      });
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js
-var require_module_error = __commonJS({
-  "../../node_modules/.pnpm/module-error@1.0.2/node_modules/module-error/index.js"(exports2, module2) {
-    "use strict";
-    module2.exports = class ModuleError extends Error {
-      /**
-       * @param {string} message Error message
-       * @param {{ code?: string, cause?: Error, expected?: boolean, transient?: boolean }} [options]
-       */
-      constructor(message, options) {
-        super(message || "");
-        if (typeof options === "object" && options !== null) {
-          if (options.code) this.code = String(options.code);
-          if (options.expected) this.expected = true;
-          if (options.transient) this.transient = true;
-          if (options.cause) this.cause = options.cause;
-        }
-        if (Error.captureStackTrace) {
-          Error.captureStackTrace(this, this.constructor);
-        }
-      }
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js
-var require_text_endec = __commonJS({
-  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/text-endec.js"(exports2, module2) {
-    "use strict";
-    var lazy = null;
-    module2.exports = function() {
-      if (lazy === null) {
-        lazy = {
-          textEncoder: new TextEncoder(),
-          textDecoder: new TextDecoder()
-        };
-      }
-      return lazy;
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js
-var require_encoding = __commonJS({
-  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encoding.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var formats = /* @__PURE__ */ new Set(["buffer", "view", "utf8"]);
-    var Encoding = class {
-      /**
-       * @param {IEncoding<TIn,TFormat,TOut>} options
-       */
-      constructor(options) {
-        this.encode = options.encode || this.encode;
-        this.decode = options.decode || this.decode;
-        this.name = options.name || this.name;
-        this.format = options.format || this.format;
-        if (typeof this.encode !== "function") {
-          throw new TypeError("The 'encode' property must be a function");
-        }
-        if (typeof this.decode !== "function") {
-          throw new TypeError("The 'decode' property must be a function");
-        }
-        this.encode = this.encode.bind(this);
-        this.decode = this.decode.bind(this);
-        if (typeof this.name !== "string" || this.name === "") {
-          throw new TypeError("The 'name' property must be a string");
-        }
-        if (typeof this.format !== "string" || !formats.has(this.format)) {
-          throw new TypeError("The 'format' property must be one of 'buffer', 'view', 'utf8'");
-        }
-        if (options.createViewTranscoder) {
-          this.createViewTranscoder = options.createViewTranscoder;
-        }
-        if (options.createBufferTranscoder) {
-          this.createBufferTranscoder = options.createBufferTranscoder;
-        }
-        if (options.createUTF8Transcoder) {
-          this.createUTF8Transcoder = options.createUTF8Transcoder;
-        }
-      }
-      get commonName() {
-        return (
-          /** @type {string} */
-          this.name.split("+")[0]
-        );
-      }
-      /** @return {BufferFormat<TIn,TOut>} */
-      createBufferTranscoder() {
-        throw new ModuleError(`Encoding '${this.name}' cannot be transcoded to 'buffer'`, {
-          code: "LEVEL_ENCODING_NOT_SUPPORTED"
-        });
-      }
-      /** @return {ViewFormat<TIn,TOut>} */
-      createViewTranscoder() {
-        throw new ModuleError(`Encoding '${this.name}' cannot be transcoded to 'view'`, {
-          code: "LEVEL_ENCODING_NOT_SUPPORTED"
-        });
-      }
-      /** @return {UTF8Format<TIn,TOut>} */
-      createUTF8Transcoder() {
-        throw new ModuleError(`Encoding '${this.name}' cannot be transcoded to 'utf8'`, {
-          code: "LEVEL_ENCODING_NOT_SUPPORTED"
-        });
-      }
-    };
-    exports2.Encoding = Encoding;
-  }
-});
-
-// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js
-var require_formats = __commonJS({
-  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/formats.js"(exports2) {
-    "use strict";
-    var { Buffer: Buffer2 } = require("buffer") || {};
-    var { Encoding } = require_encoding();
-    var textEndec = require_text_endec();
-    var BufferFormat = class extends Encoding {
-      /**
-       * @param {Omit<IEncoding<TIn, Buffer, TOut>, 'format'>} options
-       */
-      constructor(options) {
-        super({ ...options, format: "buffer" });
-      }
-      /** @override */
-      createViewTranscoder() {
-        return new ViewFormat({
-          encode: this.encode,
-          // Buffer is a view (UInt8Array)
-          decode: (data) => this.decode(
-            Buffer2.from(data.buffer, data.byteOffset, data.byteLength)
-          ),
-          name: `${this.name}+view`
-        });
-      }
-      /** @override */
-      createBufferTranscoder() {
-        return this;
-      }
-    };
-    var ViewFormat = class extends Encoding {
-      /**
-       * @param {Omit<IEncoding<TIn, Uint8Array, TOut>, 'format'>} options
-       */
-      constructor(options) {
-        super({ ...options, format: "view" });
-      }
-      /** @override */
-      createBufferTranscoder() {
-        return new BufferFormat({
-          encode: (data) => {
-            const view = this.encode(data);
-            return Buffer2.from(view.buffer, view.byteOffset, view.byteLength);
-          },
-          decode: this.decode,
-          // Buffer is a view (UInt8Array)
-          name: `${this.name}+buffer`
-        });
-      }
-      /** @override */
-      createViewTranscoder() {
-        return this;
-      }
-    };
-    var UTF8Format = class extends Encoding {
-      /**
-       * @param {Omit<IEncoding<TIn, string, TOut>, 'format'>} options
-       */
-      constructor(options) {
-        super({ ...options, format: "utf8" });
-      }
-      /** @override */
-      createBufferTranscoder() {
-        return new BufferFormat({
-          encode: (data) => Buffer2.from(this.encode(data), "utf8"),
-          decode: (data) => this.decode(data.toString("utf8")),
-          name: `${this.name}+buffer`
-        });
-      }
-      /** @override */
-      createViewTranscoder() {
-        const { textEncoder, textDecoder } = textEndec();
-        return new ViewFormat({
-          encode: (data) => textEncoder.encode(this.encode(data)),
-          decode: (data) => this.decode(textDecoder.decode(data)),
-          name: `${this.name}+view`
-        });
-      }
-      /** @override */
-      createUTF8Transcoder() {
-        return this;
-      }
-    };
-    exports2.BufferFormat = BufferFormat;
-    exports2.ViewFormat = ViewFormat;
-    exports2.UTF8Format = UTF8Format;
-  }
-});
-
-// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js
-var require_encodings = __commonJS({
-  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/lib/encodings.js"(exports2) {
-    "use strict";
-    var { Buffer: Buffer2 } = require("buffer") || { Buffer: { isBuffer: () => false } };
-    var { textEncoder, textDecoder } = require_text_endec()();
-    var { BufferFormat, ViewFormat, UTF8Format } = require_formats();
-    var identity = (v) => v;
-    exports2.utf8 = new UTF8Format({
-      encode: function(data) {
-        return Buffer2.isBuffer(data) ? data.toString("utf8") : ArrayBuffer.isView(data) ? textDecoder.decode(data) : String(data);
-      },
-      decode: identity,
-      name: "utf8",
-      createViewTranscoder() {
-        return new ViewFormat({
-          encode: function(data) {
-            return ArrayBuffer.isView(data) ? data : textEncoder.encode(data);
-          },
-          decode: function(data) {
-            return textDecoder.decode(data);
-          },
-          name: `${this.name}+view`
-        });
-      },
-      createBufferTranscoder() {
-        return new BufferFormat({
-          encode: function(data) {
-            return Buffer2.isBuffer(data) ? data : ArrayBuffer.isView(data) ? Buffer2.from(data.buffer, data.byteOffset, data.byteLength) : Buffer2.from(String(data), "utf8");
-          },
-          decode: function(data) {
-            return data.toString("utf8");
-          },
-          name: `${this.name}+buffer`
-        });
-      }
-    });
-    exports2.json = new UTF8Format({
-      encode: JSON.stringify,
-      decode: JSON.parse,
-      name: "json"
-    });
-    exports2.buffer = new BufferFormat({
-      encode: function(data) {
-        return Buffer2.isBuffer(data) ? data : ArrayBuffer.isView(data) ? Buffer2.from(data.buffer, data.byteOffset, data.byteLength) : Buffer2.from(String(data), "utf8");
-      },
-      decode: identity,
-      name: "buffer",
-      createViewTranscoder() {
-        return new ViewFormat({
-          encode: function(data) {
-            return ArrayBuffer.isView(data) ? data : Buffer2.from(String(data), "utf8");
-          },
-          decode: function(data) {
-            return Buffer2.from(data.buffer, data.byteOffset, data.byteLength);
-          },
-          name: `${this.name}+view`
-        });
-      }
-    });
-    exports2.view = new ViewFormat({
-      encode: function(data) {
-        return ArrayBuffer.isView(data) ? data : textEncoder.encode(data);
-      },
-      decode: identity,
-      name: "view",
-      createBufferTranscoder() {
-        return new BufferFormat({
-          encode: function(data) {
-            return Buffer2.isBuffer(data) ? data : ArrayBuffer.isView(data) ? Buffer2.from(data.buffer, data.byteOffset, data.byteLength) : Buffer2.from(String(data), "utf8");
-          },
-          decode: identity,
-          name: `${this.name}+buffer`
-        });
-      }
-    });
-    exports2.hex = new BufferFormat({
-      encode: function(data) {
-        return Buffer2.isBuffer(data) ? data : Buffer2.from(String(data), "hex");
-      },
-      decode: function(buffer) {
-        return buffer.toString("hex");
-      },
-      name: "hex"
-    });
-    exports2.base64 = new BufferFormat({
-      encode: function(data) {
-        return Buffer2.isBuffer(data) ? data : Buffer2.from(String(data), "base64");
-      },
-      decode: function(buffer) {
-        return buffer.toString("base64");
-      },
-      name: "base64"
-    });
-  }
-});
-
-// ../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js
-var require_level_transcoder = __commonJS({
-  "../../node_modules/.pnpm/level-transcoder@1.0.1/node_modules/level-transcoder/index.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var encodings = require_encodings();
-    var { Encoding } = require_encoding();
-    var { BufferFormat, ViewFormat, UTF8Format } = require_formats();
-    var kFormats = Symbol("formats");
-    var kEncodings = Symbol("encodings");
-    var validFormats = /* @__PURE__ */ new Set(["buffer", "view", "utf8"]);
-    var Transcoder = class {
-      /**
-       * @param {Array<'buffer'|'view'|'utf8'>} formats
-       */
-      constructor(formats) {
-        if (!Array.isArray(formats)) {
-          throw new TypeError("The first argument 'formats' must be an array");
-        } else if (!formats.every((f) => validFormats.has(f))) {
-          throw new TypeError("Format must be one of 'buffer', 'view', 'utf8'");
-        }
-        this[kEncodings] = /* @__PURE__ */ new Map();
-        this[kFormats] = new Set(formats);
-        for (const k in encodings) {
-          try {
-            this.encoding(k);
-          } catch (err) {
-            if (err.code !== "LEVEL_ENCODING_NOT_SUPPORTED") throw err;
-          }
-        }
-      }
-      /**
-       * @returns {Array<Encoding<any,T,any>>}
-       */
-      encodings() {
-        return Array.from(new Set(this[kEncodings].values()));
-      }
-      /**
-       * @param {string|MixedEncoding<any, any, any>} encoding
-       * @returns {Encoding<any, T, any>}
-       */
-      encoding(encoding) {
-        let resolved = this[kEncodings].get(encoding);
-        if (resolved === void 0) {
-          if (typeof encoding === "string" && encoding !== "") {
-            resolved = lookup[encoding];
-            if (!resolved) {
-              throw new ModuleError(`Encoding '${encoding}' is not found`, {
-                code: "LEVEL_ENCODING_NOT_FOUND"
-              });
-            }
-          } else if (typeof encoding !== "object" || encoding === null) {
-            throw new TypeError("First argument 'encoding' must be a string or object");
-          } else {
-            resolved = from(encoding);
-          }
-          const { name, format } = resolved;
-          if (!this[kFormats].has(format)) {
-            if (this[kFormats].has("view")) {
-              resolved = resolved.createViewTranscoder();
-            } else if (this[kFormats].has("buffer")) {
-              resolved = resolved.createBufferTranscoder();
-            } else if (this[kFormats].has("utf8")) {
-              resolved = resolved.createUTF8Transcoder();
-            } else {
-              throw new ModuleError(`Encoding '${name}' cannot be transcoded`, {
-                code: "LEVEL_ENCODING_NOT_SUPPORTED"
-              });
-            }
-          }
-          for (const k of [encoding, name, resolved.name, resolved.commonName]) {
-            this[kEncodings].set(k, resolved);
-          }
-        }
-        return resolved;
-      }
-    };
-    exports2.Transcoder = Transcoder;
-    function from(options) {
-      if (options instanceof Encoding) {
-        return options;
-      }
-      const maybeType = "type" in options && typeof options.type === "string" ? options.type : void 0;
-      const name = options.name || maybeType || `anonymous-${anonymousCount++}`;
-      switch (detectFormat(options)) {
-        case "view":
-          return new ViewFormat({ ...options, name });
-        case "utf8":
-          return new UTF8Format({ ...options, name });
-        case "buffer":
-          return new BufferFormat({ ...options, name });
-        default: {
-          throw new TypeError("Format must be one of 'buffer', 'view', 'utf8'");
-        }
-      }
-    }
-    function detectFormat(options) {
-      if ("format" in options && options.format !== void 0) {
-        return options.format;
-      } else if ("buffer" in options && typeof options.buffer === "boolean") {
-        return options.buffer ? "buffer" : "utf8";
-      } else if ("code" in options && Number.isInteger(options.code)) {
-        return "view";
-      } else {
-        return "buffer";
-      }
-    }
-    var aliases = {
-      binary: encodings.buffer,
-      "utf-8": encodings.utf8
-    };
-    var lookup = {
-      ...encodings,
-      ...aliases
-    };
-    var anonymousCount = 0;
-  }
-});
-
-// ../../node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js
-var require_maybe_combine_errors = __commonJS({
-  "../../node_modules/.pnpm/maybe-combine-errors@1.0.0/node_modules/maybe-combine-errors/index.js"(exports2, module2) {
-    "use strict";
-    var kErrors = Symbol("kErrors");
-    module2.exports = function(errors) {
-      errors = errors.filter(defined);
-      if (errors.length === 0) return;
-      if (errors.length === 1) return errors[0];
-      return new CombinedError(errors);
-    };
-    var CombinedError = class extends Error {
-      constructor(errors) {
-        const unique = new Set(errors.map(getMessage).filter(Boolean));
-        const message = Array.from(unique).join("; ");
-        super(message);
-        value(this, "name", "CombinedError");
-        value(this, kErrors, errors);
-        getter(this, "stack", () => errors.map(getStack).join("\n\n"));
-        getter(this, "transient", () => errors.length > 0 && errors.every(transient));
-        getter(this, "expected", () => errors.length > 0 && errors.every(expected));
-      }
-      [Symbol.iterator]() {
-        return this[kErrors][Symbol.iterator]();
-      }
-    };
-    function value(obj, prop, value2) {
-      Object.defineProperty(obj, prop, { value: value2 });
-    }
-    function getter(obj, prop, get) {
-      Object.defineProperty(obj, prop, { get });
-    }
-    function defined(err) {
-      return err != null;
-    }
-    function getMessage(err) {
-      return err.message;
-    }
-    function getStack(err) {
-      return err.stack;
-    }
-    function transient(err) {
-      return err.transient === true;
-    }
-    function expected(err) {
-      return err.expected === true;
-    }
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/common.js
-var require_common = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/common.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var deprecations = /* @__PURE__ */ new Set();
-    exports2.getOptions = function(options, def) {
-      if (typeof options === "object" && options !== null) {
-        return options;
-      }
-      if (def !== void 0) {
-        return def;
-      }
-      return {};
-    };
-    exports2.emptyOptions = Object.freeze({});
-    exports2.noop = function() {
-    };
-    exports2.resolvedPromise = Promise.resolve();
-    exports2.deprecate = function(message) {
-      if (!deprecations.has(message)) {
-        deprecations.add(message);
-        const c = globalThis.console;
-        if (typeof c !== "undefined" && typeof c.warn === "function") {
-          c.warn(new ModuleError(message, { code: "LEVEL_LEGACY" }));
-        }
-      }
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/errors.js
-var require_errors = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/errors.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var AbortError = class extends ModuleError {
-      constructor(cause) {
-        super("Operation has been aborted", {
-          code: "LEVEL_ABORTED",
-          cause
-        });
-      }
-      // Set name to AbortError for web compatibility. See:
-      // https://dom.spec.whatwg.org/#aborting-ongoing-activities
-      // https://github.com/nodejs/node/pull/35911#discussion_r515779306
-      get name() {
-        return "AbortError";
-      }
-    };
-    exports2.AbortError = AbortError;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-iterator.js
-var require_abstract_iterator = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-iterator.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var combineErrors = require_maybe_combine_errors();
-    var { getOptions, emptyOptions, noop } = require_common();
-    var { AbortError } = require_errors();
-    var kDecodeOne = Symbol("decodeOne");
-    var kDecodeMany = Symbol("decodeMany");
-    var kKeyEncoding = Symbol("keyEncoding");
-    var kValueEncoding = Symbol("valueEncoding");
-    var CommonIterator = class {
-      #working = false;
-      #pendingClose = null;
-      #closingPromise = null;
-      #count = 0;
-      #signal;
-      #limit;
-      #ended;
-      #snapshot;
-      constructor(db, options) {
-        if (typeof db !== "object" || db === null) {
-          const hint = db === null ? "null" : typeof db;
-          throw new TypeError(`The first argument must be an abstract-level database, received ${hint}`);
-        }
-        if (typeof options !== "object" || options === null) {
-          throw new TypeError("The second argument must be an options object");
-        }
-        this[kKeyEncoding] = options[kKeyEncoding];
-        this[kValueEncoding] = options[kValueEncoding];
-        this.#limit = Number.isInteger(options.limit) && options.limit >= 0 ? options.limit : Infinity;
-        this.#signal = options.signal != null ? options.signal : null;
-        this.#snapshot = options.snapshot != null ? options.snapshot : null;
-        this.#ended = false;
-        this.db = db;
-        this.db.attachResource(this);
-      }
-      get count() {
-        return this.#count;
-      }
-      get limit() {
-        return this.#limit;
-      }
-      async next() {
-        this.#startWork();
-        try {
-          if (this.#ended || this.#count >= this.#limit) {
-            this.#ended = true;
-            return void 0;
-          }
-          let item = await this._next();
-          if (item === void 0) {
-            this.#ended = true;
-            return void 0;
-          }
-          try {
-            item = this[kDecodeOne](item);
-          } catch (err) {
-            throw new IteratorDecodeError(err);
-          }
-          this.#count++;
-          return item;
-        } finally {
-          this.#endWork();
-        }
-      }
-      async _next() {
-      }
-      async nextv(size, options) {
-        if (!Number.isInteger(size)) {
-          throw new TypeError("The first argument 'size' must be an integer");
-        }
-        options = getOptions(options, emptyOptions);
-        if (size < 1) size = 1;
-        if (this.#limit < Infinity) size = Math.min(size, this.#limit - this.#count);
-        this.#startWork();
-        try {
-          if (this.#ended || size <= 0) {
-            this.#ended = true;
-            return [];
-          }
-          const items = await this._nextv(size, options);
-          if (items.length === 0) {
-            this.#ended = true;
-            return items;
-          }
-          try {
-            this[kDecodeMany](items);
-          } catch (err) {
-            throw new IteratorDecodeError(err);
-          }
-          this.#count += items.length;
-          return items;
-        } finally {
-          this.#endWork();
-        }
-      }
-      async _nextv(size, options) {
-        const acc = [];
-        while (acc.length < size) {
-          const item = await this._next(options);
-          if (item !== void 0) {
-            acc.push(item);
-          } else {
-            this.#ended = true;
-            break;
-          }
-        }
-        return acc;
-      }
-      async all(options) {
-        options = getOptions(options, emptyOptions);
-        this.#startWork();
-        try {
-          if (this.#ended || this.#count >= this.#limit) {
-            return [];
-          }
-          const items = await this._all(options);
-          try {
-            this[kDecodeMany](items);
-          } catch (err) {
-            throw new IteratorDecodeError(err);
-          }
-          this.#count += items.length;
-          return items;
-        } catch (err) {
-          this.#endWork();
-          await this.#destroy(err);
-        } finally {
-          this.#ended = true;
-          if (this.#working) {
-            this.#endWork();
-            await this.close();
-          }
-        }
-      }
-      async _all(options) {
-        let count = this.#count;
-        const acc = [];
-        while (true) {
-          const size = this.#limit < Infinity ? Math.min(1e3, this.#limit - count) : 1e3;
-          if (size <= 0) {
-            return acc;
-          }
-          const items = await this._nextv(size, options);
-          if (items.length === 0) {
-            return acc;
-          }
-          acc.push.apply(acc, items);
-          count += items.length;
-        }
-      }
-      seek(target, options) {
-        options = getOptions(options, emptyOptions);
-        if (this.#closingPromise !== null) {
-        } else if (this.#working) {
-          throw new ModuleError("Iterator is busy: cannot call seek() until next() has completed", {
-            code: "LEVEL_ITERATOR_BUSY"
-          });
-        } else {
-          const keyEncoding = this.db.keyEncoding(options.keyEncoding || this[kKeyEncoding]);
-          const keyFormat = keyEncoding.format;
-          if (options.keyEncoding !== keyFormat) {
-            options = { ...options, keyEncoding: keyFormat };
-          }
-          const mapped = this.db.prefixKey(keyEncoding.encode(target), keyFormat, false);
-          this._seek(mapped, options);
-          this.#ended = false;
-        }
-      }
-      _seek(target, options) {
-        throw new ModuleError("Iterator does not implement seek()", {
-          code: "LEVEL_NOT_SUPPORTED"
-        });
-      }
-      async close() {
-        if (this.#closingPromise !== null) {
-          return this.#closingPromise.catch(noop);
-        }
-        this.#closingPromise = new Promise((resolve, reject) => {
-          this.#pendingClose = () => {
-            this.#pendingClose = null;
-            this.#privateClose().then(resolve, reject);
-          };
-        });
-        if (!this.#working) {
-          this.#pendingClose();
-        }
-        return this.#closingPromise;
-      }
-      async _close() {
-      }
-      async *[Symbol.asyncIterator]() {
-        try {
-          let item;
-          while ((item = await this.next()) !== void 0) {
-            yield item;
-          }
-        } catch (err) {
-          await this.#destroy(err);
-        } finally {
-          await this.close();
-        }
-      }
-      #startWork() {
-        if (this.#closingPromise !== null) {
-          throw new ModuleError("Iterator is not open: cannot read after close()", {
-            code: "LEVEL_ITERATOR_NOT_OPEN"
-          });
-        } else if (this.#working) {
-          throw new ModuleError("Iterator is busy: cannot read until previous read has completed", {
-            code: "LEVEL_ITERATOR_BUSY"
-          });
-        } else if (this.#signal?.aborted) {
-          throw new AbortError();
-        }
-        this.#snapshot?.ref();
-        this.#working = true;
-      }
-      #endWork() {
-        this.#working = false;
-        this.#pendingClose?.();
-        this.#snapshot?.unref();
-      }
-      async #privateClose() {
-        await this._close();
-        this.db.detachResource(this);
-      }
-      async #destroy(err) {
-        try {
-          await this.close();
-        } catch (closeErr) {
-          throw combineErrors([err, closeErr]);
-        }
-        throw err;
-      }
-    };
-    if (typeof Symbol.asyncDispose === "symbol") {
-      CommonIterator.prototype[Symbol.asyncDispose] = async function() {
-        return this.close();
-      };
-    }
-    var AbstractIterator = class extends CommonIterator {
-      #keys;
-      #values;
-      constructor(db, options) {
-        super(db, options);
-        this.#keys = options.keys !== false;
-        this.#values = options.values !== false;
-      }
-      [kDecodeOne](entry) {
-        const key = entry[0];
-        const value = entry[1];
-        if (key !== void 0) {
-          entry[0] = this.#keys ? this[kKeyEncoding].decode(key) : void 0;
-        }
-        if (value !== void 0) {
-          entry[1] = this.#values ? this[kValueEncoding].decode(value) : void 0;
-        }
-        return entry;
-      }
-      [kDecodeMany](entries) {
-        const keyEncoding = this[kKeyEncoding];
-        const valueEncoding = this[kValueEncoding];
-        for (const entry of entries) {
-          const key = entry[0];
-          const value = entry[1];
-          if (key !== void 0) entry[0] = this.#keys ? keyEncoding.decode(key) : void 0;
-          if (value !== void 0) entry[1] = this.#values ? valueEncoding.decode(value) : void 0;
-        }
-      }
-    };
-    var AbstractKeyIterator = class extends CommonIterator {
-      [kDecodeOne](key) {
-        return this[kKeyEncoding].decode(key);
-      }
-      [kDecodeMany](keys) {
-        const keyEncoding = this[kKeyEncoding];
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          if (key !== void 0) keys[i] = keyEncoding.decode(key);
-        }
-      }
-    };
-    var AbstractValueIterator = class extends CommonIterator {
-      [kDecodeOne](value) {
-        return this[kValueEncoding].decode(value);
-      }
-      [kDecodeMany](values) {
-        const valueEncoding = this[kValueEncoding];
-        for (let i = 0; i < values.length; i++) {
-          const value = values[i];
-          if (value !== void 0) values[i] = valueEncoding.decode(value);
-        }
-      }
-    };
-    var IteratorDecodeError = class extends ModuleError {
-      constructor(cause) {
-        super("Iterator could not decode data", {
-          code: "LEVEL_DECODE_ERROR",
-          cause
-        });
-      }
-    };
-    AbstractIterator.keyEncoding = kKeyEncoding;
-    AbstractIterator.valueEncoding = kValueEncoding;
-    exports2.AbstractIterator = AbstractIterator;
-    exports2.AbstractKeyIterator = AbstractKeyIterator;
-    exports2.AbstractValueIterator = AbstractValueIterator;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-kv-iterator.js
-var require_default_kv_iterator = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-kv-iterator.js"(exports2) {
-    "use strict";
-    var { AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
-    var kIterator = Symbol("iterator");
-    var kHandleOne = Symbol("handleOne");
-    var kHandleMany = Symbol("handleMany");
-    var DefaultKeyIterator = class extends AbstractKeyIterator {
-      constructor(db, options) {
-        super(db, options);
-        this[kIterator] = db.iterator({ ...options, keys: true, values: false });
-      }
-      [kHandleOne](entry) {
-        return entry[0];
-      }
-      [kHandleMany](entries) {
-        for (let i = 0; i < entries.length; i++) {
-          entries[i] = entries[i][0];
-        }
-      }
-    };
-    var DefaultValueIterator = class extends AbstractValueIterator {
-      constructor(db, options) {
-        super(db, options);
-        this[kIterator] = db.iterator({ ...options, keys: false, values: true });
-      }
-      [kHandleOne](entry) {
-        return entry[1];
-      }
-      [kHandleMany](entries) {
-        for (let i = 0; i < entries.length; i++) {
-          entries[i] = entries[i][1];
-        }
-      }
-    };
-    for (const Iterator of [DefaultKeyIterator, DefaultValueIterator]) {
-      Iterator.prototype._next = async function() {
-        const entry = await this[kIterator].next();
-        return entry === void 0 ? entry : this[kHandleOne](entry);
-      };
-      Iterator.prototype._nextv = async function(size, options) {
-        const entries = await this[kIterator].nextv(size, options);
-        this[kHandleMany](entries);
-        return entries;
-      };
-      Iterator.prototype._all = async function(options) {
-        const entries = await this[kIterator].all(options);
-        this[kHandleMany](entries);
-        return entries;
-      };
-      Iterator.prototype._seek = function(target, options) {
-        this[kIterator].seek(target, options);
-      };
-      Iterator.prototype._close = async function() {
-        return this[kIterator].close();
-      };
-    }
-    exports2.DefaultKeyIterator = DefaultKeyIterator;
-    exports2.DefaultValueIterator = DefaultValueIterator;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-iterator.js
-var require_deferred_iterator = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-iterator.js"(exports2) {
-    "use strict";
-    var { AbstractIterator, AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
-    var ModuleError = require_module_error();
-    var kNut = Symbol("nut");
-    var kUndefer = Symbol("undefer");
-    var kFactory = Symbol("factory");
-    var kSignalOptions = Symbol("signalOptions");
-    var DeferredIterator = class extends AbstractIterator {
-      constructor(db, options) {
-        super(db, options);
-        this[kNut] = null;
-        this[kFactory] = () => db.iterator(options);
-        this[kSignalOptions] = { signal: options.signal };
-        this.db.defer(() => this[kUndefer](), this[kSignalOptions]);
-      }
-    };
-    var DeferredKeyIterator = class extends AbstractKeyIterator {
-      constructor(db, options) {
-        super(db, options);
-        this[kNut] = null;
-        this[kFactory] = () => db.keys(options);
-        this[kSignalOptions] = { signal: options.signal };
-        this.db.defer(() => this[kUndefer](), this[kSignalOptions]);
-      }
-    };
-    var DeferredValueIterator = class extends AbstractValueIterator {
-      constructor(db, options) {
-        super(db, options);
-        this[kNut] = null;
-        this[kFactory] = () => db.values(options);
-        this[kSignalOptions] = { signal: options.signal };
-        this.db.defer(() => this[kUndefer](), this[kSignalOptions]);
-      }
-    };
-    for (const Iterator of [DeferredIterator, DeferredKeyIterator, DeferredValueIterator]) {
-      Iterator.prototype[kUndefer] = function() {
-        if (this.db.status === "open") {
-          this[kNut] = this[kFactory]();
-        }
-      };
-      Iterator.prototype._next = async function() {
-        if (this[kNut] !== null) {
-          return this[kNut].next();
-        } else if (this.db.status === "opening") {
-          return this.db.deferAsync(() => this._next(), this[kSignalOptions]);
-        } else {
-          throw new ModuleError("Iterator is not open: cannot call next() after close()", {
-            code: "LEVEL_ITERATOR_NOT_OPEN"
-          });
-        }
-      };
-      Iterator.prototype._nextv = async function(size, options) {
-        if (this[kNut] !== null) {
-          return this[kNut].nextv(size, options);
-        } else if (this.db.status === "opening") {
-          return this.db.deferAsync(() => this._nextv(size, options), this[kSignalOptions]);
-        } else {
-          throw new ModuleError("Iterator is not open: cannot call nextv() after close()", {
-            code: "LEVEL_ITERATOR_NOT_OPEN"
-          });
-        }
-      };
-      Iterator.prototype._all = async function(options) {
-        if (this[kNut] !== null) {
-          return this[kNut].all();
-        } else if (this.db.status === "opening") {
-          return this.db.deferAsync(() => this._all(options), this[kSignalOptions]);
-        } else {
-          throw new ModuleError("Iterator is not open: cannot call all() after close()", {
-            code: "LEVEL_ITERATOR_NOT_OPEN"
-          });
-        }
-      };
-      Iterator.prototype._seek = function(target, options) {
-        if (this[kNut] !== null) {
-          this[kNut]._seek(target, options);
-        } else if (this.db.status === "opening") {
-          this.db.defer(() => this._seek(target, options), this[kSignalOptions]);
-        }
-      };
-      Iterator.prototype._close = async function() {
-        if (this[kNut] !== null) {
-          return this[kNut].close();
-        } else if (this.db.status === "opening") {
-          return this.db.deferAsync(() => this._close());
-        }
-      };
-    }
-    exports2.DeferredIterator = DeferredIterator;
-    exports2.DeferredKeyIterator = DeferredKeyIterator;
-    exports2.DeferredValueIterator = DeferredValueIterator;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prefixes.js
-var require_prefixes = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prefixes.js"(exports2) {
-    "use strict";
-    exports2.prefixDescendantKey = function(key, keyFormat, descendant, ancestor) {
-      while (descendant !== null && descendant !== ancestor) {
-        key = descendant.prefixKey(key, keyFormat, true);
-        descendant = descendant.parent;
-      }
-      return key;
-    };
-    exports2.isDescendant = function(db, ancestor) {
-      while (true) {
-        if (db.parent == null) return false;
-        if (db.parent === ancestor) return true;
-        db = db.parent;
-      }
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prewrite-batch.js
-var require_prewrite_batch = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/prewrite-batch.js"(exports2) {
-    "use strict";
-    var { prefixDescendantKey, isDescendant } = require_prefixes();
-    var PrewriteBatch = class {
-      #db;
-      #privateOperations;
-      #publicOperations;
-      constructor(db, privateOperations, publicOperations) {
-        this.#db = db;
-        this.#privateOperations = privateOperations;
-        this.#publicOperations = publicOperations;
-      }
-      add(op) {
-        const isPut = op.type === "put";
-        const delegated = op.sublevel != null;
-        const db = delegated ? op.sublevel : this.#db;
-        db._assertValidKey(op.key);
-        op.keyEncoding = db.keyEncoding(op.keyEncoding);
-        if (isPut) {
-          db._assertValidValue(op.value);
-          op.valueEncoding = db.valueEncoding(op.valueEncoding);
-        } else if (op.type !== "del") {
-          throw new TypeError("A batch operation must have a type property that is 'put' or 'del'");
-        }
-        const keyEncoding = op.keyEncoding;
-        const preencodedKey = keyEncoding.encode(op.key);
-        const keyFormat = keyEncoding.format;
-        const siblings = delegated && !isDescendant(op.sublevel, this.#db) && op.sublevel !== this.#db;
-        const encodedKey = delegated && !siblings ? prefixDescendantKey(preencodedKey, keyFormat, db, this.#db) : preencodedKey;
-        if (delegated && !siblings) {
-          op.sublevel = null;
-        }
-        let publicOperation = null;
-        if (this.#publicOperations !== null && !siblings) {
-          publicOperation = { ...op };
-          publicOperation.encodedKey = encodedKey;
-          if (delegated) {
-            publicOperation.key = encodedKey;
-            publicOperation.keyEncoding = this.#db.keyEncoding(keyFormat);
-          }
-          this.#publicOperations.push(publicOperation);
-        }
-        op.key = siblings ? encodedKey : this.#db.prefixKey(encodedKey, keyFormat, true);
-        op.keyEncoding = keyFormat;
-        if (isPut) {
-          const valueEncoding = op.valueEncoding;
-          const encodedValue = valueEncoding.encode(op.value);
-          const valueFormat = valueEncoding.format;
-          op.value = encodedValue;
-          op.valueEncoding = valueFormat;
-          if (publicOperation !== null) {
-            publicOperation.encodedValue = encodedValue;
-            if (delegated) {
-              publicOperation.value = encodedValue;
-              publicOperation.valueEncoding = this.#db.valueEncoding(valueFormat);
-            }
-          }
-        }
-        this.#privateOperations.push(op);
-        return this;
-      }
-    };
-    exports2.PrewriteBatch = PrewriteBatch;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-chained-batch.js
-var require_abstract_chained_batch = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-chained-batch.js"(exports2) {
-    "use strict";
-    var combineErrors = require_maybe_combine_errors();
-    var ModuleError = require_module_error();
-    var { getOptions, emptyOptions, noop } = require_common();
-    var { prefixDescendantKey, isDescendant } = require_prefixes();
-    var { PrewriteBatch } = require_prewrite_batch();
-    var kPublicOperations = Symbol("publicOperations");
-    var kPrivateOperations = Symbol("privateOperations");
-    var AbstractChainedBatch = class {
-      #status = "open";
-      #length = 0;
-      #closePromise = null;
-      #publicOperations;
-      #prewriteRun;
-      #prewriteBatch;
-      #prewriteData;
-      #addMode;
-      constructor(db, options) {
-        if (typeof db !== "object" || db === null) {
-          const hint = db === null ? "null" : typeof db;
-          throw new TypeError(`The first argument must be an abstract-level database, received ${hint}`);
-        }
-        const enableWriteEvent = db.listenerCount("write") > 0;
-        const enablePrewriteHook = !db.hooks.prewrite.noop;
-        this.#publicOperations = enableWriteEvent ? [] : null;
-        this.#addMode = getOptions(options, emptyOptions).add === true;
-        if (enablePrewriteHook) {
-          const data = new PrewriteData([], enableWriteEvent ? [] : null);
-          this.#prewriteData = data;
-          this.#prewriteBatch = new PrewriteBatch(db, data[kPrivateOperations], data[kPublicOperations]);
-          this.#prewriteRun = db.hooks.prewrite.run;
-        } else {
-          this.#prewriteData = null;
-          this.#prewriteBatch = null;
-          this.#prewriteRun = null;
-        }
-        this.db = db;
-        this.db.attachResource(this);
-      }
-      get length() {
-        if (this.#prewriteData !== null) {
-          return this.#length + this.#prewriteData.length;
-        } else {
-          return this.#length;
-        }
-      }
-      put(key, value, options) {
-        this.#assertStatus();
-        options = getOptions(options, emptyOptions);
-        const delegated = options.sublevel != null;
-        const db = delegated ? options.sublevel : this.db;
-        db._assertValidKey(key);
-        db._assertValidValue(value);
-        const op = {
-          ...options,
-          type: "put",
-          key,
-          value,
-          keyEncoding: db.keyEncoding(options.keyEncoding),
-          valueEncoding: db.valueEncoding(options.valueEncoding)
-        };
-        if (this.#prewriteRun !== null) {
-          try {
-            this.#prewriteRun(op, this.#prewriteBatch);
-            op.keyEncoding = db.keyEncoding(op.keyEncoding);
-            op.valueEncoding = db.valueEncoding(op.valueEncoding);
-          } catch (err) {
-            throw new ModuleError("The prewrite hook failed on batch.put()", {
-              code: "LEVEL_HOOK_ERROR",
-              cause: err
-            });
-          }
-        }
-        const keyEncoding = op.keyEncoding;
-        const preencodedKey = keyEncoding.encode(op.key);
-        const keyFormat = keyEncoding.format;
-        const siblings = delegated && !isDescendant(op.sublevel, this.db) && op.sublevel !== this.db;
-        const encodedKey = delegated && !siblings ? prefixDescendantKey(preencodedKey, keyFormat, db, this.db) : preencodedKey;
-        const valueEncoding = op.valueEncoding;
-        const encodedValue = valueEncoding.encode(op.value);
-        const valueFormat = valueEncoding.format;
-        if (delegated && !siblings) {
-          op.sublevel = null;
-        }
-        if (this.#publicOperations !== null && !siblings) {
-          const publicOperation = { ...op };
-          publicOperation.encodedKey = encodedKey;
-          publicOperation.encodedValue = encodedValue;
-          if (delegated) {
-            publicOperation.key = encodedKey;
-            publicOperation.value = encodedValue;
-            publicOperation.keyEncoding = this.db.keyEncoding(keyFormat);
-            publicOperation.valueEncoding = this.db.valueEncoding(valueFormat);
-          }
-          this.#publicOperations.push(publicOperation);
-        }
-        op.key = siblings ? encodedKey : this.db.prefixKey(encodedKey, keyFormat, true);
-        op.value = encodedValue;
-        op.keyEncoding = keyFormat;
-        op.valueEncoding = valueFormat;
-        if (this.#addMode) {
-          this._add(op);
-        } else {
-          this._put(op.key, encodedValue, op);
-        }
-        this.#length++;
-        return this;
-      }
-      _put(key, value, options) {
-      }
-      del(key, options) {
-        this.#assertStatus();
-        options = getOptions(options, emptyOptions);
-        const delegated = options.sublevel != null;
-        const db = delegated ? options.sublevel : this.db;
-        db._assertValidKey(key);
-        const op = {
-          ...options,
-          type: "del",
-          key,
-          keyEncoding: db.keyEncoding(options.keyEncoding)
-        };
-        if (this.#prewriteRun !== null) {
-          try {
-            this.#prewriteRun(op, this.#prewriteBatch);
-            op.keyEncoding = db.keyEncoding(op.keyEncoding);
-          } catch (err) {
-            throw new ModuleError("The prewrite hook failed on batch.del()", {
-              code: "LEVEL_HOOK_ERROR",
-              cause: err
-            });
-          }
-        }
-        const keyEncoding = op.keyEncoding;
-        const preencodedKey = keyEncoding.encode(op.key);
-        const keyFormat = keyEncoding.format;
-        const encodedKey = delegated ? prefixDescendantKey(preencodedKey, keyFormat, db, this.db) : preencodedKey;
-        if (delegated) op.sublevel = null;
-        if (this.#publicOperations !== null) {
-          const publicOperation = { ...op };
-          publicOperation.encodedKey = encodedKey;
-          if (delegated) {
-            publicOperation.key = encodedKey;
-            publicOperation.keyEncoding = this.db.keyEncoding(keyFormat);
-          }
-          this.#publicOperations.push(publicOperation);
-        }
-        op.key = this.db.prefixKey(encodedKey, keyFormat, true);
-        op.keyEncoding = keyFormat;
-        if (this.#addMode) {
-          this._add(op);
-        } else {
-          this._del(op.key, op);
-        }
-        this.#length++;
-        return this;
-      }
-      _del(key, options) {
-      }
-      _add(op) {
-      }
-      clear() {
-        this.#assertStatus();
-        this._clear();
-        if (this.#publicOperations !== null) this.#publicOperations = [];
-        if (this.#prewriteData !== null) this.#prewriteData.clear();
-        this.#length = 0;
-        return this;
-      }
-      _clear() {
-      }
-      async write(options) {
-        this.#assertStatus();
-        options = getOptions(options);
-        if (this.#length === 0) {
-          return this.close();
-        } else {
-          this.#status = "writing";
-          const close = this.#prepareClose();
-          try {
-            if (this.#prewriteData !== null) {
-              const publicOperations = this.#prewriteData[kPublicOperations];
-              const privateOperations = this.#prewriteData[kPrivateOperations];
-              const length = this.#prewriteData.length;
-              for (let i = 0; i < length; i++) {
-                const op = privateOperations[i];
-                if (this.#addMode) {
-                  this._add(op);
-                } else if (op.type === "put") {
-                  this._put(op.key, op.value, op);
-                } else {
-                  this._del(op.key, op);
-                }
-              }
-              if (publicOperations !== null && length !== 0) {
-                this.#publicOperations = this.#publicOperations.concat(publicOperations);
-              }
-            }
-            await this._write(options);
-          } catch (err) {
-            close();
-            try {
-              await this.#closePromise;
-            } catch (closeErr) {
-              err = combineErrors([err, closeErr]);
-            }
-            throw err;
-          }
-          close();
-          if (this.#publicOperations !== null) {
-            this.db.emit("write", this.#publicOperations);
-          }
-          return this.#closePromise;
-        }
-      }
-      async _write(options) {
-      }
-      async close() {
-        if (this.#closePromise !== null) {
-          return this.#closePromise.catch(noop);
-        } else {
-          this.#prepareClose()();
-          return this.#closePromise;
-        }
-      }
-      async _close() {
-      }
-      #assertStatus() {
-        if (this.#status !== "open") {
-          throw new ModuleError("Batch is not open: cannot change operations after write() or close()", {
-            code: "LEVEL_BATCH_NOT_OPEN"
-          });
-        }
-        if (this.db.status !== "open") {
-          throw new ModuleError("Database is not open", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        }
-      }
-      #prepareClose() {
-        let close;
-        this.#closePromise = new Promise((resolve, reject) => {
-          close = () => {
-            this.#privateClose().then(resolve, reject);
-          };
-        });
-        return close;
-      }
-      async #privateClose() {
-        this.#status = "closing";
-        await this._close();
-        this.db.detachResource(this);
-      }
-    };
-    if (typeof Symbol.asyncDispose === "symbol") {
-      AbstractChainedBatch.prototype[Symbol.asyncDispose] = async function() {
-        return this.close();
-      };
-    }
-    var PrewriteData = class {
-      constructor(privateOperations, publicOperations) {
-        this[kPrivateOperations] = privateOperations;
-        this[kPublicOperations] = publicOperations;
-      }
-      get length() {
-        return this[kPrivateOperations].length;
-      }
-      clear() {
-        for (const k of [kPublicOperations, kPrivateOperations]) {
-          const ops = this[k];
-          if (ops !== null) {
-            ops.splice(0, ops.length);
-          }
-        }
-      }
-    };
-    exports2.AbstractChainedBatch = AbstractChainedBatch;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-chained-batch.js
-var require_default_chained_batch = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/default-chained-batch.js"(exports2) {
-    "use strict";
-    var { AbstractChainedBatch } = require_abstract_chained_batch();
-    var DefaultChainedBatch = class extends AbstractChainedBatch {
-      #encoded = [];
-      constructor(db) {
-        super(db, { add: true });
-      }
-      _add(op) {
-        this.#encoded.push(op);
-      }
-      _clear() {
-        this.#encoded = [];
-      }
-      async _write(options) {
-        return this.db._batch(this.#encoded, options);
-      }
-    };
-    exports2.DefaultChainedBatch = DefaultChainedBatch;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/hooks.js
-var require_hooks = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/hooks.js"(exports2) {
-    "use strict";
-    var { noop } = require_common();
-    var DatabaseHooks = class {
-      constructor() {
-        this.postopen = new Hook({ async: true });
-        this.prewrite = new Hook({ async: false });
-        this.newsub = new Hook({ async: false });
-      }
-    };
-    var Hook = class {
-      #functions = /* @__PURE__ */ new Set();
-      #isAsync;
-      constructor(options) {
-        this.#isAsync = options.async;
-        this.noop = true;
-        this.run = this.#runner();
-      }
-      add(fn) {
-        assertFunction(fn);
-        this.#functions.add(fn);
-        this.noop = false;
-        this.run = this.#runner();
-      }
-      delete(fn) {
-        assertFunction(fn);
-        this.#functions.delete(fn);
-        this.noop = this.#functions.size === 0;
-        this.run = this.#runner();
-      }
-      #runner() {
-        if (this.noop) {
-          return noop;
-        } else if (this.#functions.size === 1) {
-          const [fn] = this.#functions;
-          return fn;
-        } else if (this.#isAsync) {
-          const run = async function(functions, ...args) {
-            for (const fn of functions) {
-              await fn(...args);
-            }
-          };
-          return run.bind(null, Array.from(this.#functions));
-        } else {
-          const run = function(functions, ...args) {
-            for (const fn of functions) {
-              fn(...args);
-            }
-          };
-          return run.bind(null, Array.from(this.#functions));
-        }
-      }
-    };
-    var assertFunction = function(fn) {
-      if (typeof fn !== "function") {
-        const hint = fn === null ? "null" : typeof fn;
-        throw new TypeError(`The first argument must be a function, received ${hint}`);
-      }
-    };
-    exports2.DatabaseHooks = DatabaseHooks;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/event-monitor.js
-var require_event_monitor = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/event-monitor.js"(exports2) {
-    "use strict";
-    var { deprecate } = require_common();
-    exports2.EventMonitor = class EventMonitor {
-      constructor(emitter) {
-        this.write = false;
-        const beforeAdded = (name) => {
-          if (name === "write") {
-            this.write = true;
-          }
-          if (name === "put" || name === "del" || name === "batch") {
-            deprecate(`The '${name}' event has been removed in favor of 'write'`);
-          }
-        };
-        const afterRemoved = (name) => {
-          if (name === "write") {
-            this.write = emitter.listenerCount("write") > 0;
-          }
-        };
-        emitter.on("newListener", beforeAdded);
-        emitter.on("removeListener", afterRemoved);
-      }
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-queue.js
-var require_deferred_queue = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/deferred-queue.js"(exports2) {
-    "use strict";
-    var { getOptions, emptyOptions } = require_common();
-    var { AbortError } = require_errors();
-    var DeferredOperation = class {
-      constructor(fn, signal) {
-        this.fn = fn;
-        this.signal = signal;
-      }
-    };
-    var DeferredQueue = class {
-      #operations;
-      #signals;
-      constructor() {
-        this.#operations = [];
-        this.#signals = /* @__PURE__ */ new Set();
-      }
-      add(fn, options) {
-        options = getOptions(options, emptyOptions);
-        const signal = options.signal;
-        if (signal == null) {
-          this.#operations.push(new DeferredOperation(fn, null));
-          return;
-        }
-        if (signal.aborted) {
-          fn(new AbortError());
-          return;
-        }
-        if (!this.#signals.has(signal)) {
-          this.#signals.add(signal);
-          signal.addEventListener("abort", this.#handleAbort, { once: true });
-        }
-        this.#operations.push(new DeferredOperation(fn, signal));
-      }
-      drain() {
-        const operations = this.#operations;
-        const signals = this.#signals;
-        this.#operations = [];
-        this.#signals = /* @__PURE__ */ new Set();
-        for (const signal of signals) {
-          signal.removeEventListener("abort", this.#handleAbort);
-        }
-        for (const operation of operations) {
-          operation.fn.call(null);
-        }
-      }
-      #handleAbort = (ev) => {
-        const signal = ev.target;
-        const err = new AbortError();
-        const aborted = [];
-        this.#operations = this.#operations.filter(function(operation) {
-          if (operation.signal !== null && operation.signal === signal) {
-            aborted.push(operation);
-            return false;
-          } else {
-            return true;
-          }
-        });
-        this.#signals.delete(signal);
-        for (const operation of aborted) {
-          operation.fn.call(null, err);
-        }
-      };
-    };
-    exports2.DeferredQueue = DeferredQueue;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/range-options.js
-var require_range_options = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/range-options.js"(exports2, module2) {
-    "use strict";
-    var hasOwnProperty = Object.prototype.hasOwnProperty;
-    var rangeOptions = /* @__PURE__ */ new Set(["lt", "lte", "gt", "gte"]);
-    module2.exports = function(options, keyEncoding) {
-      const result = {};
-      for (const k in options) {
-        if (!hasOwnProperty.call(options, k)) continue;
-        if (k === "keyEncoding" || k === "valueEncoding") continue;
-        if (rangeOptions.has(k)) {
-          result[k] = keyEncoding.encode(options[k]);
-        } else {
-          result[k] = options[k];
-        }
-      }
-      result.reverse = !!result.reverse;
-      result.limit = Number.isInteger(result.limit) && result.limit >= 0 ? result.limit : -1;
-      return result;
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel-iterator.js
-var require_abstract_sublevel_iterator = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel-iterator.js"(exports2) {
-    "use strict";
-    var { AbstractIterator, AbstractKeyIterator, AbstractValueIterator } = require_abstract_iterator();
-    var AbstractSublevelIterator = class extends AbstractIterator {
-      #iterator;
-      #unfix;
-      constructor(db, options, iterator, unfix) {
-        super(db, options);
-        this.#iterator = iterator;
-        this.#unfix = unfix;
-      }
-      async _next() {
-        const entry = await this.#iterator.next();
-        if (entry !== void 0) {
-          const key = entry[0];
-          if (key !== void 0) entry[0] = this.#unfix(key);
-        }
-        return entry;
-      }
-      async _nextv(size, options) {
-        const entries = await this.#iterator.nextv(size, options);
-        const unfix = this.#unfix;
-        for (const entry of entries) {
-          const key = entry[0];
-          if (key !== void 0) entry[0] = unfix(key);
-        }
-        return entries;
-      }
-      async _all(options) {
-        const entries = await this.#iterator.all(options);
-        const unfix = this.#unfix;
-        for (const entry of entries) {
-          const key = entry[0];
-          if (key !== void 0) entry[0] = unfix(key);
-        }
-        return entries;
-      }
-      _seek(target, options) {
-        this.#iterator.seek(target, options);
-      }
-      async _close() {
-        return this.#iterator.close();
-      }
-    };
-    var AbstractSublevelKeyIterator = class extends AbstractKeyIterator {
-      #iterator;
-      #unfix;
-      constructor(db, options, iterator, unfix) {
-        super(db, options);
-        this.#iterator = iterator;
-        this.#unfix = unfix;
-      }
-      async _next() {
-        const key = await this.#iterator.next();
-        return key === void 0 ? key : this.#unfix(key);
-      }
-      async _nextv(size, options) {
-        const keys = await this.#iterator.nextv(size, options);
-        const unfix = this.#unfix;
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          if (key !== void 0) keys[i] = unfix(key);
-        }
-        return keys;
-      }
-      async _all(options) {
-        const keys = await this.#iterator.all(options);
-        const unfix = this.#unfix;
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          if (key !== void 0) keys[i] = unfix(key);
-        }
-        return keys;
-      }
-      _seek(target, options) {
-        this.#iterator.seek(target, options);
-      }
-      async _close() {
-        return this.#iterator.close();
-      }
-    };
-    var AbstractSublevelValueIterator = class extends AbstractValueIterator {
-      #iterator;
-      constructor(db, options, iterator) {
-        super(db, options);
-        this.#iterator = iterator;
-      }
-      async _next() {
-        return this.#iterator.next();
-      }
-      async _nextv(size, options) {
-        return this.#iterator.nextv(size, options);
-      }
-      async _all(options) {
-        return this.#iterator.all(options);
-      }
-      _seek(target, options) {
-        this.#iterator.seek(target, options);
-      }
-      async _close() {
-        return this.#iterator.close();
-      }
-    };
-    exports2.AbstractSublevelIterator = AbstractSublevelIterator;
-    exports2.AbstractSublevelKeyIterator = AbstractSublevelKeyIterator;
-    exports2.AbstractSublevelValueIterator = AbstractSublevelValueIterator;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel.js
-var require_abstract_sublevel = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/lib/abstract-sublevel.js"(exports2, module2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var { Buffer: Buffer2 } = require("buffer") || {};
-    var {
-      AbstractSublevelIterator,
-      AbstractSublevelKeyIterator,
-      AbstractSublevelValueIterator
-    } = require_abstract_sublevel_iterator();
-    var kRoot = Symbol("root");
-    var textEncoder = new TextEncoder();
-    var defaults = { separator: "!" };
-    module2.exports = function({ AbstractLevel }) {
-      class AbstractSublevel extends AbstractLevel {
-        #globalPrefix;
-        #localPrefix;
-        #localPath;
-        #globalPath;
-        #globalUpperBound;
-        #parent;
-        #unfix;
-        static defaults(options) {
-          if (options == null) {
-            return defaults;
-          } else if (!options.separator) {
-            return { ...options, separator: "!" };
-          } else {
-            return options;
-          }
-        }
-        constructor(db, name, options) {
-          const { separator, manifest, ...forward } = AbstractSublevel.defaults(options);
-          const names = [].concat(name).map((name2) => trim(name2, separator));
-          const reserved = separator.charCodeAt(0) + 1;
-          const root = db[kRoot] || db;
-          if (!names.every((name2) => textEncoder.encode(name2).every((x) => x > reserved && x < 127))) {
-            throw new ModuleError(`Sublevel name must use bytes > ${reserved} < ${127}`, {
-              code: "LEVEL_INVALID_PREFIX"
-            });
-          }
-          super(mergeManifests(db, manifest), forward);
-          const localPrefix = names.map((name2) => separator + name2 + separator).join("");
-          const globalPrefix = (db.prefix || "") + localPrefix;
-          const globalUpperBound = globalPrefix.slice(0, -1) + String.fromCharCode(reserved);
-          this[kRoot] = root;
-          this.#parent = db;
-          this.#localPath = names;
-          this.#globalPath = db.prefix ? db.path().concat(names) : names;
-          this.#globalPrefix = new MultiFormat(globalPrefix);
-          this.#globalUpperBound = new MultiFormat(globalUpperBound);
-          this.#localPrefix = new MultiFormat(localPrefix);
-          this.#unfix = new Unfixer();
-        }
-        prefixKey(key, keyFormat, local) {
-          const prefix = local ? this.#localPrefix : this.#globalPrefix;
-          if (keyFormat === "utf8") {
-            return prefix.utf8 + key;
-          } else if (key.byteLength === 0) {
-            return prefix[keyFormat];
-          } else if (keyFormat === "view") {
-            const view = prefix.view;
-            const result = new Uint8Array(view.byteLength + key.byteLength);
-            result.set(view, 0);
-            result.set(key, view.byteLength);
-            return result;
-          } else {
-            const buffer = prefix.buffer;
-            return Buffer2.concat([buffer, key], buffer.byteLength + key.byteLength);
-          }
-        }
-        // Not exposed for now.
-        #prefixRange(range, keyFormat) {
-          if (range.gte !== void 0) {
-            range.gte = this.prefixKey(range.gte, keyFormat, false);
-          } else if (range.gt !== void 0) {
-            range.gt = this.prefixKey(range.gt, keyFormat, false);
-          } else {
-            range.gte = this.#globalPrefix[keyFormat];
-          }
-          if (range.lte !== void 0) {
-            range.lte = this.prefixKey(range.lte, keyFormat, false);
-          } else if (range.lt !== void 0) {
-            range.lt = this.prefixKey(range.lt, keyFormat, false);
-          } else {
-            range.lte = this.#globalUpperBound[keyFormat];
-          }
-        }
-        get prefix() {
-          return this.#globalPrefix.utf8;
-        }
-        get db() {
-          return this[kRoot];
-        }
-        get parent() {
-          return this.#parent;
-        }
-        path(local = false) {
-          return local ? this.#localPath : this.#globalPath;
-        }
-        async _open(options) {
-          await this.#parent.open({ passive: true });
-          this.#parent.attachResource(this);
-        }
-        async _close() {
-          this.#parent.detachResource(this);
-        }
-        async _put(key, value, options) {
-          return this.#parent.put(key, value, options);
-        }
-        async _get(key, options) {
-          return this.#parent.get(key, options);
-        }
-        _getSync(key, options) {
-          return this.#parent.getSync(key, options);
-        }
-        async _getMany(keys, options) {
-          return this.#parent.getMany(keys, options);
-        }
-        async _has(key, options) {
-          return this.#parent.has(key, options);
-        }
-        async _hasMany(keys, options) {
-          return this.#parent.hasMany(keys, options);
-        }
-        async _del(key, options) {
-          return this.#parent.del(key, options);
-        }
-        async _batch(operations, options) {
-          return this.#parent.batch(operations, options);
-        }
-        // TODO: call parent instead of root
-        async _clear(options) {
-          this.#prefixRange(options, options.keyEncoding);
-          return this[kRoot].clear(options);
-        }
-        // TODO: call parent instead of root
-        _iterator(options) {
-          this.#prefixRange(options, options.keyEncoding);
-          const iterator = this[kRoot].iterator(options);
-          const unfix = this.#unfix.get(this.#globalPrefix.utf8.length, options.keyEncoding);
-          return new AbstractSublevelIterator(this, options, iterator, unfix);
-        }
-        _keys(options) {
-          this.#prefixRange(options, options.keyEncoding);
-          const iterator = this[kRoot].keys(options);
-          const unfix = this.#unfix.get(this.#globalPrefix.utf8.length, options.keyEncoding);
-          return new AbstractSublevelKeyIterator(this, options, iterator, unfix);
-        }
-        _values(options) {
-          this.#prefixRange(options, options.keyEncoding);
-          const iterator = this[kRoot].values(options);
-          return new AbstractSublevelValueIterator(this, options, iterator);
-        }
-        _snapshot(options) {
-          return this[kRoot].snapshot(options);
-        }
-      }
-      return { AbstractSublevel };
-    };
-    var mergeManifests = function(parent, manifest) {
-      return {
-        // Inherit manifest of parent db
-        ...parent.supports,
-        // Disable unsupported features
-        createIfMissing: false,
-        errorIfExists: false,
-        // Unset additional events because we're not forwarding them
-        events: {},
-        // Unset additional methods (like approximateSize) which we can't support here unless
-        // the AbstractSublevel class is overridden by an implementation of `abstract-level`.
-        additionalMethods: {},
-        // Inherit manifest of custom AbstractSublevel subclass. Such a class is not
-        // allowed to override encodings.
-        ...manifest,
-        encodings: {
-          utf8: supportsEncoding(parent, "utf8"),
-          buffer: supportsEncoding(parent, "buffer"),
-          view: supportsEncoding(parent, "view")
-        }
-      };
-    };
-    var supportsEncoding = function(parent, encoding) {
-      return parent.supports.encodings[encoding] ? parent.keyEncoding(encoding).name === encoding : false;
-    };
-    var MultiFormat = class {
-      constructor(key) {
-        this.utf8 = key;
-        this.view = textEncoder.encode(key);
-        this.buffer = Buffer2 ? Buffer2.from(this.view.buffer, 0, this.view.byteLength) : {};
-      }
-    };
-    var Unfixer = class {
-      constructor() {
-        this.cache = /* @__PURE__ */ new Map();
-      }
-      get(prefixLength, keyFormat) {
-        let unfix = this.cache.get(keyFormat);
-        if (unfix === void 0) {
-          if (keyFormat === "view") {
-            unfix = function(prefixLength2, key) {
-              return key.subarray(prefixLength2);
-            }.bind(null, prefixLength);
-          } else {
-            unfix = function(prefixLength2, key) {
-              return key.slice(prefixLength2);
-            }.bind(null, prefixLength);
-          }
-          this.cache.set(keyFormat, unfix);
-        }
-        return unfix;
-      }
-    };
-    var trim = function(str, char) {
-      let start = 0;
-      let end = str.length;
-      while (start < end && str[start] === char) start++;
-      while (end > start && str[end - 1] === char) end--;
-      return str.slice(start, end);
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-level.js
-var require_abstract_level = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-level.js"(exports2) {
-    "use strict";
-    var { supports } = require_level_supports();
-    var { Transcoder } = require_level_transcoder();
-    var { EventEmitter } = require("events");
-    var ModuleError = require_module_error();
-    var combineErrors = require_maybe_combine_errors();
-    var { AbstractIterator } = require_abstract_iterator();
-    var { DefaultKeyIterator, DefaultValueIterator } = require_default_kv_iterator();
-    var { DeferredIterator, DeferredKeyIterator, DeferredValueIterator } = require_deferred_iterator();
-    var { DefaultChainedBatch } = require_default_chained_batch();
-    var { DatabaseHooks } = require_hooks();
-    var { PrewriteBatch } = require_prewrite_batch();
-    var { EventMonitor } = require_event_monitor();
-    var { getOptions, noop, emptyOptions, resolvedPromise } = require_common();
-    var { prefixDescendantKey, isDescendant } = require_prefixes();
-    var { DeferredQueue } = require_deferred_queue();
-    var rangeOptions = require_range_options();
-    var AbstractLevel = class extends EventEmitter {
-      #status = "opening";
-      #deferOpen = true;
-      #statusChange = null;
-      #statusLocked = false;
-      #resources;
-      #queue;
-      #options;
-      #defaultOptions;
-      #transcoder;
-      #keyEncoding;
-      #valueEncoding;
-      #eventMonitor;
-      constructor(manifest, options) {
-        super();
-        if (typeof manifest !== "object" || manifest === null) {
-          throw new TypeError("The first argument 'manifest' must be an object");
-        }
-        options = getOptions(options);
-        const { keyEncoding, valueEncoding, passive, ...forward } = options;
-        this.#resources = /* @__PURE__ */ new Set();
-        this.#queue = new DeferredQueue();
-        this.#options = forward;
-        const implicitSnapshots = manifest.snapshots !== false && manifest.implicitSnapshots !== false;
-        this.hooks = new DatabaseHooks();
-        this.supports = supports(manifest, {
-          deferredOpen: true,
-          seek: true,
-          implicitSnapshots,
-          permanence: manifest.permanence !== false,
-          encodings: manifest.encodings || {},
-          events: {
-            ...manifest.events,
-            opening: true,
-            open: true,
-            closing: true,
-            closed: true,
-            write: true,
-            clear: true
-          }
-        });
-        this.#eventMonitor = new EventMonitor(this);
-        this.#transcoder = new Transcoder(formats(this));
-        this.#keyEncoding = this.#transcoder.encoding(keyEncoding || "utf8");
-        this.#valueEncoding = this.#transcoder.encoding(valueEncoding || "utf8");
-        for (const encoding of this.#transcoder.encodings()) {
-          if (!this.supports.encodings[encoding.commonName]) {
-            this.supports.encodings[encoding.commonName] = true;
-          }
-        }
-        this.#defaultOptions = {
-          empty: emptyOptions,
-          entry: Object.freeze({
-            keyEncoding: this.#keyEncoding.commonName,
-            valueEncoding: this.#valueEncoding.commonName
-          }),
-          entryFormat: Object.freeze({
-            keyEncoding: this.#keyEncoding.format,
-            valueEncoding: this.#valueEncoding.format
-          }),
-          key: Object.freeze({
-            keyEncoding: this.#keyEncoding.commonName
-          }),
-          keyFormat: Object.freeze({
-            keyEncoding: this.#keyEncoding.format
-          }),
-          owner: Object.freeze({
-            owner: this
-          })
-        };
-        queueMicrotask(() => {
-          if (this.#deferOpen) {
-            this.open({ passive: false }).catch(noop);
-          }
-        });
-      }
-      get status() {
-        return this.#status;
-      }
-      get parent() {
-        return null;
-      }
-      keyEncoding(encoding) {
-        return this.#transcoder.encoding(encoding ?? this.#keyEncoding);
-      }
-      valueEncoding(encoding) {
-        return this.#transcoder.encoding(encoding ?? this.#valueEncoding);
-      }
-      async open(options) {
-        options = { ...this.#options, ...getOptions(options) };
-        options.createIfMissing = options.createIfMissing !== false;
-        options.errorIfExists = !!options.errorIfExists;
-        const postopen = this.hooks.postopen.noop ? null : this.hooks.postopen.run;
-        const passive = options.passive;
-        if (passive && this.#deferOpen) {
-          await void 0;
-        }
-        this.#assertUnlocked();
-        while (this.#statusChange !== null) await this.#statusChange.catch(noop);
-        this.#assertUnlocked();
-        if (passive) {
-          if (this.#status !== "open") throw new NotOpenError();
-        } else if (this.#status === "closed" || this.#deferOpen) {
-          this.#deferOpen = false;
-          this.#statusChange = resolvedPromise;
-          this.#statusChange = (async () => {
-            this.#status = "opening";
-            try {
-              this.emit("opening");
-              await this._open(options);
-            } catch (err) {
-              this.#status = "closed";
-              this.#queue.drain();
-              try {
-                await this.#closeResources();
-              } catch (resourceErr) {
-                err = combineErrors([err, resourceErr]);
-              }
-              throw new NotOpenError(err);
-            }
-            this.#status = "open";
-            if (postopen !== null) {
-              let hookErr;
-              try {
-                this.#statusLocked = true;
-                await postopen(options);
-              } catch (err) {
-                hookErr = convertRejection(err);
-              } finally {
-                this.#statusLocked = false;
-              }
-              if (hookErr) {
-                this.#status = "closing";
-                this.#queue.drain();
-                try {
-                  await this.#closeResources();
-                  await this._close();
-                } catch (closeErr) {
-                  this.#statusLocked = true;
-                  hookErr = combineErrors([hookErr, closeErr]);
-                }
-                this.#status = "closed";
-                throw new ModuleError("The postopen hook failed on open()", {
-                  code: "LEVEL_HOOK_ERROR",
-                  cause: hookErr
-                });
-              }
-            }
-            this.#queue.drain();
-            this.emit("open");
-          })();
-          try {
-            await this.#statusChange;
-          } finally {
-            this.#statusChange = null;
-          }
-        } else if (this.#status !== "open") {
-          throw new NotOpenError();
-        }
-      }
-      async _open(options) {
-      }
-      async close() {
-        this.#assertUnlocked();
-        while (this.#statusChange !== null) await this.#statusChange.catch(noop);
-        this.#assertUnlocked();
-        if (this.#status === "open" || this.#deferOpen) {
-          const fromInitial = this.#deferOpen;
-          this.#deferOpen = false;
-          this.#statusChange = resolvedPromise;
-          this.#statusChange = (async () => {
-            this.#status = "closing";
-            this.#queue.drain();
-            try {
-              this.emit("closing");
-              await this.#closeResources();
-              if (!fromInitial) await this._close();
-            } catch (err) {
-              this.#status = "open";
-              this.#queue.drain();
-              throw new NotClosedError(err);
-            }
-            this.#status = "closed";
-            this.#queue.drain();
-            this.emit("closed");
-          })();
-          try {
-            await this.#statusChange;
-          } finally {
-            this.#statusChange = null;
-          }
-        } else if (this.#status !== "closed") {
-          throw new NotClosedError();
-        }
-      }
-      async #closeResources() {
-        if (this.#resources.size === 0) {
-          return;
-        }
-        const resources = Array.from(this.#resources);
-        const promises = resources.map(closeResource);
-        const results = await Promise.allSettled(promises);
-        const errors = [];
-        for (let i = 0; i < results.length; i++) {
-          if (results[i].status === "fulfilled") {
-            this.#resources.delete(resources[i]);
-          } else {
-            errors.push(convertRejection(results[i].reason));
-          }
-        }
-        if (errors.length > 0) {
-          throw combineErrors(errors);
-        }
-      }
-      async _close() {
-      }
-      async get(key, options) {
-        options = getOptions(options, this.#defaultOptions.entry);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.get(key, options));
-        }
-        this.#assertOpen();
-        this._assertValidKey(key);
-        const snapshot = options.snapshot;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options.valueEncoding);
-        const keyFormat = keyEncoding.format;
-        const valueFormat = valueEncoding.format;
-        if (options === this.#defaultOptions.entry) {
-          options = this.#defaultOptions.entryFormat;
-        } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
-        }
-        const encodedKey = keyEncoding.encode(key);
-        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
-        snapshot?.ref();
-        let value;
-        try {
-          value = await this._get(mappedKey, options);
-        } finally {
-          snapshot?.unref();
-        }
-        try {
-          return value === void 0 ? value : valueEncoding.decode(value);
-        } catch (err) {
-          throw new ModuleError("Could not decode value", {
-            code: "LEVEL_DECODE_ERROR",
-            cause: err
-          });
-        }
-      }
-      async _get(key, options) {
-        return void 0;
-      }
-      getSync(key, options) {
-        if (this.status !== "open") {
-          throw new ModuleError("Database is not open", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        }
-        this._assertValidKey(key);
-        if (options == null) {
-          const encodedKey2 = this.#keyEncoding.encode(key);
-          const mappedKey2 = this.prefixKey(encodedKey2, this.#keyEncoding.format, true);
-          const value2 = this._getSync(mappedKey2, this.#defaultOptions.entryFormat);
-          try {
-            return value2 !== void 0 ? this.#valueEncoding.decode(value2) : void 0;
-          } catch (err) {
-            throw new ModuleError("Could not decode value", {
-              code: "LEVEL_DECODE_ERROR",
-              cause: err
-            });
-          }
-        }
-        const snapshot = options.snapshot;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options.valueEncoding);
-        const keyFormat = keyEncoding.format;
-        const valueFormat = valueEncoding.format;
-        if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
-        }
-        const encodedKey = keyEncoding.encode(key);
-        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
-        let value;
-        snapshot?.ref();
-        try {
-          value = this._getSync(mappedKey, options);
-        } finally {
-          snapshot?.unref();
-        }
-        try {
-          return value !== void 0 ? valueEncoding.decode(value) : void 0;
-        } catch (err) {
-          throw new ModuleError("Could not decode value", {
-            code: "LEVEL_DECODE_ERROR",
-            cause: err
-          });
-        }
-      }
-      _getSync(key, options) {
-        throw new ModuleError("Database does not support getSync()", {
-          code: "LEVEL_NOT_SUPPORTED"
-        });
-      }
-      async getMany(keys, options) {
-        options = getOptions(options, this.#defaultOptions.entry);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.getMany(keys, options));
-        }
-        this.#assertOpen();
-        if (!Array.isArray(keys)) {
-          throw new TypeError("The first argument 'keys' must be an array");
-        }
-        if (keys.length === 0) {
-          return [];
-        }
-        const snapshot = options.snapshot;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options.valueEncoding);
-        const keyFormat = keyEncoding.format;
-        const valueFormat = valueEncoding.format;
-        if (options === this.#defaultOptions.entry) {
-          options = this.#defaultOptions.entryFormat;
-        } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
-        }
-        const mappedKeys = new Array(keys.length);
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          this._assertValidKey(key);
-          mappedKeys[i] = this.prefixKey(keyEncoding.encode(key), keyFormat, true);
-        }
-        snapshot?.ref();
-        let values;
-        try {
-          values = await this._getMany(mappedKeys, options);
-        } finally {
-          snapshot?.unref();
-        }
-        try {
-          for (let i = 0; i < values.length; i++) {
-            if (values[i] !== void 0) {
-              values[i] = valueEncoding.decode(values[i]);
-            }
-          }
-        } catch (err) {
-          throw new ModuleError(`Could not decode one or more of ${values.length} value(s)`, {
-            code: "LEVEL_DECODE_ERROR",
-            cause: err
-          });
-        }
-        return values;
-      }
-      async _getMany(keys, options) {
-        return new Array(keys.length).fill(void 0);
-      }
-      async has(key, options) {
-        options = getOptions(options, this.#defaultOptions.key);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.has(key, options));
-        }
-        this.#assertOpen();
-        this._assertValidKey(key);
-        const snapshot = options.snapshot;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const keyFormat = keyEncoding.format;
-        if (options === this.#defaultOptions.key) {
-          options = this.#defaultOptions.keyFormat;
-        } else if (options.keyEncoding !== keyFormat) {
-          options = { ...options, keyEncoding: keyFormat };
-        }
-        const encodedKey = keyEncoding.encode(key);
-        const mappedKey = this.prefixKey(encodedKey, keyFormat, true);
-        snapshot?.ref();
-        try {
-          return this._has(mappedKey, options);
-        } finally {
-          snapshot?.unref();
-        }
-      }
-      async _has(key, options) {
-        throw new ModuleError("Database does not support has()", {
-          code: "LEVEL_NOT_SUPPORTED"
-        });
-      }
-      async hasMany(keys, options) {
-        options = getOptions(options, this.#defaultOptions.key);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.hasMany(keys, options));
-        }
-        this.#assertOpen();
-        if (!Array.isArray(keys)) {
-          throw new TypeError("The first argument 'keys' must be an array");
-        }
-        if (keys.length === 0) {
-          return [];
-        }
-        const snapshot = options.snapshot;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const keyFormat = keyEncoding.format;
-        if (options === this.#defaultOptions.key) {
-          options = this.#defaultOptions.keyFormat;
-        } else if (options.keyEncoding !== keyFormat) {
-          options = { ...options, keyEncoding: keyFormat };
-        }
-        const mappedKeys = new Array(keys.length);
-        for (let i = 0; i < keys.length; i++) {
-          const key = keys[i];
-          this._assertValidKey(key);
-          mappedKeys[i] = this.prefixKey(keyEncoding.encode(key), keyFormat, true);
-        }
-        snapshot?.ref();
-        try {
-          return this._hasMany(mappedKeys, options);
-        } finally {
-          snapshot?.unref();
-        }
-      }
-      async _hasMany(keys, options) {
-        throw new ModuleError("Database does not support hasMany()", {
-          code: "LEVEL_NOT_SUPPORTED"
-        });
-      }
-      async put(key, value, options) {
-        if (!this.hooks.prewrite.noop) {
-          return this.batch([{ type: "put", key, value }], options);
-        }
-        options = getOptions(options, this.#defaultOptions.entry);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.put(key, value, options));
-        }
-        this.#assertOpen();
-        this._assertValidKey(key);
-        this._assertValidValue(value);
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const valueEncoding = this.valueEncoding(options.valueEncoding);
-        const keyFormat = keyEncoding.format;
-        const valueFormat = valueEncoding.format;
-        const enableWriteEvent = this.#eventMonitor.write;
-        const original = options;
-        if (options === this.#defaultOptions.entry) {
-          options = this.#defaultOptions.entryFormat;
-        } else if (options.keyEncoding !== keyFormat || options.valueEncoding !== valueFormat) {
-          options = { ...options, keyEncoding: keyFormat, valueEncoding: valueFormat };
-        }
-        const encodedKey = keyEncoding.encode(key);
-        const prefixedKey = this.prefixKey(encodedKey, keyFormat, true);
-        const encodedValue = valueEncoding.encode(value);
-        await this._put(prefixedKey, encodedValue, options);
-        if (enableWriteEvent) {
-          const op = {
-            ...original,
-            type: "put",
-            key,
-            value,
-            keyEncoding,
-            valueEncoding,
-            encodedKey,
-            encodedValue
-          };
-          this.emit("write", [op]);
-        }
-      }
-      async _put(key, value, options) {
-      }
-      async del(key, options) {
-        if (!this.hooks.prewrite.noop) {
-          return this.batch([{ type: "del", key }], options);
-        }
-        options = getOptions(options, this.#defaultOptions.key);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.del(key, options));
-        }
-        this.#assertOpen();
-        this._assertValidKey(key);
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const keyFormat = keyEncoding.format;
-        const enableWriteEvent = this.#eventMonitor.write;
-        const original = options;
-        if (options === this.#defaultOptions.key) {
-          options = this.#defaultOptions.keyFormat;
-        } else if (options.keyEncoding !== keyFormat) {
-          options = { ...options, keyEncoding: keyFormat };
-        }
-        const encodedKey = keyEncoding.encode(key);
-        const prefixedKey = this.prefixKey(encodedKey, keyFormat, true);
-        await this._del(prefixedKey, options);
-        if (enableWriteEvent) {
-          const op = {
-            ...original,
-            type: "del",
-            key,
-            keyEncoding,
-            encodedKey
-          };
-          this.emit("write", [op]);
-        }
-      }
-      async _del(key, options) {
-      }
-      // TODO (future): add way for implementations to declare which options are for the
-      // whole batch rather than defaults for individual operations. E.g. the sync option
-      // of classic-level, that should not be copied to individual operations.
-      batch(operations, options) {
-        if (!arguments.length) {
-          this.#assertOpen();
-          return this._chainedBatch();
-        }
-        options = getOptions(options, this.#defaultOptions.empty);
-        return this.#arrayBatch(operations, options);
-      }
-      // Wrapped for async error handling
-      async #arrayBatch(operations, options) {
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.#arrayBatch(operations, options));
-        }
-        this.#assertOpen();
-        if (!Array.isArray(operations)) {
-          throw new TypeError("The first argument 'operations' must be an array");
-        }
-        if (operations.length === 0) {
-          return;
-        }
-        const length = operations.length;
-        const enablePrewriteHook = !this.hooks.prewrite.noop;
-        const enableWriteEvent = this.#eventMonitor.write;
-        const publicOperations = enableWriteEvent ? new Array(length) : null;
-        const privateOperations = new Array(length);
-        const prewriteBatch = enablePrewriteHook ? new PrewriteBatch(this, privateOperations, publicOperations) : null;
-        for (let i = 0; i < length; i++) {
-          const op = { ...options, ...operations[i] };
-          const isPut = op.type === "put";
-          const delegated = op.sublevel != null;
-          const db = delegated ? op.sublevel : this;
-          db._assertValidKey(op.key);
-          op.keyEncoding = db.keyEncoding(op.keyEncoding);
-          if (isPut) {
-            db._assertValidValue(op.value);
-            op.valueEncoding = db.valueEncoding(op.valueEncoding);
-          } else if (op.type !== "del") {
-            throw new TypeError("A batch operation must have a type property that is 'put' or 'del'");
-          }
-          if (enablePrewriteHook) {
-            try {
-              this.hooks.prewrite.run(op, prewriteBatch);
-              op.keyEncoding = db.keyEncoding(op.keyEncoding);
-              if (isPut) op.valueEncoding = db.valueEncoding(op.valueEncoding);
-            } catch (err) {
-              throw new ModuleError("The prewrite hook failed on batch()", {
-                code: "LEVEL_HOOK_ERROR",
-                cause: err
-              });
-            }
-          }
-          const keyEncoding = op.keyEncoding;
-          const preencodedKey = keyEncoding.encode(op.key);
-          const keyFormat = keyEncoding.format;
-          const siblings = delegated && !isDescendant(op.sublevel, this) && op.sublevel !== this;
-          const encodedKey = delegated && !siblings ? prefixDescendantKey(preencodedKey, keyFormat, db, this) : preencodedKey;
-          if (delegated && !siblings) {
-            op.sublevel = null;
-          }
-          let publicOperation = null;
-          if (enableWriteEvent && !siblings) {
-            publicOperation = { ...op };
-            publicOperation.encodedKey = encodedKey;
-            if (delegated) {
-              publicOperation.key = encodedKey;
-              publicOperation.keyEncoding = this.keyEncoding(keyFormat);
-            }
-            publicOperations[i] = publicOperation;
-          }
-          op.key = siblings ? encodedKey : this.prefixKey(encodedKey, keyFormat, true);
-          op.keyEncoding = keyFormat;
-          if (isPut) {
-            const valueEncoding = op.valueEncoding;
-            const encodedValue = valueEncoding.encode(op.value);
-            const valueFormat = valueEncoding.format;
-            op.value = encodedValue;
-            op.valueEncoding = valueFormat;
-            if (enableWriteEvent && !siblings) {
-              publicOperation.encodedValue = encodedValue;
-              if (delegated) {
-                publicOperation.value = encodedValue;
-                publicOperation.valueEncoding = this.valueEncoding(valueFormat);
-              }
-            }
-          }
-          privateOperations[i] = op;
-        }
-        await this._batch(privateOperations, options);
-        if (enableWriteEvent) {
-          this.emit("write", publicOperations);
-        }
-      }
-      async _batch(operations, options) {
-      }
-      sublevel(name, options) {
-        const xopts = AbstractSublevel.defaults(options);
-        const sublevel = this._sublevel(name, xopts);
-        if (!this.hooks.newsub.noop) {
-          try {
-            this.hooks.newsub.run(sublevel, xopts);
-          } catch (err) {
-            throw new ModuleError("The newsub hook failed on sublevel()", {
-              code: "LEVEL_HOOK_ERROR",
-              cause: err
-            });
-          }
-        }
-        return sublevel;
-      }
-      _sublevel(name, options) {
-        return new AbstractSublevel(this, name, options);
-      }
-      prefixKey(key, keyFormat, local) {
-        return key;
-      }
-      async clear(options) {
-        options = getOptions(options, this.#defaultOptions.empty);
-        if (this.#status === "opening") {
-          return this.deferAsync(() => this.clear(options));
-        }
-        this.#assertOpen();
-        const original = options;
-        const keyEncoding = this.keyEncoding(options.keyEncoding);
-        const snapshot = options.snapshot;
-        options = rangeOptions(options, keyEncoding);
-        options.keyEncoding = keyEncoding.format;
-        if (options.limit !== 0) {
-          snapshot?.ref();
-          try {
-            await this._clear(options);
-          } finally {
-            snapshot?.unref();
-          }
-          this.emit("clear", original);
-        }
-      }
-      async _clear(options) {
-      }
-      iterator(options) {
-        const keyEncoding = this.keyEncoding(options?.keyEncoding);
-        const valueEncoding = this.valueEncoding(options?.valueEncoding);
-        options = rangeOptions(options, keyEncoding);
-        options.keys = options.keys !== false;
-        options.values = options.values !== false;
-        options[AbstractIterator.keyEncoding] = keyEncoding;
-        options[AbstractIterator.valueEncoding] = valueEncoding;
-        options.keyEncoding = keyEncoding.format;
-        options.valueEncoding = valueEncoding.format;
-        if (this.#status === "opening") {
-          return new DeferredIterator(this, options);
-        }
-        this.#assertOpen();
-        return this._iterator(options);
-      }
-      _iterator(options) {
-        return new AbstractIterator(this, options);
-      }
-      keys(options) {
-        const keyEncoding = this.keyEncoding(options?.keyEncoding);
-        const valueEncoding = this.valueEncoding(options?.valueEncoding);
-        options = rangeOptions(options, keyEncoding);
-        options[AbstractIterator.keyEncoding] = keyEncoding;
-        options[AbstractIterator.valueEncoding] = valueEncoding;
-        options.keyEncoding = keyEncoding.format;
-        options.valueEncoding = valueEncoding.format;
-        if (this.#status === "opening") {
-          return new DeferredKeyIterator(this, options);
-        }
-        this.#assertOpen();
-        return this._keys(options);
-      }
-      _keys(options) {
-        return new DefaultKeyIterator(this, options);
-      }
-      values(options) {
-        const keyEncoding = this.keyEncoding(options?.keyEncoding);
-        const valueEncoding = this.valueEncoding(options?.valueEncoding);
-        options = rangeOptions(options, keyEncoding);
-        options[AbstractIterator.keyEncoding] = keyEncoding;
-        options[AbstractIterator.valueEncoding] = valueEncoding;
-        options.keyEncoding = keyEncoding.format;
-        options.valueEncoding = valueEncoding.format;
-        if (this.#status === "opening") {
-          return new DeferredValueIterator(this, options);
-        }
-        this.#assertOpen();
-        return this._values(options);
-      }
-      _values(options) {
-        return new DefaultValueIterator(this, options);
-      }
-      snapshot(options) {
-        this.#assertOpen();
-        if (typeof options !== "object" || options === null) {
-          options = this.#defaultOptions.owner;
-        } else if (options.owner == null) {
-          options = { ...options, owner: this };
-        }
-        return this._snapshot(options);
-      }
-      _snapshot(options) {
-        throw new ModuleError("Database does not support explicit snapshots", {
-          code: "LEVEL_NOT_SUPPORTED"
-        });
-      }
-      defer(fn, options) {
-        if (typeof fn !== "function") {
-          throw new TypeError("The first argument must be a function");
-        }
-        this.#queue.add(function(abortError) {
-          if (!abortError) fn();
-        }, options);
-      }
-      deferAsync(fn, options) {
-        if (typeof fn !== "function") {
-          throw new TypeError("The first argument must be a function");
-        }
-        return new Promise((resolve, reject) => {
-          this.#queue.add(function(abortError) {
-            if (abortError) reject(abortError);
-            else fn().then(resolve, reject);
-          }, options);
-        });
-      }
-      attachResource(resource) {
-        if (typeof resource !== "object" || resource === null || typeof resource.close !== "function") {
-          throw new TypeError("The first argument must be a resource object");
-        }
-        this.#resources.add(resource);
-      }
-      detachResource(resource) {
-        this.#resources.delete(resource);
-      }
-      _chainedBatch() {
-        return new DefaultChainedBatch(this);
-      }
-      _assertValidKey(key) {
-        if (key === null || key === void 0) {
-          throw new ModuleError("Key cannot be null or undefined", {
-            code: "LEVEL_INVALID_KEY"
-          });
-        }
-      }
-      _assertValidValue(value) {
-        if (value === null || value === void 0) {
-          throw new ModuleError("Value cannot be null or undefined", {
-            code: "LEVEL_INVALID_VALUE"
-          });
-        }
-      }
-      #assertOpen() {
-        if (this.#status !== "open") {
-          throw new ModuleError("Database is not open", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        }
-      }
-      #assertUnlocked() {
-        if (this.#statusLocked) {
-          throw new ModuleError("Database status is locked", {
-            code: "LEVEL_STATUS_LOCKED"
-          });
-        }
-      }
-    };
-    var { AbstractSublevel } = require_abstract_sublevel()({ AbstractLevel });
-    exports2.AbstractLevel = AbstractLevel;
-    exports2.AbstractSublevel = AbstractSublevel;
-    if (typeof Symbol.asyncDispose === "symbol") {
-      AbstractLevel.prototype[Symbol.asyncDispose] = async function() {
-        return this.close();
-      };
-    }
-    var formats = function(db) {
-      return Object.keys(db.supports.encodings).filter((k) => !!db.supports.encodings[k]);
-    };
-    var closeResource = function(resource) {
-      return resource.close();
-    };
-    var convertRejection = function(reason) {
-      if (reason instanceof Error) {
-        return reason;
-      }
-      if (Object.prototype.toString.call(reason) === "[object Error]") {
-        return reason;
-      }
-      const hint = reason === null ? "null" : typeof reason;
-      const msg = `Promise rejection reason must be an Error, received ${hint}`;
-      return new TypeError(msg);
-    };
-    var NotOpenError = class extends ModuleError {
-      constructor(cause) {
-        super("Database failed to open", {
-          code: "LEVEL_DATABASE_NOT_OPEN",
-          cause
-        });
-      }
-    };
-    var NotClosedError = class extends ModuleError {
-      constructor(cause) {
-        super("Database failed to close", {
-          code: "LEVEL_DATABASE_NOT_CLOSED",
-          cause
-        });
-      }
-    };
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-snapshot.js
-var require_abstract_snapshot = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/abstract-snapshot.js"(exports2) {
-    "use strict";
-    var ModuleError = require_module_error();
-    var { noop } = require_common();
-    var AbstractSnapshot = class {
-      #open = true;
-      #referenceCount = 0;
-      #pendingClose = null;
-      #closePromise = null;
-      #owner;
-      constructor(options) {
-        const owner = options.owner;
-        if (typeof owner !== "object" || owner === null) {
-          const hint = owner === null ? "null" : typeof owner;
-          throw new TypeError(`Owner must be an abstract-level database, received ${hint}`);
-        }
-        this.#owner = owner;
-        this.#owner.attachResource(this);
-      }
-      ref() {
-        if (!this.#open) {
-          throw new ModuleError("Snapshot is not open: cannot use snapshot after close()", {
-            code: "LEVEL_SNAPSHOT_NOT_OPEN"
-          });
-        }
-        this.#referenceCount++;
-      }
-      unref() {
-        if (--this.#referenceCount === 0) {
-          this.#pendingClose?.();
-        }
-      }
-      async close() {
-        if (this.#closePromise !== null) {
-          return this.#closePromise.catch(noop);
-        }
-        this.#open = false;
-        this.#closePromise = new Promise((resolve, reject) => {
-          this.#pendingClose = () => {
-            this.#pendingClose = null;
-            privateClose(this, this.#owner).then(resolve, reject);
-          };
-        });
-        if (this.#referenceCount === 0) {
-          this.#pendingClose();
-        }
-        return this.#closePromise;
-      }
-      async _close() {
-      }
-    };
-    if (typeof Symbol.asyncDispose === "symbol") {
-      AbstractSnapshot.prototype[Symbol.asyncDispose] = async function() {
-        return this.close();
-      };
-    }
-    var privateClose = async function(snapshot, owner) {
-      await snapshot._close();
-      owner.detachResource(snapshot);
-    };
-    exports2.AbstractSnapshot = AbstractSnapshot;
-  }
-});
-
-// ../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/index.js
-var require_abstract_level2 = __commonJS({
-  "../../node_modules/.pnpm/abstract-level@3.1.1/node_modules/abstract-level/index.js"(exports2) {
-    "use strict";
-    exports2.AbstractLevel = require_abstract_level().AbstractLevel;
-    exports2.AbstractSublevel = require_abstract_level().AbstractSublevel;
-    exports2.AbstractIterator = require_abstract_iterator().AbstractIterator;
-    exports2.AbstractKeyIterator = require_abstract_iterator().AbstractKeyIterator;
-    exports2.AbstractValueIterator = require_abstract_iterator().AbstractValueIterator;
-    exports2.AbstractChainedBatch = require_abstract_chained_batch().AbstractChainedBatch;
-    exports2.AbstractSnapshot = require_abstract_snapshot().AbstractSnapshot;
-  }
-});
-
-// ../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js
-var require_node_gyp_build = __commonJS({
-  "../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/node-gyp-build.js"(exports2, module2) {
-    "use strict";
-    var fs = require("fs");
-    var path4 = require("path");
-    var os = require("os");
-    var runtimeRequire = typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
-    var vars = process.config && process.config.variables || {};
-    var prebuildsOnly = !!process.env.PREBUILDS_ONLY;
-    var abi = process.versions.modules;
-    var runtime = isElectron() ? "electron" : isNwjs() ? "node-webkit" : "node";
-    var arch = process.env.npm_config_arch || os.arch();
-    var platform = process.env.npm_config_platform || os.platform();
-    var libc = process.env.LIBC || (isAlpine(platform) ? "musl" : "glibc");
-    var armv = process.env.ARM_VERSION || (arch === "arm64" ? "8" : vars.arm_version) || "";
-    var uv = (process.versions.uv || "").split(".")[0];
-    module2.exports = load;
-    function load(dir) {
-      return runtimeRequire(load.resolve(dir));
-    }
-    load.resolve = load.path = function(dir) {
-      dir = path4.resolve(dir || ".");
-      try {
-        var name = runtimeRequire(path4.join(dir, "package.json")).name.toUpperCase().replace(/-/g, "_");
-        if (process.env[name + "_PREBUILD"]) dir = process.env[name + "_PREBUILD"];
-      } catch (err) {
-      }
-      if (!prebuildsOnly) {
-        var release = getFirst(path4.join(dir, "build/Release"), matchBuild);
-        if (release) return release;
-        var debug = getFirst(path4.join(dir, "build/Debug"), matchBuild);
-        if (debug) return debug;
-      }
-      var prebuild = resolve(dir);
-      if (prebuild) return prebuild;
-      var nearby = resolve(path4.dirname(process.execPath));
-      if (nearby) return nearby;
-      var target = [
-        "platform=" + platform,
-        "arch=" + arch,
-        "runtime=" + runtime,
-        "abi=" + abi,
-        "uv=" + uv,
-        armv ? "armv=" + armv : "",
-        "libc=" + libc,
-        "node=" + process.versions.node,
-        process.versions.electron ? "electron=" + process.versions.electron : "",
-        typeof __webpack_require__ === "function" ? "webpack=true" : ""
-        // eslint-disable-line
-      ].filter(Boolean).join(" ");
-      throw new Error("No native build was found for " + target + "\n    loaded from: " + dir + "\n");
-      function resolve(dir2) {
-        var tuples = readdirSync(path4.join(dir2, "prebuilds")).map(parseTuple);
-        var tuple = tuples.filter(matchTuple(platform, arch)).sort(compareTuples)[0];
-        if (!tuple) return;
-        var prebuilds = path4.join(dir2, "prebuilds", tuple.name);
-        var parsed = readdirSync(prebuilds).map(parseTags);
-        var candidates = parsed.filter(matchTags(runtime, abi));
-        var winner = candidates.sort(compareTags(runtime))[0];
-        if (winner) return path4.join(prebuilds, winner.file);
-      }
-    };
-    function readdirSync(dir) {
-      try {
-        return fs.readdirSync(dir);
-      } catch (err) {
-        return [];
-      }
-    }
-    function getFirst(dir, filter) {
-      var files = readdirSync(dir).filter(filter);
-      return files[0] && path4.join(dir, files[0]);
-    }
-    function matchBuild(name) {
-      return /\.node$/.test(name);
-    }
-    function parseTuple(name) {
-      var arr = name.split("-");
-      if (arr.length !== 2) return;
-      var platform2 = arr[0];
-      var architectures = arr[1].split("+");
-      if (!platform2) return;
-      if (!architectures.length) return;
-      if (!architectures.every(Boolean)) return;
-      return { name, platform: platform2, architectures };
-    }
-    function matchTuple(platform2, arch2) {
-      return function(tuple) {
-        if (tuple == null) return false;
-        if (tuple.platform !== platform2) return false;
-        return tuple.architectures.includes(arch2);
-      };
-    }
-    function compareTuples(a, b) {
-      return a.architectures.length - b.architectures.length;
-    }
-    function parseTags(file) {
-      var arr = file.split(".");
-      var extension = arr.pop();
-      var tags = { file, specificity: 0 };
-      if (extension !== "node") return;
-      for (var i = 0; i < arr.length; i++) {
-        var tag = arr[i];
-        if (tag === "node" || tag === "electron" || tag === "node-webkit") {
-          tags.runtime = tag;
-        } else if (tag === "napi") {
-          tags.napi = true;
-        } else if (tag.slice(0, 3) === "abi") {
-          tags.abi = tag.slice(3);
-        } else if (tag.slice(0, 2) === "uv") {
-          tags.uv = tag.slice(2);
-        } else if (tag.slice(0, 4) === "armv") {
-          tags.armv = tag.slice(4);
-        } else if (tag === "glibc" || tag === "musl") {
-          tags.libc = tag;
-        } else {
-          continue;
-        }
-        tags.specificity++;
-      }
-      return tags;
-    }
-    function matchTags(runtime2, abi2) {
-      return function(tags) {
-        if (tags == null) return false;
-        if (tags.runtime && tags.runtime !== runtime2 && !runtimeAgnostic(tags)) return false;
-        if (tags.abi && tags.abi !== abi2 && !tags.napi) return false;
-        if (tags.uv && tags.uv !== uv) return false;
-        if (tags.armv && tags.armv !== armv) return false;
-        if (tags.libc && tags.libc !== libc) return false;
-        return true;
-      };
-    }
-    function runtimeAgnostic(tags) {
-      return tags.runtime === "node" && tags.napi;
-    }
-    function compareTags(runtime2) {
-      return function(a, b) {
-        if (a.runtime !== b.runtime) {
-          return a.runtime === runtime2 ? -1 : 1;
-        } else if (a.abi !== b.abi) {
-          return a.abi ? -1 : 1;
-        } else if (a.specificity !== b.specificity) {
-          return a.specificity > b.specificity ? -1 : 1;
-        } else {
-          return 0;
-        }
-      };
-    }
-    function isNwjs() {
-      return !!(process.versions && process.versions.nw);
-    }
-    function isElectron() {
-      if (process.versions && process.versions.electron) return true;
-      if (process.env.ELECTRON_RUN_AS_NODE) return true;
-      return typeof window !== "undefined" && window.process && window.process.type === "renderer";
-    }
-    function isAlpine(platform2) {
-      return platform2 === "linux" && fs.existsSync("/etc/alpine-release");
-    }
-    load.parseTags = parseTags;
-    load.matchTags = matchTags;
-    load.compareTags = compareTags;
-    load.parseTuple = parseTuple;
-    load.matchTuple = matchTuple;
-    load.compareTuples = compareTuples;
-  }
-});
-
-// ../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js
-var require_node_gyp_build2 = __commonJS({
-  "../../node_modules/.pnpm/node-gyp-build@4.8.4/node_modules/node-gyp-build/index.js"(exports2, module2) {
-    "use strict";
-    var runtimeRequire = typeof __webpack_require__ === "function" ? __non_webpack_require__ : require;
-    if (typeof runtimeRequire.addon === "function") {
-      module2.exports = runtimeRequire.addon.bind(runtimeRequire);
-    } else {
-      module2.exports = require_node_gyp_build();
-    }
-  }
-});
-
-// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/binding.js
-var require_binding = __commonJS({
-  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/binding.js"(exports2, module2) {
-    "use strict";
-    module2.exports = require_node_gyp_build2()(__dirname);
-  }
-});
-
-// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/chained-batch.js
-var require_chained_batch = __commonJS({
-  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/chained-batch.js"(exports2) {
-    "use strict";
-    var { AbstractChainedBatch } = require_abstract_level2();
-    var binding = require_binding();
-    var kContext = Symbol("context");
-    var ChainedBatch = class extends AbstractChainedBatch {
-      constructor(db, context) {
-        super(db);
-        this[kContext] = binding.batch_init(context);
-      }
-      _put(key, value) {
-        binding.batch_put(this[kContext], key, value);
-      }
-      _del(key) {
-        binding.batch_del(this[kContext], key);
-      }
-      _clear() {
-        binding.batch_clear(this[kContext]);
-      }
-      async _write(options) {
-        return binding.batch_write(this[kContext], options);
-      }
-      async _close() {
-      }
-    };
-    exports2.ChainedBatch = ChainedBatch;
-  }
-});
-
-// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/iterator.js
-var require_iterator = __commonJS({
-  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/iterator.js"(exports2) {
-    "use strict";
-    var { AbstractIterator } = require_abstract_level2();
-    var binding = require_binding();
-    var kContext = Symbol("context");
-    var kCache = Symbol("cache");
-    var kFirst = Symbol("first");
-    var kPosition = Symbol("position");
-    var kState = Symbol("state");
-    var kSignal = Symbol("signal");
-    var kAbort = Symbol("abort");
-    var empty = [];
-    var STATE_ENDED = 1;
-    var Iterator = class extends AbstractIterator {
-      constructor(db, context, options, snapshotCtx) {
-        super(db, options);
-        this[kState] = new Uint8Array(1);
-        this[kContext] = binding.iterator_init(context, this[kState], options, snapshotCtx);
-        this[kFirst] = true;
-        this[kCache] = empty;
-        this[kPosition] = 0;
-        this[kAbort] = this[kAbort].bind(this);
-        if (options.signal != null) {
-          this[kSignal] = options.signal;
-          this[kSignal].addEventListener("abort", this[kAbort], { once: true });
-        } else {
-          this[kSignal] = null;
-        }
-      }
-      _seek(target, options) {
-        this[kFirst] = true;
-        this[kCache] = empty;
-        this[kState][0] &= ~STATE_ENDED;
-        this[kPosition] = 0;
-        binding.iterator_seek(this[kContext], target);
-      }
-      async _next() {
-        if (this[kPosition] < this[kCache].length) {
-          return this[kCache][this[kPosition]++];
-        }
-        if ((this[kState][0] & STATE_ENDED) !== 0) {
-          return void 0;
-        }
-        if (this[kFirst]) {
-          this[kFirst] = false;
-          this[kCache] = await binding.iterator_nextv(this[kContext], 1);
-          this[kPosition] = 0;
-        } else {
-          this[kCache] = await binding.iterator_nextv(this[kContext], 1e3);
-          this[kPosition] = 0;
-        }
-        if (this[kPosition] < this[kCache].length) {
-          return this[kCache][this[kPosition]++];
-        }
-      }
-      async _nextv(size, options) {
-        this[kFirst] = false;
-        if (this[kPosition] < this[kCache].length) {
-          const length = Math.min(size, this[kCache].length - this[kPosition]);
-          const chunk = this[kCache].slice(this[kPosition], this[kPosition] + length);
-          this[kPosition] += length;
-          return chunk;
-        }
-        if ((this[kState][0] & STATE_ENDED) !== 0) {
-          return [];
-        }
-        return binding.iterator_nextv(this[kContext], size);
-      }
-      async _close() {
-        this[kCache] = empty;
-        if (this[kSignal] !== null) {
-          this[kSignal].removeEventListener("abort", this[kAbort]);
-          this[kSignal] = null;
-        }
-        binding.iterator_close(this[kContext]);
-      }
-      [kAbort]() {
-        this[kSignal] = null;
-        binding.iterator_abort(this[kContext]);
-      }
-      // Undocumented, exposed for tests only
-      get cached() {
-        return this[kCache].length - this[kPosition];
-      }
-    };
-    exports2.Iterator = Iterator;
-  }
-});
-
-// ../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/index.js
-var require_classic_level = __commonJS({
-  "../../node_modules/.pnpm/classic-level@3.0.0/node_modules/classic-level/index.js"(exports2) {
-    "use strict";
-    var { AbstractLevel, AbstractSnapshot } = require_abstract_level2();
-    var ModuleError = require_module_error();
-    var fsp = require("fs/promises");
-    var binding = require_binding();
-    var { ChainedBatch } = require_chained_batch();
-    var { Iterator } = require_iterator();
-    var kContext = Symbol("context");
-    var kLocation = Symbol("location");
-    var ClassicLevel = class extends AbstractLevel {
-      #sharedBuffer = null;
-      constructor(location, options) {
-        if (typeof location !== "string" || location === "") {
-          throw new TypeError("The first argument 'location' must be a non-empty string");
-        }
-        super({
-          encodings: {
-            buffer: true,
-            utf8: true,
-            view: true
-          },
-          has: true,
-          createIfMissing: true,
-          errorIfExists: true,
-          explicitSnapshots: true,
-          getSync: true,
-          additionalMethods: {
-            approximateSize: true,
-            compactRange: true
-          },
-          signals: {
-            iterators: true
-          }
-        }, options);
-        this[kLocation] = location;
-        this[kContext] = binding.db_init();
-      }
-      get location() {
-        return this[kLocation];
-      }
-      async _open(options) {
-        if (options.createIfMissing) {
-          await fsp.mkdir(this[kLocation], { recursive: true });
-        }
-        return binding.db_open(this[kContext], this[kLocation], options);
-      }
-      async _close() {
-        return binding.db_close(this[kContext]);
-      }
-      async _put(key, value, options) {
-        return binding.db_put(this[kContext], key, value, options);
-      }
-      async _get(key, options) {
-        let flags = 0;
-        if (options.fillCache !== false) flags |= FLAG_FILL_CACHE;
-        if (options.valueEncoding !== "utf8") flags |= FLAG_VALUE_AS_BUFFER;
-        if (options.keyEncoding !== "utf8") {
-          flags |= FLAG_KEY_AS_BUFFER;
-          if (key.buffer.resizable) {
-            key = new Uint8Array(key);
-          }
-        }
-        return binding.db_get(
-          this[kContext],
-          flags,
-          key,
-          options.snapshot?.[kContext]
-        );
-      }
-      _getSync(key, options) {
-        let flags = 0;
-        if (options.fillCache !== false) flags |= FLAG_FILL_CACHE;
-        if (options.valueEncoding !== "utf8") flags |= FLAG_VALUE_AS_BUFFER;
-        if (options.keyEncoding !== "utf8") {
-          return binding.db_get_sync(
-            this[kContext],
-            flags,
-            key,
-            options.snapshot?.[kContext]
-          );
-        } else {
-          let keySize;
-          if (this.#sharedBuffer === null) {
-            keySize = this.#createSharedBuffer(key);
-          } else {
-            keySize = this.#sharedBuffer.write(key);
-            if (keySize === this.#sharedBuffer.byteLength) {
-              keySize = this.#createSharedBuffer(key);
-            }
-          }
-          return binding.db_get_sync(
-            this[kContext],
-            flags | FLAG_SHARED_KEY,
-            keySize,
-            options.snapshot?.[kContext]
-          );
-        }
-      }
-      #createSharedBuffer(str) {
-        this.#sharedBuffer = Buffer.allocUnsafe(Buffer.byteLength(str) + 64);
-        binding.db_set_shared_buffer(this[kContext], this.#sharedBuffer);
-        return this.#sharedBuffer.write(str);
-      }
-      async _getMany(keys, options) {
-        return binding.db_get_many(
-          this[kContext],
-          keys,
-          options,
-          options.snapshot?.[kContext]
-        );
-      }
-      async _has(key, options) {
-        return binding.db_has(
-          this[kContext],
-          key,
-          options.fillCache,
-          options.snapshot?.[kContext]
-        );
-      }
-      async _hasMany(keys, options) {
-        const wordCount = keys.length + 32 >>> 5;
-        const buffer = new ArrayBuffer(wordCount * 4);
-        const bitset = new Uint32Array(buffer);
-        await binding.db_has_many(
-          this[kContext],
-          keys,
-          options.fillCache,
-          options.snapshot?.[kContext],
-          buffer
-        );
-        const values = new Array(keys.length);
-        for (let i = 0; i < values.length; i++) {
-          values[i] = (bitset[i >>> 5] & 1 << (i & 31)) !== 0;
-        }
-        return values;
-      }
-      async _del(key, options) {
-        return binding.db_del(this[kContext], key, options);
-      }
-      async _clear(options) {
-        return binding.db_clear(
-          this[kContext],
-          options,
-          options.snapshot?.[kContext]
-        );
-      }
-      _chainedBatch() {
-        return new ChainedBatch(this, this[kContext]);
-      }
-      async _batch(operations, options) {
-        return binding.batch_do(this[kContext], operations, options);
-      }
-      async approximateSize(start, end, options) {
-        if (arguments.length < 2) {
-          throw new TypeError("The arguments 'start' and 'end' are required");
-        } else if (typeof options !== "object") {
-          options = null;
-        }
-        if (this.status === "opening") {
-          return this.deferAsync(() => this.approximateSize(start, end, options));
-        } else if (this.status !== "open") {
-          throw new ModuleError("Database is not open: cannot call approximateSize()", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        } else {
-          const keyEncoding = this.keyEncoding(options && options.keyEncoding);
-          start = keyEncoding.encode(start);
-          end = keyEncoding.encode(end);
-          return binding.db_approximate_size(this[kContext], start, end);
-        }
-      }
-      async compactRange(start, end, options) {
-        if (arguments.length < 2) {
-          throw new TypeError("The arguments 'start' and 'end' are required");
-        } else if (typeof options !== "object") {
-          options = null;
-        }
-        if (this.status === "opening") {
-          return this.deferAsync(() => this.compactRange(start, end, options));
-        } else if (this.status !== "open") {
-          throw new ModuleError("Database is not open: cannot call compactRange()", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        } else {
-          const keyEncoding = this.keyEncoding(options && options.keyEncoding);
-          start = keyEncoding.encode(start);
-          end = keyEncoding.encode(end);
-          return binding.db_compact_range(this[kContext], start, end);
-        }
-      }
-      getProperty(property) {
-        if (typeof property !== "string") {
-          throw new TypeError("The first argument 'property' must be a string");
-        }
-        if (this.status !== "open") {
-          throw new ModuleError("Database is not open", {
-            code: "LEVEL_DATABASE_NOT_OPEN"
-          });
-        }
-        return binding.db_get_property(this[kContext], property);
-      }
-      _iterator(options) {
-        return new Iterator(
-          this,
-          this[kContext],
-          options,
-          options.snapshot?.[kContext]
-        );
-      }
-      _snapshot(options) {
-        return new Snapshot(this[kContext], options);
-      }
-      static async destroy(location) {
-        if (typeof location !== "string" || location === "") {
-          throw new TypeError("The first argument 'location' must be a non-empty string");
-        }
-        return binding.destroy_db(location);
-      }
-      static async repair(location) {
-        if (typeof location !== "string" || location === "") {
-          throw new TypeError("The first argument 'location' must be a non-empty string");
-        }
-        return binding.repair_db(location);
-      }
-    };
-    var Snapshot = class extends AbstractSnapshot {
-      constructor(context, options) {
-        super(options);
-        this[kContext] = binding.snapshot_init(context);
-      }
-      async _close() {
-        binding.snapshot_close(this[kContext]);
-      }
-    };
-    exports2.ClassicLevel = ClassicLevel;
-    var FLAG_FILL_CACHE = 1;
-    var FLAG_KEY_AS_BUFFER = 2;
-    var FLAG_VALUE_AS_BUFFER = 4;
-    var FLAG_SHARED_KEY = 8;
-  }
-});
-
 // ../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/package.json
 var require_package = __commonJS({
   "../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/package.json"(exports2, module2) {
@@ -3585,7 +103,7 @@ var require_main = __commonJS({
   "../../node_modules/.pnpm/dotenv@16.6.1/node_modules/dotenv/lib/main.js"(exports2, module2) {
     "use strict";
     var fs = require("fs");
-    var path4 = require("path");
+    var path5 = require("path");
     var os = require("os");
     var crypto = require("crypto");
     var packageJson = require_package();
@@ -3701,7 +219,7 @@ var require_main = __commonJS({
           possibleVaultPath = options.path.endsWith(".vault") ? options.path : `${options.path}.vault`;
         }
       } else {
-        possibleVaultPath = path4.resolve(process.cwd(), ".env.vault");
+        possibleVaultPath = path5.resolve(process.cwd(), ".env.vault");
       }
       if (fs.existsSync(possibleVaultPath)) {
         return possibleVaultPath;
@@ -3709,7 +227,7 @@ var require_main = __commonJS({
       return null;
     }
     function _resolveHome(envPath) {
-      return envPath[0] === "~" ? path4.join(os.homedir(), envPath.slice(1)) : envPath;
+      return envPath[0] === "~" ? path5.join(os.homedir(), envPath.slice(1)) : envPath;
     }
     function _configVault(options) {
       const debug = Boolean(options && options.debug);
@@ -3726,7 +244,7 @@ var require_main = __commonJS({
       return { parsed };
     }
     function configDotenv(options) {
-      const dotenvPath = path4.resolve(process.cwd(), ".env");
+      const dotenvPath = path5.resolve(process.cwd(), ".env");
       let encoding = "utf8";
       const debug = Boolean(options && options.debug);
       const quiet = options && "quiet" in options ? options.quiet : true;
@@ -3750,13 +268,13 @@ var require_main = __commonJS({
       }
       let lastError;
       const parsedAll = {};
-      for (const path5 of optionPaths) {
+      for (const path6 of optionPaths) {
         try {
-          const parsed = DotenvModule.parse(fs.readFileSync(path5, { encoding }));
+          const parsed = DotenvModule.parse(fs.readFileSync(path6, { encoding }));
           DotenvModule.populate(parsedAll, parsed, options);
         } catch (e) {
           if (debug) {
-            _debug(`Failed to load ${path5} ${e.message}`);
+            _debug(`Failed to load ${path6} ${e.message}`);
           }
           lastError = e;
         }
@@ -3771,7 +289,7 @@ var require_main = __commonJS({
         const shortPaths = [];
         for (const filePath of optionPaths) {
           try {
-            const relative = path4.relative(process.cwd(), filePath);
+            const relative = path5.relative(process.cwd(), filePath);
             shortPaths.push(relative);
           } catch (e) {
             if (debug) {
@@ -3904,15 +422,13 @@ var require_dist = __commonJS({
     var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
     var index_exports2 = {};
     __export2(index_exports2, {
-      compilePack: () => compilePack2,
-      extractPack: () => extractPack2,
       findManifest: () => findManifest2,
       getFoundryConfigInfo: () => getFoundryConfigInfo2,
       launchFoundry: () => launchFoundry2
     });
     module2.exports = __toCommonJS2(index_exports2);
     var import_fs_extra2 = __toESM2(require("fs-extra"));
-    var import_path2 = __toESM2(require("path"));
+    var import_path22 = __toESM2(require("path"));
     function isNothing(subject) {
       return typeof subject === "undefined" || subject === null;
     }
@@ -6494,9 +3010,9 @@ var require_dist = __commonJS({
     var JSON_SCHEMA = json;
     var CORE_SCHEMA = core;
     var DEFAULT_SCHEMA = _default;
-    var load = loader.load;
+    var load2 = loader.load;
     var loadAll = loader.loadAll;
-    var dump = dumper.dump;
+    var dump2 = dumper.dump;
     var YAMLException = exception;
     var types = {
       binary,
@@ -6523,9 +3039,9 @@ var require_dist = __commonJS({
       JSON_SCHEMA,
       CORE_SCHEMA,
       DEFAULT_SCHEMA,
-      load,
+      load: load2,
       loadAll,
-      dump,
+      dump: dump2,
       YAMLException,
       types,
       safeLoad,
@@ -6582,7 +3098,7 @@ var require_dist = __commonJS({
     async function getFoundryConfigInfo2(cwd) {
       const foundryConfigPath = await getFoundryConfigPath(cwd);
       if (!foundryConfigPath) return void 0;
-      const foundryConfig = import_path2.default.extname(foundryConfigPath) == ".json" ? await import_fs_extra2.default.readJSON(foundryConfigPath) : js_yaml_default.load(await import_fs_extra2.default.readFile(foundryConfigPath, "utf-8"), {
+      const foundryConfig = import_path22.default.extname(foundryConfigPath) == ".json" ? await import_fs_extra2.default.readJSON(foundryConfigPath) : js_yaml_default.load(await import_fs_extra2.default.readFile(foundryConfigPath, "utf-8"), {
         json: true,
         filename: foundryConfigPath
       });
@@ -6609,282 +3125,23 @@ var require_dist = __commonJS({
       function resolvePath(paths) {
         return paths.map((p) => {
           p = replaceEnvVars(p);
-          if (!import_fs_extra2.default.statSync(import_path2.default.resolve(p)).isDirectory()) {
+          if (!import_fs_extra2.default.statSync(import_path22.default.resolve(p)).isDirectory()) {
             return void 0;
           }
-          return import_path2.default.resolve(p);
+          return import_path22.default.resolve(p);
         }).filter((p) => p !== void 0);
       }
       function resolveMainJs(paths) {
         const candidates = paths.flatMap((p) => [
-          import_path2.default.normalize(import_path2.default.join(p, "resources", "app", "main.js")),
+          import_path22.default.normalize(import_path22.default.join(p, "resources", "app", "main.js")),
           // before v13
-          import_path2.default.normalize(import_path2.default.join(p, "main.js"))
+          import_path22.default.normalize(import_path22.default.join(p, "main.js"))
           // v13
         ]).filter((p) => import_fs_extra2.default.pathExistsSync(p));
         if (candidates.length === 0) throw new Error("No main.js found in any of the installation paths.");
         return candidates[0];
       }
     }
-    var fse4 = __toESM2(require("fs-extra"));
-    var import_path32 = __toESM2(require("path"));
-    var import_picocolors = __toESM2(require_picocolors());
-    var import_classic_level = require_classic_level();
-    async function compilePack2(src, dest, { nedb = false, yaml = false, recursive = false, log = false, transformEntry } = {}) {
-      if (nedb) throw new Error("NeDB files are obsolete and only Classic database level files are handled!");
-      const files = findSourceFiles(src, { yaml, recursive });
-      return compileClassicLevel(dest, files, { log, transformEntry });
-    }
-    async function compileClassicLevel(pack2, files, { log, transformEntry } = {}) {
-      fse4.mkdirSync(pack2, { recursive: true });
-      const db = new import_classic_level.ClassicLevel(pack2, { keyEncoding: "utf8", valueEncoding: "json" });
-      await db.open();
-      const batch = db.batch();
-      const seenKeys = /* @__PURE__ */ new Set();
-      const packDoc = applyHierarchy(async (doc, collection) => {
-        const key = doc._key;
-        delete doc._key;
-        if (seenKeys.has(key)) {
-          throw new Error(`An entry with key '${key}' was already packed and would be overwritten by this entry.`);
-        }
-        seenKeys.add(key);
-        const value = structuredClone(doc);
-        await mapHierarchy(value, collection, (d) => d._id);
-        batch.put(key, value);
-      });
-      for (const file of files) {
-        try {
-          const contents = fse4.readFileSync(file, "utf8");
-          const ext = import_path32.default.extname(file);
-          const isYaml = ext === ".yml" || ext === ".yaml";
-          const doc = isYaml ? load(contents) : JSON.parse(contents);
-          const [, collection] = doc._key.split("!");
-          if (await transformEntry?.(doc) === false) continue;
-          await packDoc(doc, collection);
-          if (log) console.log(`Packed ${import_picocolors.default.blue(doc._id)}${import_picocolors.default.blue(doc.name ? ` (${doc.name})` : "")}`);
-        } catch (err) {
-          if (log) console.error(`Failed to pack ${import_picocolors.default.red(file)}. See error below.`);
-          throw err;
-        }
-      }
-      for (const key of await db.keys().all()) {
-        if (!seenKeys.has(key)) {
-          batch.del(key);
-          if (log) console.log(`Removed ${import_picocolors.default.blue(key)}`);
-        }
-      }
-      await batch.write();
-      await compactClassicLevel(db);
-      await db.close();
-    }
-    async function compactClassicLevel(db) {
-      const forwardIterator = db.keys({ limit: 1, fillCache: false });
-      const firstKey = await forwardIterator.next();
-      await forwardIterator.close();
-      const backwardIterator = db.keys({ limit: 1, reverse: true, fillCache: false });
-      const lastKey = await backwardIterator.next();
-      await backwardIterator.close();
-      if (firstKey && lastKey) return db.compactRange(firstKey, lastKey, { keyEncoding: "utf8" });
-    }
-    async function extractPack2(src, dest, {
-      nedb = false,
-      yaml = false,
-      yamlOptions = {},
-      jsonOptions = {},
-      log = false,
-      ////documentType,
-      ////collection,
-      clean,
-      folders,
-      transformEntry,
-      transformName,
-      transformFolderName
-    } = {}) {
-      if (nedb) throw new Error("NeDB files are obsolete and only Classic database level files are handled!");
-      if (clean) fse4.rmSync(dest, { force: true, recursive: true, maxRetries: 10 });
-      fse4.mkdirSync(dest, { recursive: true });
-      return extractClassicLevel(src, dest, {
-        yaml,
-        log,
-        yamlOptions,
-        jsonOptions,
-        folders,
-        transformEntry,
-        transformName,
-        transformFolderName
-      });
-    }
-    async function extractClassicLevel(pack2, dest, {
-      yaml,
-      yamlOptions,
-      jsonOptions,
-      log,
-      folders,
-      transformEntry,
-      transformName,
-      transformFolderName
-    }) {
-      const db = new import_classic_level.ClassicLevel(pack2, { keyEncoding: "utf8", valueEncoding: "json" });
-      await db.open();
-      const foldersMap = /* @__PURE__ */ new Map();
-      if (folders) {
-        for await (const [key, doc] of db.iterator()) {
-          if (!key.startsWith("!folders")) continue;
-          let name = await transformFolderName?.(doc);
-          if (!name) name = doc.name ? `${getSafeFilename(doc.name)}_${doc._id}` : key;
-          foldersMap.set(doc._id, { name, folder: doc.folder });
-        }
-        for (const folder of foldersMap.values()) {
-          let parent = foldersMap.get(folder.folder);
-          folder.path = folder.name;
-          while (parent) {
-            folder.path = import_path32.default.join(parent.name, folder.path);
-            parent = foldersMap.get(parent.folder);
-          }
-        }
-      }
-      const unpackDoc = applyHierarchy(async (doc, collection, options = {}) => {
-        const { sublevelPrefix, idPrefix } = options;
-        const sublevel = keyJoin(sublevelPrefix, collection);
-        const id = keyJoin(idPrefix, doc._id);
-        doc._key = `!${sublevel}!${id}`;
-        await mapHierarchy(doc, collection, (embeddedId, embeddedCollectionName) => {
-          return db.get(`!${sublevel}.${embeddedCollectionName}!${id}.${embeddedId}`);
-        });
-        return { sublevelPrefix: sublevel, idPrefix: id };
-      });
-      for await (const [key, doc] of db.iterator()) {
-        const [, collection, id] = key.split("!");
-        if (collection.includes(".")) continue;
-        await unpackDoc(doc, collection);
-        if (await transformEntry?.(doc) === false) continue;
-        const folder = foldersMap?.get(doc.folder)?.path;
-        let name = await transformName?.(doc, { folder });
-        if (!name) {
-          if (key.startsWith("!folders") && foldersMap?.has(doc._id)) {
-            const folder2 = foldersMap.get(doc._id);
-            name = import_path32.default.join(folder2.name, `_Folder.${yaml ? "yml" : "json"}`);
-          } else {
-            name = `${doc.name ? `${getSafeFilename(doc.name)}_${id}` : key}.${yaml ? "yml" : "json"}`;
-          }
-          if (folder) name = import_path32.default.join(folder, name);
-        }
-        const filename = import_path32.default.join(dest, name);
-        serializeDocument(doc, filename, { yaml, yamlOptions, jsonOptions });
-        if (log) console.log(`Wrote ${import_picocolors.default.blue(name)}`);
-      }
-      await db.close();
-    }
-    function applyHierarchy(fn) {
-      const apply = async (doc, collection, options = {}) => {
-        const newOptions = await fn(doc, collection, options);
-        for (const [embeddedCollectionName, type2] of Object.entries(HIERARCHY[collection] ?? {})) {
-          const embeddedValue = doc[embeddedCollectionName];
-          if (Array.isArray(type2) && Array.isArray(embeddedValue)) {
-            for (const embeddedDoc of embeddedValue) await apply(embeddedDoc, embeddedCollectionName, newOptions ?? {});
-          } else if (embeddedValue) {
-            await apply(embeddedValue, embeddedCollectionName, newOptions ?? {});
-          }
-        }
-      };
-      return apply;
-    }
-    async function mapHierarchy(doc, collection, fn) {
-      for (const [embeddedCollectionName, type2] of Object.entries(HIERARCHY[collection] ?? {})) {
-        const embeddedValue = doc[embeddedCollectionName];
-        if (Array.isArray(type2)) {
-          if (Array.isArray(embeddedValue)) {
-            doc[embeddedCollectionName] = await Promise.all(
-              embeddedValue.map((entry) => {
-                return fn(entry, embeddedCollectionName);
-              })
-            );
-          } else doc[embeddedCollectionName] = [];
-        } else {
-          if (embeddedValue) doc[embeddedCollectionName] = await fn(embeddedValue, embeddedCollectionName);
-          else doc[embeddedCollectionName] = null;
-        }
-      }
-    }
-    function findSourceFiles(root, { yaml = false, recursive = false } = {}) {
-      const files = [];
-      for (const entry of fse4.readdirSync(root, { withFileTypes: true })) {
-        const name = import_path32.default.join(root, entry.name);
-        if (entry.isDirectory() && recursive) {
-          files.push(...findSourceFiles(name, { yaml, recursive }));
-          continue;
-        }
-        if (!entry.isFile()) continue;
-        const ext = import_path32.default.extname(name);
-        const isYaml = ext === ".yml" || ext === ".yaml";
-        if (yaml && isYaml) files.push(name);
-        else if (!yaml && ext === ".json") files.push(name);
-      }
-      return files;
-    }
-    function getSafeFilename(filename) {
-      return filename.normalize("NFD").replace(/[^a-zA-Z0-9\u0300-\u036F]/gu, "_");
-    }
-    function keyJoin(...args) {
-      return args.filter((_) => _).join(".");
-    }
-    function serializeDocument(doc, filename, { yaml, yamlOptions = {}, jsonOptions = {} } = {}) {
-      fse4.mkdirSync(import_path32.default.dirname(filename), { recursive: true });
-      const serialized = (() => {
-        if (yaml) return dump(doc, yamlOptions);
-        else {
-          const { replacer = null, space = 2 } = jsonOptions;
-          return JSON.stringify(doc, replacer, space) + "\n";
-        }
-      })();
-      fse4.writeFileSync(filename, serialized);
-    }
-    var HIERARCHY = {
-      actors: {
-        items: [],
-        effects: []
-      },
-      cards: {
-        cards: []
-      },
-      combats: {
-        combatants: []
-      },
-      delta: {
-        items: [],
-        effects: []
-      },
-      items: {
-        effects: []
-      },
-      journal: {
-        pages: [],
-        categories: []
-      },
-      playlists: {
-        sounds: []
-      },
-      regions: {
-        behaviors: []
-      },
-      tables: {
-        results: []
-      },
-      tokens: {
-        delta: {}
-      },
-      scenes: {
-        drawings: [],
-        tokens: [],
-        lights: [],
-        notes: [],
-        regions: [],
-        sounds: [],
-        templates: [],
-        tiles: [],
-        walls: []
-      }
-    };
     var import_child_process = require("child_process");
     var dotenv = __toESM2(require_main());
     async function launchFoundry2(rootPath = ".", {
@@ -6939,7 +3196,7 @@ var require_dist = __commonJS({
       foundry.on("close", (code) => console.log(`Foundry VTT exited with code ${code}`));
     }
     var import_fs_extra3 = __toESM2(require("fs-extra"));
-    var import_path4 = __toESM2(require("path"));
+    var import_path32 = __toESM2(require("path"));
     var manifestCandidates = [
       "**/module.json",
       "**/module.yaml",
@@ -6953,19 +3210,19 @@ var require_dist = __commonJS({
       const found = walkFiles(manifestCandidates, { cwd });
       if (found.length === 0) return void 0;
       const manifestPath = found[0];
-      const { base } = import_path4.default.parse(manifestPath);
+      const { name } = import_path32.default.parse(manifestPath);
       let cachedManifest = void 0;
       const manifest = async () => cachedManifest ??= await loadManifest(manifestPath);
       const manifestInfo = {
         path: manifestPath,
-        type: base,
+        type: name,
         manifest,
         baseUrl: () => getFoundryBaseUrl(manifestInfo)
       };
       return manifestInfo;
     }
     async function loadManifest(manifestPath) {
-      const { ext } = import_path4.default.posix.parse(manifestPath);
+      const { ext } = import_path32.default.posix.parse(manifestPath);
       const manifestData = await import_fs_extra3.default.readFile(manifestPath, "utf8");
       return ext === ".json" ? JSON.parse(manifestData) : js_yaml_default.load(manifestData);
     }
@@ -6978,7 +3235,7 @@ var require_dist = __commonJS({
       if (!prefix) return void 0;
       const { id } = await manifestInfo.manifest() ?? { id: void 0 };
       if (!id) return void 0;
-      return import_path4.default.posix.join(prefix, id);
+      return import_path32.default.posix.join(prefix, id);
     }
   }
 });
@@ -6994,11 +3251,274 @@ __export(index_exports, {
 module.exports = __toCommonJS(index_exports);
 
 // src/pack.ts
-var import_utils = __toESM(require_dist());
-var fse = __toESM(require("fs-extra"));
+var fse2 = __toESM(require("fs-extra"));
 var import_node_path = __toESM(require("path"));
+
+// src/_database.ts
+var import_classic_level = require("classic-level");
+var fse = __toESM(require("fs-extra"));
+var YAML = __toESM(require("js-yaml"));
+var import_path = __toESM(require("path"));
+var import_picocolors = __toESM(require("picocolors"));
+async function compilePack(src, dest, { nedb = false, yaml = false, recursive = false, log = false, transformEntry } = {}) {
+  if (nedb) throw new Error("NeDB files are obsolete and only Classic database level files are handled!");
+  const files = findSourceFiles(src, { yaml, recursive });
+  return compileClassicLevel(dest, files, { log, transformEntry });
+}
+async function compileClassicLevel(pack2, files, { log, transformEntry } = {}) {
+  fse.mkdirSync(pack2, { recursive: true });
+  const db = new import_classic_level.ClassicLevel(pack2, { keyEncoding: "utf8", valueEncoding: "json" });
+  await db.open();
+  const batch = db.batch();
+  const seenKeys = /* @__PURE__ */ new Set();
+  const packDoc = applyHierarchy(async (doc, collection) => {
+    const key = doc._key;
+    delete doc._key;
+    if (seenKeys.has(key)) {
+      throw new Error(`An entry with key '${key}' was already packed and would be overwritten by this entry.`);
+    }
+    seenKeys.add(key);
+    const value = structuredClone(doc);
+    await mapHierarchy(value, collection, async (d) => d._id);
+    batch.put(key, value);
+  });
+  for (const file of files) {
+    try {
+      const contents = fse.readFileSync(file, "utf8");
+      const ext = import_path.default.extname(file);
+      const isYaml = ext === ".yml" || ext === ".yaml";
+      const doc = isYaml ? YAML.load(contents) : JSON.parse(contents);
+      const [, collection] = doc._key.split("!");
+      if (await transformEntry?.(doc) === false) continue;
+      await packDoc(doc, collection);
+      if (log) console.log(`Packed ${import_picocolors.default.blue(doc._id)}${import_picocolors.default.blue(doc.name ? ` (${doc.name})` : "")}`);
+    } catch (err) {
+      if (log) console.error(`Failed to pack ${import_picocolors.default.red(file)}. See error below.`);
+      throw err;
+    }
+  }
+  for (const key of await db.keys().all()) {
+    if (!seenKeys.has(key)) {
+      batch.del(key);
+      if (log) console.log(`Removed ${import_picocolors.default.blue(key)}`);
+    }
+  }
+  await batch.write();
+  await compactClassicLevel(db);
+  await db.close();
+}
+async function compactClassicLevel(db) {
+  const forwardIterator = db.keys({ limit: 1, fillCache: false });
+  const firstKey = await forwardIterator.next();
+  await forwardIterator.close();
+  const backwardIterator = db.keys({ limit: 1, reverse: true, fillCache: false });
+  const lastKey = await backwardIterator.next();
+  await backwardIterator.close();
+  if (firstKey && lastKey) return db.compactRange(firstKey, lastKey, { keyEncoding: "utf8" });
+}
+async function extractPack(src, dest, {
+  nedb = false,
+  yaml = false,
+  yamlOptions = {},
+  jsonOptions = {},
+  log = false,
+  ////documentType,
+  ////collection,
+  clean,
+  folders,
+  transformEntry,
+  transformName,
+  transformFolderName
+} = {}) {
+  if (nedb) throw new Error("NeDB files are obsolete and only Classic database level files are handled!");
+  if (clean) fse.rmSync(dest, { force: true, recursive: true, maxRetries: 10 });
+  fse.mkdirSync(dest, { recursive: true });
+  return extractClassicLevel(src, dest, {
+    yaml,
+    log,
+    yamlOptions,
+    jsonOptions,
+    folders,
+    transformEntry,
+    transformName,
+    transformFolderName
+  });
+}
+async function extractClassicLevel(pack2, dest, {
+  yaml,
+  yamlOptions,
+  jsonOptions,
+  log,
+  folders,
+  transformEntry,
+  transformName,
+  transformFolderName
+}) {
+  const db = new import_classic_level.ClassicLevel(pack2, { keyEncoding: "utf8", valueEncoding: "json" });
+  await db.open();
+  const foldersMap = /* @__PURE__ */ new Map();
+  if (folders) {
+    for await (const [key, doc] of db.iterator()) {
+      if (!key.startsWith("!folders")) continue;
+      let name = await transformFolderName?.(doc);
+      if (!name) name = doc.name ? `${getSafeFilename(doc.name)}_${doc._id}` : key;
+      foldersMap.set(doc._id, { name, folder: doc.folder });
+    }
+    for (const folder of foldersMap.values()) {
+      let parent = foldersMap.get(folder.folder);
+      folder.path = folder.name;
+      while (parent) {
+        folder.path = import_path.default.join(parent.name, folder.path);
+        parent = foldersMap.get(parent.folder);
+      }
+    }
+  }
+  const unpackDoc = applyHierarchy(async (doc, collection, options = {}) => {
+    const { sublevelPrefix, idPrefix } = options;
+    const sublevel = keyJoin(sublevelPrefix, collection);
+    const id = keyJoin(idPrefix, doc._id);
+    doc._key = `!${sublevel}!${id}`;
+    await mapHierarchy(doc, collection, (embeddedId, embeddedCollectionName) => {
+      return db.get(`!${sublevel}.${embeddedCollectionName}!${id}.${embeddedId}`);
+    });
+    return { sublevelPrefix: sublevel, idPrefix: id };
+  });
+  for await (const [key, doc] of db.iterator()) {
+    const [, collection, id] = key.split("!");
+    if (collection.includes(".")) continue;
+    await unpackDoc(doc, collection);
+    if (await transformEntry?.(doc) === false) continue;
+    const folder = foldersMap?.get(doc.folder)?.path;
+    let name = await transformName?.(doc, { folder });
+    if (!name) {
+      if (key.startsWith("!folders") && foldersMap?.has(doc._id)) {
+        const folder2 = foldersMap.get(doc._id);
+        name = import_path.default.join(folder2.name, `_Folder.${yaml ? "yml" : "json"}`);
+      } else {
+        name = `${doc.name ? `${getSafeFilename(doc.name)}_${id}` : key}.${yaml ? "yml" : "json"}`;
+      }
+      if (folder) name = import_path.default.join(folder, name);
+    }
+    const filename = import_path.default.join(dest, name);
+    serializeDocument(doc, filename, { yaml, yamlOptions, jsonOptions });
+    if (log) console.log(`Wrote ${import_picocolors.default.blue(name)}`);
+  }
+  await db.close();
+}
+function applyHierarchy(fn) {
+  const apply = async (doc, collection, options = {}) => {
+    const newOptions = await fn(doc, collection, options);
+    for (const [embeddedCollectionName, type] of Object.entries(HIERARCHY[collection] ?? {})) {
+      const embeddedValue = doc[embeddedCollectionName];
+      if (Array.isArray(type) && Array.isArray(embeddedValue)) {
+        for (const embeddedDoc of embeddedValue) await apply(embeddedDoc, embeddedCollectionName, newOptions ?? {});
+      } else if (embeddedValue) {
+        await apply(embeddedValue, embeddedCollectionName, newOptions ?? {});
+      }
+    }
+  };
+  return apply;
+}
+async function mapHierarchy(doc, collection, fn) {
+  for (const [embeddedCollectionName, type] of Object.entries(HIERARCHY[collection] ?? {})) {
+    const embeddedValue = doc[embeddedCollectionName];
+    if (Array.isArray(type)) {
+      if (Array.isArray(embeddedValue)) {
+        doc[embeddedCollectionName] = await Promise.all(
+          embeddedValue.map((entry) => {
+            return fn(entry, embeddedCollectionName);
+          })
+        );
+      } else doc[embeddedCollectionName] = [];
+    } else {
+      if (embeddedValue) doc[embeddedCollectionName] = await fn(embeddedValue, embeddedCollectionName);
+      else doc[embeddedCollectionName] = null;
+    }
+  }
+}
+function findSourceFiles(root, { yaml = false, recursive = false } = {}) {
+  const files = [];
+  for (const entry of fse.readdirSync(root, { withFileTypes: true })) {
+    const name = import_path.default.join(root, entry.name);
+    if (entry.isDirectory() && recursive) {
+      files.push(...findSourceFiles(name, { yaml, recursive }));
+      continue;
+    }
+    if (!entry.isFile()) continue;
+    const ext = import_path.default.extname(name);
+    const isYaml = ext === ".yml" || ext === ".yaml";
+    if (yaml && isYaml) files.push(name);
+    else if (!yaml && ext === ".json") files.push(name);
+  }
+  return files;
+}
+function getSafeFilename(filename) {
+  return filename.normalize("NFD").replace(/[^a-zA-Z0-9\u0300-\u036F]/gu, "_");
+}
+function keyJoin(...args) {
+  return args.filter((_) => _).join(".");
+}
+function serializeDocument(doc, filename, { yaml, yamlOptions = {}, jsonOptions = {} } = {}) {
+  fse.mkdirSync(import_path.default.dirname(filename), { recursive: true });
+  const serialized = (() => {
+    if (yaml) return YAML.dump(doc, yamlOptions);
+    else {
+      const { replacer = null, space = 2 } = jsonOptions;
+      return JSON.stringify(doc, replacer, space) + "\n";
+    }
+  })();
+  fse.writeFileSync(filename, serialized);
+}
+var HIERARCHY = {
+  actors: {
+    items: [],
+    effects: []
+  },
+  cards: {
+    cards: []
+  },
+  combats: {
+    combatants: []
+  },
+  delta: {
+    items: [],
+    effects: []
+  },
+  items: {
+    effects: []
+  },
+  journal: {
+    pages: [],
+    categories: []
+  },
+  playlists: {
+    sounds: []
+  },
+  regions: {
+    behaviors: []
+  },
+  tables: {
+    results: []
+  },
+  tokens: {
+    delta: {}
+  },
+  scenes: {
+    drawings: [],
+    tokens: [],
+    lights: [],
+    notes: [],
+    regions: [],
+    sounds: [],
+    templates: [],
+    tiles: [],
+    walls: []
+  }
+};
+
+// src/pack.ts
 async function pack(done) {
-  const exists4 = await fse.exists("packs");
+  const exists4 = await fse2.exists("packs");
   if (!exists4) return done();
   const dirs = await getDirectories("packs");
   if (dirs.length === 0) return;
@@ -7006,7 +3526,7 @@ async function pack(done) {
     const src = import_node_path.default.resolve("packs", dir).split(import_node_path.default.sep).join(import_node_path.default.posix.sep);
     const dst = src.replace("packs", "dist/packs");
     try {
-      await (0, import_utils.compilePack)(src, dst, { yaml: true, recursive: true, log: true });
+      await compilePack(src, dst, { yaml: true, recursive: true, log: true });
     } catch (e) {
       console.error(e);
     }
@@ -7014,28 +3534,27 @@ async function pack(done) {
   done();
 }
 async function getDirectories(dir) {
-  const files = await fse.readdir(dir);
+  const files = await fse2.readdir(dir);
   return files.filter(async (file) => {
     const filepath = import_node_path.default.join(dir, file);
-    const stat3 = await fse.stat(filepath);
+    const stat3 = await fse2.stat(filepath);
     return stat3.isDirectory();
   });
 }
 
 // src/unpack.ts
-var utils = __toESM(require_dist());
-var fse2 = __toESM(require("fs-extra"));
-var import_node_path2 = __toESM(require("path"));
+var fse3 = __toESM(require("fs-extra"));
+var path3 = __toESM(require("path"));
 async function unpack(done) {
-  const exists4 = await fse2.exists(`dist/packs`);
+  const exists4 = await fse3.exists(`dist/packs`);
   if (!exists4) return done();
   const dirs = await getDirectories2("dist/packs");
   if (dirs.length === 0) return;
   for (const dir of dirs) {
-    const src = import_node_path2.default.resolve("dist/packs/", dir).split(import_node_path2.default.sep).join(import_node_path2.default.posix.sep);
+    const src = path3.resolve("dist/packs/", dir).split(path3.sep).join(path3.posix.sep);
     const dst = src.replace("dist/packs/", "packs/");
     try {
-      await utils.extractPack(src, dst, { yaml: true, yamlOptions: defaultYamlOptions, log: true });
+      await extractPack(src, dst, { yaml: true, yamlOptions: defaultYamlOptions, log: true });
     } catch (e) {
       console.error(e);
     }
@@ -7043,10 +3562,10 @@ async function unpack(done) {
   done();
 }
 async function getDirectories2(dir) {
-  const files = await fse2.readdir(dir);
+  const files = await fse3.readdir(dir);
   return files.filter(async (file) => {
-    const filepath = import_node_path2.default.join(dir, file);
-    const stat3 = await fse2.stat(filepath);
+    const filepath = path3.join(dir, file);
+    const stat3 = await fse3.stat(filepath);
     return stat3.isDirectory();
   });
 }
@@ -7058,7 +3577,7 @@ var defaultYamlOptions = {
 };
 
 // src/launch.ts
-var import_utils2 = __toESM(require_dist());
+var import_utils = __toESM(require_dist());
 var import_process = __toESM(require("process"));
 var import_yargs = __toESM(require("yargs"));
 var import_helpers = require("yargs/helpers");
@@ -7070,26 +3589,29 @@ async function launch(done) {
     noupnp: { type: "boolean", default: false },
     noupdate: { type: "boolean", default: false }
   }).argv;
-  (0, import_utils2.launchFoundry)(".", argv);
+  (0, import_utils.launchFoundry)(".", argv);
   done();
 }
 
 // src/link.ts
-var import_utils3 = __toESM(require_dist());
+var import_utils2 = __toESM(require_dist());
 var import_console = __toESM(require("console"));
-var fse3 = __toESM(require("fs-extra"));
-var import_path = __toESM(require("path"));
+var fse4 = __toESM(require("fs-extra"));
+var import_path2 = __toESM(require("path"));
 var import_process2 = __toESM(require("process"));
 var import_yargs2 = __toESM(require("yargs"));
 var import_helpers2 = require("yargs/helpers");
 async function link(done) {
-  const foundryManifestInfo = await (0, import_utils3.findManifest)();
+  const foundryManifestInfo = await (0, import_utils2.findManifest)();
   if (!foundryManifestInfo) return done();
   const foundryManifest = await foundryManifestInfo.manifest();
-  const foundryConfig = await (0, import_utils3.getFoundryConfigInfo)();
+  const foundryConfig = await (0, import_utils2.getFoundryConfigInfo)();
   if (!foundryManifest || !foundryConfig) return done();
-  const linkDirectories = foundryConfig.resolvedDataPath.map(
-    (dataPath) => import_path.default.resolve(dataPath, "Data", foundryManifestInfo.path)
+  const linkDirectories = await Promise.all(
+    foundryConfig.resolvedDataPath.map(async (dataPath) => {
+      const baseUrl = await foundryManifestInfo.baseUrl();
+      return import_path2.default.join(dataPath, "Data", baseUrl);
+    })
   );
   const argv = (0, import_yargs2.default)((0, import_helpers2.hideBin)(import_process2.default.argv)).options({
     clean: { type: "boolean", default: false }
@@ -7098,12 +3620,12 @@ async function link(done) {
   for (const linkDirectory of linkDirectories) {
     if (clean) {
       import_console.default.log(`Removing build in ${linkDirectory}.`);
-      await fse3.remove(linkDirectory);
-    } else if (!await fse3.exists(linkDirectory)) {
+      await fse4.remove(linkDirectory);
+    } else if (!await fse4.exists(linkDirectory)) {
       import_console.default.log(`Linking dist to ${linkDirectory}.`);
-      await fse3.ensureDir("dist");
-      await fse3.ensureDir(import_path.default.resolve(linkDirectory, ".."));
-      await fse3.symlink(import_path.default.resolve("dist"), linkDirectory);
+      await fse4.ensureDir("dist");
+      await fse4.ensureDir(import_path2.default.resolve(linkDirectory, ".."));
+      await fse4.symlink(import_path2.default.resolve("dist"), linkDirectory);
     } else {
       import_console.default.log(`Skipped linking to ${linkDirectory}, as it already exists.`);
     }
@@ -7121,3 +3643,4 @@ async function link(done) {
 js-yaml/dist/js-yaml.mjs:
   (*! js-yaml 4.1.0 https://github.com/nodeca/js-yaml @license MIT *)
 */
+//# sourceMappingURL=index.js.map
